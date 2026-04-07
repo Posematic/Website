@@ -23,7 +23,7 @@ export function HeroBackdrop() {
       />
 
       <div className="pointer-events-none absolute inset-0 z-[8] flex items-center justify-end pr-2 pl-6 sm:pr-4 sm:pl-10 md:pr-8 md:pl-16 lg:pr-12">
-        <div className="relative h-[min(75svh,820px)] w-[min(92vw,560px)] sm:h-[min(78svh,860px)] sm:w-[min(88vw,620px)] md:w-[min(72vw,680px)] lg:w-[min(58vw,720px)]">
+        <div className="relative h-[min(75svh,820px)] w-[min(92vw,560px)] translate-y-6 sm:h-[min(78svh,860px)] sm:w-[min(88vw,620px)] sm:translate-y-8 md:w-[min(72vw,680px)] lg:w-[min(58vw,720px)]">
           <Image
             src="/images/823_1x_shots_so.png"
             alt="Posematic app on two tablets: Scenes library and Profile with bento-style settings"
