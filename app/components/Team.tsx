@@ -11,38 +11,38 @@ export type TeamMember = {
 
 const team: TeamMember[] = [
   {
-    name: "Alex Rivera",
-    role: "Co-founder & CEO",
+    name: "Craig Mellor",
+    role: "Co-founder",
     bio: "Former graphics tools PM; obsessed with creative workflows that respect artists' time.",
     imageSrc: "/images/team-placeholder.svg",
     imageAlt: "Portrait placeholder for Alex Rivera",
     founder: true,
   },
   {
-    name: "Jordan Lee",
-    role: "Co-founder & CTO",
+    name: "Daniel Yang",
+    role: "Co-founder",
     bio: "ML systems and real-time 3D — building Posematic's sketch-to-pose brain.",
     imageSrc: "/images/team-placeholder.svg",
     imageAlt: "Portrait placeholder for Jordan Lee",
     founder: true,
   },
   {
-    name: "Sam Okonkwo",
-    role: "Lead Product Designer",
+    name: "Ritvik Gupta",
+    role: "Co-founder",
     bio: "Interfaces for pro tools; previously shipped design systems for creative software.",
     imageSrc: "/images/team-placeholder.svg",
     imageAlt: "Portrait placeholder for Sam Okonkwo",
   },
   {
-    name: "Morgan Chen",
-    role: "3D & Anatomy",
+    name: "Nicholas \"Nick\" Mino",
+    role: "Co-founder",
     bio: "Character TD and anatomy nerd — making poses that hold up under scrutiny.",
     imageSrc: "/images/team-placeholder.svg",
     imageAlt: "Portrait placeholder for Morgan Chen",
   },
   {
-    name: "Riley Patel",
-    role: "Engineering",
+    name: "Ivan G.",
+    role: "Lead Engineer",
     bio: "Performance, rendering, and the glue between ML and interactive 3D.",
     imageSrc: "/images/team-placeholder.svg",
     imageAlt: "Portrait placeholder for Riley Patel",
@@ -94,15 +94,15 @@ export function Team() {
   return (
     <section
       id="team"
-      className="relative scroll-mt-28 px-4 py-16 sm:scroll-mt-32 sm:px-6 lg:px-10 lg:py-24"
+      className="relative scroll-mt-5 px-4 py-16 sm:scroll-mt-5 sm:px-6 lg:px-10 lg:py-24"
     >
       <div className="mx-auto max-w-5xl">
         <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
           Team
         </h2>
         <p className="mt-4 max-w-2xl text-lg text-[var(--color-text-secondary)]">
-          Builders who care as much about craft as about code — a small team with
-          a loud roadmap.
+          Developers who care about the craft as much as the code — with backgrounds
+          in graphics, ML, and real-time 3D. A small team, a focused roadmap: Posematic.
         </p>
 
         {/*

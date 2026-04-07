@@ -5,8 +5,8 @@ const problems = [
     icon: Clock,
     title: "Posing takes too long",
     quote:
-      "“I spend half my session just getting the mannequin to cooperate — before I draw a single clean line.”",
-    attribution: "— Illustrator, digital comic",
+      "“Contemprary posing apps are too much time to figure out, when I can get references online.”",
+    attribution: "— Illustrator, digital artist (Stella Wong)",
     fix: "Posematic cuts iteration time with sketch-first input and controls tuned for speed.",
     variant: "liquid" as const,
   },
@@ -23,14 +23,14 @@ const problems = [
     icon: UserX,
     title: "Terrible anatomy",
     quote:
-      "“The default proportions read wrong under pressure — I stop trusting the reference.”",
-    attribution: "— Animator, indie studio",
+      "“I wish the models were more accurate, the models lack useful anatomical landmarks.”",
+    attribution: "— Professional Entertainment Artists, freelance (Daniel)",
     fix: "Anatomy is a core pillar: believable defaults, clearer silhouettes, and honest posing.",
     variant: "matte" as const,
   },
   {
     icon: DollarSign,
-    title: "Expensive for starving artists",
+    title: "Expensive for professionals and hobbyists",
     quote:
       "“Monthly pricing stings when you are still building an audience.”",
     attribution: "— Freelance character artist",
@@ -47,7 +47,7 @@ export function Problems() {
           Existing posing apps are broken
         </h2>
         <p className="mt-4 max-w-2xl text-lg text-[var(--color-text-secondary)]">
-          Four friction points we hear again and again — each paired with how we
+          Four friction points we commonly hear — each paired with how we
           are responding.
         </p>
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:gap-6">
@@ -62,7 +62,7 @@ export function Problems() {
                 key={p.title}
                 className={`grain relative flex flex-col rounded-[24px] border border-[var(--color-border-subtle)] p-8 shadow-[0_20px_60px_rgba(10,5,40,0.45)] ${cardClass}`}
               >
-                <div className="mb-6 flex items-start gap-4">
+                <div className="mb-6 flex items-center gap-4">
                   <div className="icon-ring shrink-0">
                     <div className="icon-ring-inner h-12 w-12">
                       <Icon
@@ -72,7 +72,9 @@ export function Problems() {
                       />
                     </div>
                   </div>
-                  <h3 className="text-xl font-semibold text-white">{p.title}</h3>
+                  <h3 className="min-w-0 flex-1 text-xl font-semibold leading-snug text-white">
+                    {p.title}
+                  </h3>
                 </div>
                 <blockquote className="flex-1 text-[var(--color-text-secondary)] leading-relaxed">
                   {p.quote}

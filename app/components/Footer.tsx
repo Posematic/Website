@@ -1,10 +1,42 @@
 import Link from "next/link";
-import { Github, Linkedin, Twitter } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
 
-const social = [
-  { href: "https://twitter.com", label: "Twitter", icon: Twitter },
-  { href: "https://github.com", label: "GitHub", icon: Github },
-  { href: "https://linkedin.com", label: "LinkedIn", icon: Linkedin },
+/** X (formerly Twitter) wordmark — filled mark reads clearly at small sizes */
+function XLogo({ className }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      aria-hidden
+      fill="currentColor"
+    >
+      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+    </svg>
+  );
+}
+
+const social: readonly {
+  href: string;
+  label: string;
+  icon?: LucideIcon;
+  render?: "x";
+}[] = [
+  {
+    href: "https://x.com",
+    label: "X",
+    render: "x",
+  },
+  {
+    href: "https://github.com",
+    label: "GitHub",
+    icon: Github,
+  },
+  {
+    href: "https://www.linkedin.com",
+    label: "LinkedIn",
+    icon: Linkedin,
+  },
 ] as const;
 
 export function Footer() {
@@ -17,7 +49,7 @@ export function Footer() {
             href="mailto:hello@posematic.com"
             className="mt-1 block text-sm text-[var(--color-text-secondary)] transition hover:text-white"
           >
-            hello@posematic.com
+            posematic.team@gmail.com
           </a>
         </div>
         <div className="flex items-center gap-4">
@@ -32,7 +64,11 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Icon className="h-5 w-5" strokeWidth={1.5} />
+                {s.render === "x" ? (
+                  <XLogo className="h-5 w-5" />
+                ) : Icon ? (
+                  <Icon className="h-5 w-5" strokeWidth={1.5} />
+                ) : null}
               </Link>
             );
           })}

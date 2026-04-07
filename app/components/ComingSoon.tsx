@@ -12,7 +12,7 @@ export function ComingSoon() {
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-[var(--color-text-secondary)]">
           We are polishing core posing, sketch-to-pose, and account flows before
-          we open the floodgates. Join the waitlist to be first in line.
+          our full release. Join the waitlist to be first in line.
         </p>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
           <button

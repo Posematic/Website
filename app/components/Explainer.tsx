@@ -14,8 +14,8 @@ export function Explainer() {
             canvas.&rdquo;
           </p>
           <p className="mt-4 text-lg leading-relaxed text-[var(--color-text-secondary)]">
-            Posematic treats that bridge as a first-class product surface: fast
-            iteration, readable anatomy, and workflows that respect how artists
+            Posematic treats that bridge as a core product: fast
+            iteration, readable anatomy, and workflows that respect how artists and creatives
             actually work.
           </p>
         </div>

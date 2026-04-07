@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useState, type SubmitEvent } from "react";
 import { Check, Loader2 } from "lucide-react";
 
 type SubmitState = "idle" | "loading" | "success" | "error";
@@ -10,7 +10,7 @@ export function Waitlist() {
   const [state, setState] = useState<SubmitState>("idle");
   const [message, setMessage] = useState<string | null>(null);
 
-  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: SubmitEvent<HTMLFormElement>) {
     e.preventDefault();
     setMessage(null);
     setState("loading");
@@ -33,7 +33,7 @@ export function Waitlist() {
   return (
     <section
       id="waitlist"
-      className="relative scroll-mt-28 px-4 py-20 sm:scroll-mt-32 sm:px-6 lg:px-10 lg:py-28"
+      className="relative scroll-mt-15 px-4 py-20 sm:scroll-mt-20 sm:px-6 lg:px-10 lg:py-28"
     >
       <div className="grain relative mx-auto max-w-4xl overflow-hidden rounded-[28px] border border-[var(--color-border-subtle)] p-10 sm:p-14 surface-liquid shadow-[0_20px_60px_rgba(10,5,40,0.5)]">
         <div className="relative z-[1] text-center">

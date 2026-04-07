@@ -15,7 +15,7 @@ export default function Home() {
       <Nav />
       <main>
         <Hero />
-        <div id="product" className="scroll-mt-28 sm:scroll-mt-32">
+        <div id="product" className="scroll-mt-3 sm:scroll-mt-3">
           <SketchToPose />
           <Explainer />
           <Problems />

@@ -27,12 +27,12 @@ export function Nav() {
             className="flex min-w-0 shrink items-center gap-2.5 text-[17px] font-medium tracking-tight text-white sm:gap-3"
             onClick={() => setOpen(false)}
           >
-            <span className="relative inline-flex h-9 w-9 shrink-0 sm:h-10 sm:w-10">
+            <span className="relative inline-flex h-10 w-10 shrink-0 sm:h-12 sm:w-12">
               <Image
                 src="/images/profile-circle.svg"
                 alt=""
-                width={91}
-                height={88}
+                width={95 }
+                height={90}
                 className="h-full w-full object-contain"
                 priority
               />
@@ -40,9 +40,9 @@ export function Nav() {
                 <Image
                   src="/images/posematic-default-profile-logo.svg"
                   alt=""
-                  width={41}
-                  height={40}
-                  className="h-[38%] w-[38%] object-contain"
+                  width={55}
+                  height={53}
+                  className="h-[45%] w-[45%] object-contain"
                   aria-hidden
                 />
               </span>

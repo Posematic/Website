@@ -7,7 +7,7 @@ export function Hero() {
   return (
     <section
       id="mission"
-      className="relative min-h-[100svh] scroll-mt-28 overflow-hidden border-b border-white/[0.06] sm:scroll-mt-32"
+      className="relative min-h-[100svh] scroll-mt-24 overflow-hidden border-b border-white/[0.06] sm:scroll-mt-28"
     >
       <HeroBackdrop />
 
@@ -36,10 +36,10 @@ export function Hero() {
             </span>
           </div>
           <h1 className="text-balance text-4xl font-semibold leading-[1.12] tracking-tight text-white drop-shadow-sm sm:text-5xl lg:text-[2.75rem]">
-            Posing that keeps up with the way you actually draw.
+            Posing that keeps up with your creative workflows.
           </h1>
           <p className="mt-5 max-w-xl text-lg leading-relaxed text-[var(--color-text-secondary)] drop-shadow-sm">
-            A next-generation posing app for artists — fast anatomy, modern UI,
+            A modern posing app for the modern artist — fast anatomy, modern UI,
             and sketch-to-pose AI that turns rough lines into clear 3D reference.
           </p>
           <div className="mt-9 flex flex-wrap items-center gap-4">
