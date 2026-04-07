@@ -1,0 +1,87 @@
+@import url("https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700&display=swap");
+
+@import "tailwindcss";
+
+@theme inline {
+  --color-bg-deepest: #05021a;
+  --color-bg-primary: #08080f;
+  --color-bg-card-dark: #0c0c1a;
+  --color-bg-card-gradient-base: #0d0730;
+  --color-brand-indigo: #2e1b9e;
+  --color-brand-violet: #4b3bff;
+  --color-brand-purple: #5b4bff;
+  --color-brand-lavender: #8b7bff;
+  --color-brand-highlight: #c8beff;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: rgba(255, 255, 255, 0.65);
+  --color-text-tertiary: rgba(255, 255, 255, 0.45);
+  --color-border-subtle: rgba(255, 255, 255, 0.05);
+  --font-sans: "Satoshi", var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+}
+
+/* Subtle grain overlay — design system */
+.grain::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Iridescent ring for icon badges */
+.icon-ring {
+  background: conic-gradient(
+    from 0deg,
+    #ff3d8b,
+    #7b5bff,
+    #3dd9d6,
+    #ff3d8b
+  );
+  padding: 2px;
+  border-radius: 9999px;
+}
+
+.icon-ring-inner {
+  background: var(--color-bg-card-dark);
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Liquid gradient card utility */
+.surface-liquid {
+  background:
+    radial-gradient(ellipse 80% 60% at 30% 40%, #5b4bff 0%, transparent 60%),
+    radial-gradient(ellipse 70% 80% at 70% 70%, #4b3bff 0%, transparent 55%),
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(200, 190, 255, 0.2) 0%,
+      transparent 40%
+    ),
+    #0d0730;
+}
+
+.surface-matte {
+  background: linear-gradient(135deg, #0a0a18 0%, #14102e 100%);
+}
+
+/* Frosted nav — dark variant from design json */
+.nav-frosted {
+  background: rgba(12, 12, 26, 0.62);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-left: 3px solid var(--color-brand-purple);
+}
