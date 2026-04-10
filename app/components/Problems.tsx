@@ -56,7 +56,7 @@ export function Problems() {
             const cardClass =
               p.variant === "liquid"
                 ? "surface-liquid"
-                : "surface-matte bg-[#0c0c1a]";
+                : "surface-matte bg-[var(--color-bg-card-dark)]";
             return (
               <article
                 key={p.title}

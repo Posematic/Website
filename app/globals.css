@@ -3,10 +3,11 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-bg-deepest: #05021a;
-  --color-bg-primary: #08080f;
-  --color-bg-card-dark: #0c0c1a;
-  --color-bg-card-gradient-base: #0d0730;
+  /* Slightly lifted from prior values — page reads a touch brighter without losing depth */
+  --color-bg-deepest: #07051e;
+  --color-bg-primary: #0c0c14;
+  --color-bg-card-dark: #10101f;
+  --color-bg-card-gradient-base: #100a34;
   --color-brand-indigo: #2e1b9e;
   --color-brand-violet: #4b3bff;
   --color-brand-purple: #5b4bff;
@@ -39,14 +40,24 @@ body {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
-/* Iridescent ring for icon badges */
+/*
+ * Icon badge ring — colors from AI/pattern_design.json (Liquid Aurora).
+ * violet_bloom + luminance: deep navy → blues → violet → lavender/silver frost (no red/cyan).
+ */
 .icon-ring {
   background: conic-gradient(
-    from 0deg,
-    #ff3d8b,
-    #7b5bff,
-    #3dd9d6,
-    #ff3d8b
+    from -90deg,
+    #3366ff 0deg,
+    #1a3bcc 36deg,
+    #3366ff 72deg,
+    #4d88ff 108deg,
+    #6633cc 144deg,
+    #8833cc 180deg,
+    #c4b8ff 216deg,
+    #d6cfff 252deg,
+    #e8d8ff 288deg,
+    #3366ff 324deg,
+    #3366ff 360deg
   );
   padding: 2px;
   border-radius: 9999px;
@@ -70,16 +81,16 @@ body {
       rgba(200, 190, 255, 0.2) 0%,
       transparent 40%
     ),
-    #0d0730;
+    var(--color-bg-card-gradient-base);
 }
 
 .surface-matte {
-  background: linear-gradient(135deg, #0a0a18 0%, #14102e 100%);
+  background: linear-gradient(135deg, #0c0c1c 0%, #16132e 100%);
 }
 
 /* Frosted nav — dark variant from design json */
 .nav-frosted {
-  background: rgba(12, 12, 26, 0.62);
+  background: rgba(16, 16, 32, 0.62);
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);

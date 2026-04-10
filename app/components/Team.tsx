@@ -62,7 +62,7 @@ function MemberCard({
     >
       {/* Smaller, equal portrait frames — width-capped so all match */}
       <div className="flex justify-center px-4 pt-5 sm:px-5 sm:pt-6">
-        <div className="relative aspect-[3/4] w-full max-w-[148px] overflow-hidden rounded-xl bg-gradient-to-b from-[#1a1535] to-[#0c0c1a] sm:max-w-[168px]">
+        <div className="relative aspect-[3/4] w-full max-w-[148px] overflow-hidden rounded-xl bg-gradient-to-b from-[#1a1535] to-[var(--color-bg-card-dark)] sm:max-w-[168px]">
           <Image
             src={member.imageSrc}
             alt={member.imageAlt}

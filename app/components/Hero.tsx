@@ -12,11 +12,11 @@ export function Hero() {
       <HeroBackdrop />
 
       <div
-        className="absolute inset-0 z-[3] bg-gradient-to-b from-[#08080f]/50 via-[#08080f]/15 to-[#08080f]/42"
+        className="absolute inset-0 z-[3] bg-gradient-to-b from-[#0c0c14]/50 via-[#0c0c14]/15 to-[#0c0c14]/42"
         aria-hidden
       />
       <div
-        className="pointer-events-none absolute inset-0 z-[4] bg-gradient-to-r from-[#08080f]/90 via-[#08080f]/18 to-transparent sm:from-[#08080f]/85"
+        className="pointer-events-none absolute inset-0 z-[4] bg-gradient-to-r from-[#0c0c14]/90 via-[#0c0c14]/18 to-transparent sm:from-[#0c0c14]/85"
         aria-hidden
       />
 
