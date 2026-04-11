@@ -11,7 +11,7 @@ export function ComingSoon() {
           Launching on mobile first — desktop to follow
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-[var(--color-text-secondary)]">
-          We are polishing core posing, sketch-to-pose, and account flows before
+          We are polishing our core posing features, such as, sketch-to-pose, and account flows before
           our full release. Join the waitlist to be first in line.
         </p>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">

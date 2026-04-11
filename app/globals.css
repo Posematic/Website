@@ -96,3 +96,24 @@ body {
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   border-left: 3px solid var(--color-brand-purple);
 }
+
+.distortion-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+@keyframes hero-word-cycle-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.18em);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-word-cycle-in {
+  animation: hero-word-cycle-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}

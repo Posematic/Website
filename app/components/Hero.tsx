@@ -1,7 +1,63 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
+import { useEffect, useState } from "react";
 import { HeroBackdrop } from "./HeroBackdrop";
+
+const wordCycle = [
+  "imagination",
+  "vision",
+  "flow",
+  "concepts",
+  "illustrations",
+  "animations",
+] as const;
+
+const WORD_CYCLE_MS = 2800;
+
+function WordCycle({
+  words,
+  intervalMs = WORD_CYCLE_MS,
+  className = "",
+}: {
+  words: readonly string[];
+  intervalMs?: number;
+  className?: string;
+}) {
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    if (words.length <= 1) return;
+    const id = window.setInterval(() => {
+      setIndex((i) => (i + 1) % words.length);
+    }, intervalMs);
+    return () => window.clearInterval(id);
+  }, [words, intervalMs]);
+
+  return (
+    <span
+      className={`relative inline-grid justify-items-start ${className}`}
+      aria-live="polite"
+    >
+      {words.map((w) => (
+        <span
+          key={w}
+          className="invisible col-start-1 row-start-1 whitespace-nowrap select-none"
+          aria-hidden
+        >
+          {w}
+        </span>
+      ))}
+      <span className="col-start-1 row-start-1 z-1 justify-self-start">
+        <span key={index} className="inline-block hero-word-cycle-in text-[var(--color-brand-highlight)]">
+          {words[index] ?? ""}
+        </span>
+      </span>
+    </span>
+  );
+}
 
 export function Hero() {
   return (
@@ -20,7 +76,7 @@ export function Hero() {
         aria-hidden
       />
 
-      <div className="relative z-10 mx-auto flex min-h-[100svh] w-full max-w-7xl flex-col justify-center px-4 pb-16 pt-24 sm:px-8 sm:pb-20 sm:pt-28 lg:px-10 lg:pb-24">
+      <div className="relative z-10 mx-auto flex min-h-[100svh] w-full max-w-7xl flex-col justify-center px-4 pb-16 pt-24 sm:px-8 sm:pb-20 sm:pt-28 lg:px-1 lg:pb-24">
         <div className="max-w-2xl">
           <div className="mb-6 flex items-center gap-3">
             <Image
@@ -36,11 +92,16 @@ export function Hero() {
             </span>
           </div>
           <h1 className="text-balance text-4xl font-semibold leading-[1.12] tracking-tight text-white drop-shadow-sm sm:text-5xl lg:text-[2.75rem]">
-            Posing that keeps up with your creative workflows.
+            Posing that continues to keep up with your {" "}
+            <WordCycle
+              words={wordCycle}
+              className="text-[var(--color-brand-highlight)]"
+            />
           </h1>
           <p className="mt-5 max-w-xl text-lg leading-relaxed text-[var(--color-text-secondary)] drop-shadow-sm">
             A modern posing app for the modern artist — fast anatomy, modern UI,
-            and sketch-to-pose AI that turns rough lines into clear 3D reference.
+            and sketch-to-pose AI that turns rough lines into clear 3D
+            reference.
           </p>
           <div className="mt-9 flex flex-wrap items-center gap-4">
             <a

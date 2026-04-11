@@ -16,7 +16,7 @@ const animationFeatures = [
     icon: Sparkles,
     title: "Sketch to animation",
     description:
-      "Turn rough motion intent into editable timing blocks — built for iteration, not rigging busywork.",
+      "Turn animations into useable reference material — built for iteration, not rigging busywork.",
   },
   {
     icon: Video,
@@ -28,7 +28,7 @@ const animationFeatures = [
     icon: Box,
     title: "Custom rig support",
     description:
-      "Bring your own rigs where it matters — Posematic aims to be the hub, not a walled garden.",
+      "Bring your own rigs where it matters — Posematic aims to provide broad support for all types of rigs.",
   },
 ] as const;
 
@@ -42,39 +42,39 @@ const referenceFeatures: Array<{
     icon: Smile,
     title: "Sketch to facial pose",
     description:
-      "From scribbled expression notes to a readable facial pose you can light and rotate.",
+      "Turn doodles of faces into a readable facial pose you can maniuplate.",
   },
   {
     icon: Camera,
     title: "Image to facial pose",
     description:
-      "Infer facial structure from stills when you need a fast match to a photo or film grab.",
+      "Find the right image to the right expressions. Especially when you need a fast match to a photo.",
   },
   {
     icon: Grid3x3,
     title: "3D perspective grids & live vanishing points",
     description:
-      "Draw with perspective scaffolding that updates as you move the camera.",
+      "Draw with proper perspective that updates as you move the camera.",
   },
   {
     icon: Shirt,
     title: "Cloth physics",
     description:
-      "Draping that reacts to pose changes — rare in reference tools, essential for costume work.",
+      "Draping that reacts to changes in the environment — uncommon in similar tools.",
     highlight: true,
   },
   {
     icon: Wind,
     title: "Hair physics",
     description:
-      "Strand motion that follows head turns — another category gap we are closing for stylists.",
+      "Strand motion that follows head turns and movements — another category we aim to provide.",
     highlight: true,
   },
   {
     icon: Layers,
     title: "Asaro head references",
     description:
-      "Planes you can rotate under studio lighting — fundamentals without the dusty textbook vibe.",
+      "Undertand the human head, providing a reference you can rotate under studio lighting.",
   },
 ];
 
@@ -90,8 +90,8 @@ export function Vision() {
         </h2>
         <p className="mt-4 max-w-3xl text-lg text-[var(--color-text-secondary)]">
           We are building toward a single place illustrators and{" "}
-          <span className="text-white/90">3D animators</span> trust for bodies,
-          faces, cloth, and motion — with physics and perspective tools most
+          <span className="text-white/90">3D animators</span> can trust for references of the body,
+          face, clothing, and much more — with physics and perspective tools most
           competitors simply do not ship.
         </p>
 
