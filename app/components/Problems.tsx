@@ -5,8 +5,8 @@ const problems = [
     icon: Clock,
     title: "Posing takes too long",
     quote:
-      "“Contemprary posing apps are too much time to figure out, when I can get references online.”",
-    attribution: "— Illustrator, digital artist (Stella Wong)",
+      "“Contemporary posing apps take too long to figure out when I can grab references online.”",
+    attribution: "Illustrator, digital artist (Stella Wong)",
     fix: "Posematic cuts iteration time with sketch-first input and controls tuned for speed.",
     variant: "liquid" as const,
   },
@@ -14,9 +14,9 @@ const problems = [
     icon: Cpu,
     title: "Archaic UI/UX",
     quote:
-      "“It feels like software from another decade — dense panels, mystery meat icons.”",
-    attribution: "— Concept artist, games",
-    fix: "We are rebuilding the interface around a modern, bento-clear layout you can actually memorize.",
+      "“It feels like software from another decade: dense panels, mystery-meat icons.”",
+    attribution: "Concept artist, games",
+    fix: "We are rebuilding the interface around a modern, easily readable layout you actually understand.",
     variant: "matte" as const,
   },
   {
@@ -24,8 +24,8 @@ const problems = [
     title: "Terrible anatomy",
     quote:
       "“I wish the models were more accurate, the models lack useful anatomical landmarks.”",
-    attribution: "— Professional Entertainment Artists, freelance (Daniel)",
-    fix: "Anatomy is a core pillar: believable defaults, clearer silhouettes, and honest posing.",
+    attribution: "Professional entertainment artist, freelance (Daniel)",
+    fix: "Anatomy is a core pillar: believable default presets, clearer silhouettes, and physiological posing.",
     variant: "matte" as const,
   },
   {
@@ -33,8 +33,8 @@ const problems = [
     title: "Expensive for professionals and hobbyists",
     quote:
       "“Monthly pricing stings when you are still building an audience.”",
-    attribution: "— Freelance character artist",
-    fix: "Fair tiers with a generous path for students and early supporters — details at launch.",
+    attribution: "Freelance character artist",
+    fix: "Fair tiers with a generous path for students and early supporters. More details to be provided at launch.",
     variant: "liquid" as const,
   },
 ];
@@ -47,8 +47,7 @@ export function Problems() {
           Existing posing apps are broken
         </h2>
         <p className="mt-4 max-w-2xl text-lg text-[var(--color-text-secondary)]">
-          Four friction points we commonly hear — each paired with how we
-          are responding.
+          Four pain points we hear a lot, each with how we aim to tackle these problems.
         </p>
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:gap-6">
           {problems.map((p) => {

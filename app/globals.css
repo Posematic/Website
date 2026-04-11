@@ -3,7 +3,7 @@
 @import "tailwindcss";
 
 @theme inline {
-  /* Slightly lifted from prior values — page reads a touch brighter without losing depth */
+  /* Slightly lifted from prior values; page reads a touch brighter without losing depth */
   --color-bg-deepest: #07051e;
   --color-bg-primary: #0c0c14;
   --color-bg-card-dark: #10101f;
@@ -30,7 +30,7 @@ body {
   font-family: var(--font-sans);
 }
 
-/* Subtle grain overlay — design system */
+/* Subtle grain overlay (design system) */
 .grain::after {
   content: "";
   pointer-events: none;
@@ -41,7 +41,7 @@ body {
 }
 
 /*
- * Icon badge ring — colors from AI/pattern_design.json (Liquid Aurora).
+ * Icon badge ring. Colors from AI/pattern_design.json (Liquid Aurora).
  * violet_bloom + luminance: deep navy → blues → violet → lavender/silver frost (no red/cyan).
  */
 .icon-ring {
@@ -88,7 +88,7 @@ body {
   background: linear-gradient(135deg, #0c0c1c 0%, #16132e 100%);
 }
 
-/* Frosted nav — dark variant from design json */
+/* Frosted nav: dark variant from design json */
 .nav-frosted {
   background: rgba(16, 16, 32, 0.62);
   backdrop-filter: blur(20px) saturate(180%);

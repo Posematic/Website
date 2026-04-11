@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { LucideIcon } from "lucide-react";
 import { Github, Linkedin } from "lucide-react";
 
-/** X (formerly Twitter) wordmark — filled mark reads clearly at small sizes */
+/** X (formerly Twitter) wordmark; filled mark reads clearly at small sizes */
 function XLogo({ className }: { className?: string }) {
   return (
     <svg

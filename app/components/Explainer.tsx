@@ -7,7 +7,7 @@ export function Explainer() {
             What is a posing app?
           </h2>
           <p className="mt-5 text-lg leading-relaxed text-[var(--color-text-secondary)]">
-            A posing app lets you position a 3D figure — limbs, torso, camera —
+            A posing app lets you position a 3D figure (limbs, torso, camera)
             so you can light, frame, and capture reference for illustration or
             animation. It is the bridge between &ldquo;I know what I want to
             draw&rdquo; and &ldquo;I can see it clearly enough to commit ink to

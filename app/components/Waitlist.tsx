@@ -38,12 +38,11 @@ export function Waitlist() {
       <div className="grain relative mx-auto max-w-4xl overflow-hidden rounded-[28px] border border-[var(--color-border-subtle)] p-10 sm:p-14 surface-liquid shadow-[0_20px_60px_rgba(10,5,40,0.5)]">
         <div className="relative z-[1] text-center">
           <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-            Get Posematic Pro free for one month — for life
+            Get Posematic Pro free for one month, for life
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-[var(--color-text-secondary)]">
-            Sign up for the waitlist and lock in a founding supporter perk when
-            we ship. Early access builds, roadmap previews, and a direct line to
-            the team.
+            Sign up for the waitlist and recieve an early supporter perk when
+            we ship our app. Harness Posematic the way its meant to be used.
           </p>
           <form
             className="mx-auto mt-10 flex max-w-lg flex-col gap-3 sm:flex-row sm:items-stretch"
@@ -95,7 +94,7 @@ export function Waitlist() {
             </p>
           ) : (
             <p className="mt-4 text-sm text-[var(--color-text-tertiary)]">
-              No spam — we email sparingly and you can unsubscribe anytime.
+              No spam. We email sparingly and you can unsubscribe anytime.
             </p>
           )}
         </div>

@@ -7,12 +7,12 @@ import { useEffect, useState } from "react";
 import { HeroBackdrop } from "./HeroBackdrop";
 
 const wordCycle = [
-  "imagination",
-  "vision",
-  "flow",
-  "concepts",
-  "illustrations",
-  "animations",
+  "imagination.",
+  "vision.",
+  "artwork.",
+  "concepts.",
+  "illustrations.",
+  "animations.",
 ] as const;
 
 const WORD_CYCLE_MS = 2800;
@@ -99,7 +99,7 @@ export function Hero() {
             />
           </h1>
           <p className="mt-5 max-w-xl text-lg leading-relaxed text-[var(--color-text-secondary)] drop-shadow-sm">
-            A modern posing app for the modern artist — fast anatomy, modern UI,
+            A modern posing app for the modern artist: fast anatomy, modern UI,
             and sketch-to-pose AI that turns rough lines into clear 3D
             reference.
           </p>

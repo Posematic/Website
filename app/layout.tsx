@@ -9,7 +9,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Posematic — Next-generation posing app for artists",
+  title: "Posematic · Next-generation posing app for artists",
   description:
     "Sketch-to-pose AI and a modern posing workflow built for illustrators, animators, and every artist who needs reference fast.",
 };

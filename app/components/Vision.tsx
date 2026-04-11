@@ -16,19 +16,19 @@ const animationFeatures = [
     icon: Sparkles,
     title: "Sketch to animation",
     description:
-      "Turn animations into useable reference material — built for iteration, not rigging busywork.",
+      "Turn animations into useable reference material. We aim for fast previews and iteration.",
   },
   {
     icon: Video,
     title: "Video to animation",
     description:
-      "Lift motion from reference and retarget onto your characters with controls that stay honest.",
+      "Take motion videos and convert it into reliable poses, animated and all.",
   },
   {
     icon: Box,
     title: "Custom rig support",
     description:
-      "Bring your own rigs where it matters — Posematic aims to provide broad support for all types of rigs.",
+      "Bring your own rigs where it matters. We aim to support a wide range of rig types.",
   },
 ] as const;
 
@@ -42,7 +42,7 @@ const referenceFeatures: Array<{
     icon: Smile,
     title: "Sketch to facial pose",
     description:
-      "Turn doodles of faces into a readable facial pose you can maniuplate.",
+      "Turn doodles of faces into a readable adn accurate facial pose you can maniuplate.",
   },
   {
     icon: Camera,
@@ -60,14 +60,14 @@ const referenceFeatures: Array<{
     icon: Shirt,
     title: "Cloth physics",
     description:
-      "Draping that reacts to changes in the environment — uncommon in similar tools.",
+      "Draping that reacts to changes in the environment. Uncommon in similar tools.",
     highlight: true,
   },
   {
     icon: Wind,
     title: "Hair physics",
     description:
-      "Strand motion that follows head turns and movements — another category we aim to provide.",
+      "Strand motion that follows head turns and movements. Another area we want to nail.",
     highlight: true,
   },
   {
@@ -86,12 +86,15 @@ export function Vision() {
     >
       <div className="mx-auto max-w-7xl">
         <h2 className="max-w-3xl text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-          More than a posing app — the definitive reference hub for every artist
+          More than a posing app: a reference hub built for every artist
         </h2>
         <p className="mt-4 max-w-3xl text-lg text-[var(--color-text-secondary)]">
-          We are building toward a single place illustrators and{" "}
-          <span className="text-white/90">3D animators</span> can trust for references of the body,
-          face, clothing, and much more — with physics and perspective tools most
+          We are building toward a single place where creatives{" "}
+          {/* {" "}
+          <span className="text-white/90">3D animators</span>   
+          */}        
+          can trust their references of the body, 
+          face, clothing, and more, plus physics and perspective tools most
           competitors simply do not ship.
         </p>
 
@@ -160,7 +163,7 @@ export function Vision() {
                       </h4>
                       {f.highlight ? (
                         <span className="rounded-full bg-white/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-[var(--color-brand-highlight)]">
-                          Rare
+                          Uncommon
                         </span>
                       ) : null}
                     </div>

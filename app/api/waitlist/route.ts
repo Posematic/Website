@@ -5,7 +5,7 @@ type Body = {
 };
 
 /**
- * Stub endpoint — replace with email capture (Resend, Loops, Supabase, etc.).
+ * Stub endpoint. Replace with email capture (Resend, Loops, Supabase, etc.).
  */
 export async function POST(request: Request) {
   let body: Body;

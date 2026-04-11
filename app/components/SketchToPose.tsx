@@ -32,11 +32,11 @@ export function SketchToPose() {
             Flagship
           </div>
           <h2 className="max-w-3xl text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-            Sketch to pose — powered by machine learning and advanced algorithms.
+            Sketch to pose, powered by machine learning and proven algorithms.
           </h2>
           <p className="mt-4 max-w-2xl text-lg text-[var(--color-text-secondary)]">
             We are empowering the next generation of posing apps: go from a
-            scribble to a believable pose, then keep iterating without leaving
+            sketch to a believable pose, then keep iterating without disrupting
             your creative flow.
           </p>
 
@@ -121,7 +121,7 @@ export function SketchToPose() {
             </div>
           </div>
           <p className="mt-10 text-center text-sm text-white/50 md:text-left">
-            Placeholder frames — swap with production captures when ready.
+            Placeholder frames. Swap in production captures when ready.
           </p>
         </div>
       </div>

@@ -13,7 +13,7 @@ const team: TeamMember[] = [
   {
     name: "Craig Mellor",
     role: "Co-founder",
-    bio: "Former graphics tools PM; obsessed with creative workflows that respect artists' time.",
+    bio: "AI @ CMU.",
     imageSrc: "/images/team-placeholder.svg",
     imageAlt: "Portrait placeholder for Alex Rivera",
     founder: true,
@@ -21,7 +21,7 @@ const team: TeamMember[] = [
   {
     name: "Daniel Yang",
     role: "Co-founder",
-    bio: "ML systems and real-time 3D — building Posematic's sketch-to-pose brain.",
+    bio: "CS @ UMD College Park, involved in developing visualization systems for Posematic's model-backend, app front-end, system design, and design lead.",
     imageSrc: "/images/team-placeholder.svg",
     imageAlt: "Portrait placeholder for Jordan Lee",
     founder: true,
@@ -29,21 +29,21 @@ const team: TeamMember[] = [
   {
     name: "Ritvik Gupta",
     role: "Co-founder",
-    bio: "Interfaces for pro tools; previously shipped design systems for creative software.",
+    bio: "Visiting AI student @ CMU.",
     imageSrc: "/images/team-placeholder.svg",
     imageAlt: "Portrait placeholder for Sam Okonkwo",
   },
   {
     name: "Nicholas \"Nick\" Mino",
     role: "Co-founder",
-    bio: "Character TD and anatomy nerd — making poses that hold up under scrutiny.",
+    bio: "AI @ CMU.",
     imageSrc: "/images/team-placeholder.svg",
     imageAlt: "Portrait placeholder for Morgan Chen",
   },
   {
     name: "Ivan G.",
     role: "Lead Engineer",
-    bio: "Performance, rendering, and the glue between ML and interactive 3D.",
+    bio: "AI @ CMU.",
     imageSrc: "/images/team-placeholder.svg",
     imageAlt: "Portrait placeholder for Riley Patel",
   },
@@ -60,7 +60,7 @@ function MemberCard({
     <article
       className={`flex flex-col overflow-hidden rounded-2xl border border-[var(--color-border-subtle)] surface-matte shadow-[0_20px_60px_rgba(10,5,40,0.35)] ${className}`}
     >
-      {/* Smaller, equal portrait frames — width-capped so all match */}
+      {/* Smaller, equal portrait frames; width-capped so all match */}
       <div className="flex justify-center px-4 pt-5 sm:px-5 sm:pt-6">
         <div className="relative aspect-[3/4] w-full max-w-[148px] overflow-hidden rounded-xl bg-gradient-to-b from-[#1a1535] to-[var(--color-bg-card-dark)] sm:max-w-[168px]">
           <Image
@@ -101,13 +101,13 @@ export function Team() {
           Team
         </h2>
         <p className="mt-4 max-w-2xl text-lg text-[var(--color-text-secondary)]">
-          Developers who care about the craft as much as the code — with backgrounds
-          in graphics, ML, and real-time 3D. A small team, a focused roadmap: Posematic.
+          Developers who care about the craft as much as the code, with backgrounds
+          in graphics, ML, and real-time 3D. We're a small team, but with a focused roadmap: Posematic.
         </p>
 
         {/*
           Balanced 3 + 2: six-column grid, three cards on row one (span 2 each),
-          two cards centered on row two (span 2, starts 2 and 4) — equal widths.
+          two cards centered on row two (span 2, starts 2 and 4), equal widths.
         */}
         <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-6 sm:gap-6">
           {row1.map((member) => (
@@ -129,6 +129,11 @@ export function Team() {
             />
           ))}
         </div>
+        {/* <header className="justifyContent-center">
+          <p className="mt-4 max-w-2xl text-sm text-[var(--color-text-secondary)]">
+            Disclaimer: Order is of when each individual joined the project
+          </p>
+        </header> */}
       </div>
     </section>
   );

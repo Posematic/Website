@@ -8,7 +8,7 @@ export function HeroBackdrop() {
         <GridDistortion
           imageSrc="/images/937_1x_shots_so.png"
           grid={200}
-          mouse={0.10}
+          mouse={0.15}
           strength={0.15}
           relaxation={0.9}
         />

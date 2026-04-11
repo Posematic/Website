@@ -8,7 +8,7 @@ export function ComingSoon() {
           Coming soon
         </p>
         <h2 className="mt-3 text-2xl font-semibold tracking-tight text-white sm:text-3xl">
-          Launching on mobile first — desktop to follow
+          Mobile first, then desktop
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-[var(--color-text-secondary)]">
           We are polishing our core posing features, such as, sketch-to-pose, and account flows before
