@@ -35,7 +35,7 @@ const team: TeamMember[] = [
     founder: true,
   },
   {
-    name: "Nicholas \"Nick\" Mino",
+    name: "Nicholas Mino",
     role: "Co-founder",
     bio: "AI @ CMU. Co-founder of Posematic, building core ML systems, production inference, frontend, authentication, and the interactive 3D editor, while helping drive product design and business strategy.",
     imageSrc: "/images/nmino_headshot.jpg",
