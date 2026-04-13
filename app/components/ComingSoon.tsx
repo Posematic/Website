@@ -12,7 +12,8 @@ export function ComingSoon() {
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-[var(--color-text-secondary)]">
           We are polishing our core posing features, such as, sketch-to-pose, and account flows before
-          our full release. Join the waitlist to access Posematic as soon as it drops. 
+          our full release. Get early access so you can try Posematic as soon as
+          it drops. 
         </p>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
           <button

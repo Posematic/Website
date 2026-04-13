@@ -108,10 +108,10 @@ export function Hero() {
               href="#waitlist"
               className="inline-flex items-center gap-2 rounded-lg bg-[var(--color-brand-purple)] px-6 py-3.5 text-[15px] font-medium text-white shadow-[0_12px_40px_rgba(75,59,255,0.35)] transition hover:bg-[var(--color-brand-violet)]"
             >
-              Join the Waitlist
+              Get early access
               <ChevronRight className="h-4 w-4" strokeWidth={2} aria-hidden />
             </a>
-            <Link
+            {/* <Link
               href="#product"
               className="inline-flex items-center gap-1.5 text-[15px] font-medium text-white transition hover:text-white/95"
             >
@@ -119,7 +119,7 @@ export function Hero() {
               <span className="text-[var(--color-brand-highlight)]" aria-hidden>
                 ›
               </span>
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>

@@ -9,7 +9,6 @@ const links = [
   { href: "#mission", label: "Mission" },
   { href: "#product", label: "Product" },
   { href: "#team", label: "Team" },
-  // { href: "#waitlist", label: "Waitlist" },
 ] as const;
 
 export function Nav() {
@@ -65,10 +64,10 @@ export function Nav() {
 
           <div className="flex shrink-0 items-center gap-2 sm:gap-3">
             <a
-              href="#product"
+              href="#waitlist"
               className="hidden rounded-md border border-white/20 bg-white/6 px-5 py-2.5 text-[15px] font-medium text-white/90 transition-colors hover:border-white/30 hover:bg-white/10 sm:inline-flex"
             >
-              Join Waitlist
+              Get early access
             </a>
             <button
               type="button"
@@ -112,7 +111,7 @@ export function Nav() {
                   className="block rounded-xl px-4 py-3 text-center text-[15px] font-medium text-white"
                   onClick={() => setOpen(false)}
                 >
-                  Join Waitlist
+                  Get early access
                 </a>
               </li>
             </ul>

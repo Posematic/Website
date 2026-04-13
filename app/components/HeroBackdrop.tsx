@@ -7,7 +7,7 @@ export function HeroBackdrop() {
       <div className="absolute inset-0 z-0 min-h-0" aria-hidden>
         <GridDistortion
           imageSrc="/images/937_1x_shots_so.png"
-          grid={200}
+          grid={25}
           mouse={0.15}
           strength={0.15}
           relaxation={0.9}

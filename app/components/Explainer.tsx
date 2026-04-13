@@ -1,3 +1,10 @@
+import Image from "next/image";
+
+const POSING_DEMO = {
+  src: "/images/app_posing_posematic.gif",
+  alt: "3D mannequin with pose markers transitioning from T-pose to a dynamic pose on a grid",
+} as const;
+
 export function Explainer() {
   return (
     <section className="relative px-4 py-16 sm:px-6 lg:px-10 lg:py-24">
@@ -19,27 +26,19 @@ export function Explainer() {
             actually work.
           </p>
         </div>
-        <div className="grid gap-4 sm:grid-cols-2">
-          <div
-            className="relative flex aspect-[3/4] flex-col justify-end overflow-hidden rounded-2xl border border-[var(--color-border-subtle)] bg-gradient-to-b from-[#12122a] to-[#0a0a18] p-5 surface-matte"
-            role="img"
-            aria-label="Placeholder: 3D figure in a neutral standing pose for artist reference"
-          >
-            <div className="mx-auto mb-6 h-40 w-24 rounded-lg bg-gradient-to-t from-white/10 to-white/5" />
-            <p className="text-center text-xs font-medium uppercase tracking-wider text-white/40">
-              Neutral pose
-            </p>
-          </div>
-          <div
-            className="relative flex aspect-[3/4] flex-col justify-end overflow-hidden rounded-2xl border border-[var(--color-border-subtle)] bg-gradient-to-b from-[#12122a] to-[#0a0a18] p-5 surface-matte sm:mt-8"
-            role="img"
-            aria-label="Placeholder: 3D figure in a dynamic action pose for artist reference"
-          >
-            <div className="mx-auto mb-6 h-36 w-28 rotate-6 rounded-lg bg-gradient-to-t from-[var(--color-brand-violet)]/30 to-white/5" />
-            <p className="text-center text-xs font-medium uppercase tracking-wider text-white/40">
-              Action pose
-            </p>
-          </div>
+        <div
+          className="relative aspect-[4/3] w-full min-w-0 overflow-hidden rounded-2xl border border-[var(--color-border-subtle)] bg-gradient-to-b from-[#12122a] to-[#0a0a18] surface-matte"
+          role="img"
+          aria-label={POSING_DEMO.alt}
+        >
+          <Image
+            src={POSING_DEMO.src}
+            alt={POSING_DEMO.alt}
+            fill
+            unoptimized
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            className="object-cover"
+          />
         </div>
       </div>
     </section>

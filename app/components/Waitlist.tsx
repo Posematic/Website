@@ -22,7 +22,7 @@ export function Waitlist() {
       });
       if (!res.ok) throw new Error("Request failed");
       setState("success");
-      setMessage("You are on the list. Watch your inbox for early access.");
+      setMessage("You're registered. We'll let you know when early access opens.");
       setEmail("");
     } catch {
       setState("error");
@@ -41,8 +41,8 @@ export function Waitlist() {
             Get Posematic Pro free for one month, for life
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-[var(--color-text-secondary)]">
-            Sign up for the waitlist and recieve an early supporter perk when
-            we ship our app. Harness Posematic the way its meant to be used.
+            Reserve your spot for an early supporter perk when we ship. Use
+            Posematic the way it is meant to be used.
           </p>
           <form
             className="mx-auto mt-10 flex max-w-lg flex-col gap-3 sm:flex-row sm:items-stretch"
@@ -76,10 +76,10 @@ export function Waitlist() {
               ) : state === "success" ? (
                 <>
                   <Check className="h-4 w-4" aria-hidden />
-                  Joined
+                  You&apos;re in
                 </>
               ) : (
-                "Join waitlist"
+                "Get early access"
               )}
             </button>
           </form>
@@ -94,7 +94,8 @@ export function Waitlist() {
             </p>
           ) : (
             <p className="mt-4 text-sm text-[var(--color-text-tertiary)]">
-              No spam. We email sparingly and you can unsubscribe anytime.
+              We only use your email for launch updates and this perk—not a
+              newsletter.
             </p>
           )}
         </div>

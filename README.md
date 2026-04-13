@@ -6,5 +6,5 @@ Mock website for VC meeting. Can potentially be expanded to be used as an landin
 1. Mission
 2. Product
 3. Team
-4. Waitlist
+4. Early access
 

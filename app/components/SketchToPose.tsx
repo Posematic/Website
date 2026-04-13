@@ -1,21 +1,25 @@
 import { Fragment } from "react";
+import Image from "next/image";
 import { ArrowDown, ArrowRight, Sparkles } from "lucide-react";
 
 const stages = [
   {
     title: "Sketch",
     caption: "Rough lines, fast intent",
-    alt: "Placeholder: rough sketch of a figure pose",
+    src: "/images/sketch1.jpg",
+    alt: "Rough ink sketch of a figure in a high side kick pose",
   },
   {
     title: "Pose",
     caption: "ML lifts it into 3D",
-    alt: "Placeholder: 3D pose extracted from sketch",
+    src: "/images/model1.png",
+    alt: "3D mannequin posed to match the sketch",
   },
   {
     title: "Final",
     caption: "Draw with real reference",
-    alt: "Placeholder: finished illustration using pose reference",
+    src: "/images/finalimage.png",
+    alt: "Sketch with 3D model aligned for reference",
   },
 ] as const;
 
@@ -46,13 +50,17 @@ export function SketchToPose() {
               <Fragment key={stage.title}>
                 <div className="flex w-full max-w-[280px] flex-col items-center text-center">
                   <div
-                    className="relative mb-4 flex aspect-[4/5] w-full items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-[var(--color-bg-card-dark)] to-[#1a1040]"
+                    className="relative mb-4 aspect-[4/5] w-full overflow-hidden rounded-2xl border border-white/10 bg-[var(--color-bg-card-dark)]"
                     role="img"
                     aria-label={stage.alt}
                   >
-                    <span className="text-xs font-medium uppercase tracking-widest text-white/35">
-                      {stage.title}
-                    </span>
+                    <Image
+                      src={stage.src}
+                      alt={stage.alt}
+                      fill
+                      sizes="(max-width: 768px) 280px, 290px"
+                      className="object-cover"
+                    />
                   </div>
                   <h3 className="text-lg font-semibold text-white">
                     {stage.title}
@@ -79,13 +87,17 @@ export function SketchToPose() {
                 <Fragment key={`box-${stage.title}`}>
                   <div className={STAGE_COL}>
                     <div
-                      className="relative flex aspect-[4/5] w-full items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-[var(--color-bg-card-dark)] to-[#1a1040]"
+                      className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl border border-white/10 bg-[var(--color-bg-card-dark)]"
                       role="img"
                       aria-label={stage.alt}
                     >
-                      <span className="text-xs font-medium uppercase tracking-widest text-white/35">
-                        {stage.title}
-                      </span>
+                      <Image
+                        src={stage.src}
+                        alt={stage.alt}
+                        fill
+                        sizes="(max-width: 768px) 280px, 290px"
+                        className="object-cover"
+                      />
                     </div>
                   </div>
                   {i < stages.length - 1 ? (
@@ -120,9 +132,6 @@ export function SketchToPose() {
               ))}
             </div>
           </div>
-          <p className="mt-10 text-center text-sm text-white/50 md:text-left">
-            Placeholder frames. Swap in production captures when ready.
-          </p>
         </div>
       </div>
     </section>

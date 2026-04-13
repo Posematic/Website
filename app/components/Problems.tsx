@@ -5,8 +5,8 @@ const problems = [
     icon: Clock,
     title: "Posing takes too long",
     quote:
-      "“Contemporary posing apps take too long to figure out when I can grab references online.”",
-    attribution: "Illustrator, digital artist (Stella Wong)",
+      "Posing apps take too long to figure out when I can grab references online.”",
+    attribution: "Illustrator, Digital Artist",
     fix: "Posematic cuts iteration time with sketch-first input and controls tuned for speed.",
     variant: "liquid" as const,
   },
@@ -14,8 +14,8 @@ const problems = [
     icon: Cpu,
     title: "Archaic UI/UX",
     quote:
-      "“It feels like software from another decade: dense panels, mystery-meat icons.”",
-    attribution: "Concept artist, games",
+      "“It’s easy to start, but once you need more control, the UI gets confusing and unintuitive.”",
+    attribution: "Casual Artist, Hobbyist",
     fix: "We are rebuilding the interface around a modern, easily readable layout you actually understand.",
     variant: "matte" as const,
   },
@@ -24,7 +24,7 @@ const problems = [
     title: "Terrible anatomy",
     quote:
       "“I wish the models were more accurate, the models lack useful anatomical landmarks.”",
-    attribution: "Professional entertainment artist, freelance (Daniel)",
+    attribution: "Professional entertainment artist, Freelance",
     fix: "Anatomy is a core pillar: believable default presets, clearer silhouettes, and physiological posing.",
     variant: "matte" as const,
   },
@@ -32,8 +32,8 @@ const problems = [
     icon: DollarSign,
     title: "Expensive for professionals and hobbyists",
     quote:
-      "“Monthly pricing stings when you are still building an audience.”",
-    attribution: "Freelance character artist",
+      "“A lot of the features I need are locked behind paywalls, and they’re just too expensive.”",
+    attribution: "From many artists interviewed",
     fix: "Fair tiers with a generous path for students and early supporters. More details to be provided at launch.",
     variant: "liquid" as const,
   },
