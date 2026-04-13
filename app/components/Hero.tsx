@@ -77,12 +77,12 @@ export function Hero() {
       />
 
       <div
-        className={`relative z-10 flex min-h-[100svh] w-full flex-col justify-start pb-16 pt-24 max-md:gap-6 sm:pb-20 sm:pt-28 md:justify-center lg:pb-24 ${PAGE_MAX} ${PAGE_EDGE}`}
+        className={`relative z-10 flex min-h-[100svh] w-full flex-col justify-start gap-6 pb-16 pt-24 sm:gap-7 sm:pb-20 sm:pt-28 lg:justify-center lg:gap-0 lg:pb-24 ${PAGE_MAX} ${PAGE_EDGE}`}
       >
-        {/* Mobile: in-flow mockup so text never sits under absolute artwork */}
+        {/* Stacked mockup: phone + tablet (below lg) — same column as nav; no overlap */}
         
 
-        <div className="flex w-full min-w-0 max-w-2xl flex-col items-start text-left">
+        <div className="flex w-full min-w-0 max-w-2xl flex-col items-start text-left lg:max-w-[min(36rem,calc(100%-2rem))] xl:max-w-2xl">
           <div className="mb-5 flex w-full min-w-0 items-center justify-start gap-2.5 self-start sm:mb-6 sm:gap-3">
             <Image
               src="/images/posematic-default-profile-logo.svg"
@@ -97,7 +97,7 @@ export function Hero() {
             </span>
           </div>
           <h1 className="w-full min-w-0 text-pretty text-[clamp(1.3125rem,4vw+0.5rem,2.05rem)] font-semibold leading-snug tracking-tight text-white drop-shadow-sm sm:text-4xl sm:leading-[1.18] md:text-5xl md:leading-[1.14] lg:text-[2.75rem] lg:leading-[1.12]">
-            Posing that continues to keep up with your&nbsp;
+            Posing that keeps up with your&nbsp;
             <WordCycle
               words={wordCycle}
               className="text-[var(--color-brand-highlight)]"
@@ -126,16 +126,16 @@ export function Hero() {
               </span>
             </Link> */}
           </div>
-          <div className="relative mx-auto h-[min(40svh,360px)] w-full max-w-[min(92vw,380px)] shrink-0 md:hidden">
-          <Image
+          <div className="relative mx-auto h-[min(40svh,360px)] w-full max-w-[min(92vw,420px)] shrink-0 md:h-[min(44svh,420px)] md:max-w-[min(94vw,540px)] lg:hidden">
+            <Image
               src="/images/823_1x_shots_so.png"
               alt="Posematic app on two tablets: Scenes library and Profile with bento-style settings"
               fill
-              className="origin-top scale-[1.1] object-contain object-center brightness-[1.06] drop-shadow-[0_24px_80px_rgba(0,0,0,0.45)]"
-              sizes="92vw"
+              className="origin-top scale-[1.1] object-contain object-center brightness-[1.06] drop-shadow-[0_24px_80px_rgba(0,0,0,0.45)] md:scale-[1.2]"
+              sizes="(max-width: 1023px) 92vw, 0"
               priority
             />
-        </div>
+          </div>
         </div>
       </div>
     </section>
