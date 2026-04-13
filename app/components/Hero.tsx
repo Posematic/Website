@@ -77,11 +77,8 @@ export function Hero() {
       />
 
       <div
-        className={`relative z-10 flex min-h-[100svh] w-full flex-col justify-start gap-6 pb-16 pt-24 sm:gap-7 sm:pb-20 sm:pt-28 lg:justify-center lg:gap-0 lg:pb-24 ${PAGE_MAX} ${PAGE_EDGE}`}
+        className={`relative z-10 flex min-h-[100svh] w-full flex-col justify-start gap-3 pb-16 pt-24 sm:pb-20 sm:pt-28 lg:justify-center lg:gap-0 lg:pb-24 ${PAGE_MAX} ${PAGE_EDGE}`}
       >
-        {/* Stacked mockup: phone + tablet (below lg) — same column as nav; no overlap */}
-        
-
         <div className="flex w-full min-w-0 max-w-2xl flex-col items-start text-left lg:max-w-[min(36rem,calc(100%-2rem))] xl:max-w-2xl">
           <div className="mb-5 flex w-full min-w-0 items-center justify-start gap-2.5 self-start sm:mb-6 sm:gap-3">
             <Image
@@ -126,7 +123,10 @@ export function Hero() {
               </span>
             </Link> */}
           </div>
-          <div className="relative mx-auto h-[min(40svh,360px)] w-full max-w-[min(92vw,420px)] shrink-0 md:h-[min(44svh,420px)] md:max-w-[min(94vw,540px)] lg:hidden">
+        </div>
+
+        <div className="flex w-full justify-center lg:hidden">
+          <div className="relative h-[min(40svh,360px)] w-[min(92vw,420px)] max-w-full shrink-0 md:h-[min(40svh,420px)] md:w-[min(94vw,540px)]">
             <Image
               src="/images/823_1x_shots_so.png"
               alt="Posematic app on two tablets: Scenes library and Profile with bento-style settings"

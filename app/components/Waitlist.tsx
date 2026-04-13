@@ -39,7 +39,7 @@ export function Waitlist() {
       <div className="grain relative mx-auto w-full max-w-4xl overflow-hidden rounded-[28px] border border-[var(--color-border-subtle)] p-10 sm:p-14 surface-liquid shadow-[0_20px_60px_rgba(10,5,40,0.5)]">
         <div className="relative z-[1] text-center">
           <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-            Get Posematic Pro free for one month, for life
+            Get notified when we launch
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-[var(--color-text-secondary)]">
             Reserve your spot for an early supporter perk when we ship. Use
