@@ -76,9 +76,21 @@ export function Hero() {
         aria-hidden
       />
 
-      <div className="relative z-10 mx-auto flex min-h-[100svh] w-full max-w-7xl flex-col justify-center px-4 pb-16 pt-24 sm:px-8 sm:pb-20 sm:pt-28 lg:px-1 lg:pb-24">
-        <div className="max-w-2xl">
-          <div className="mb-6 flex items-center gap-3">
+      <div className="relative z-10 mx-auto flex min-h-[100svh] w-full max-w-7xl flex-col justify-start px-4 pb-16 pt-24 max-md:gap-6 sm:px-8 sm:pb-20 sm:pt-28 md:justify-center lg:px-8 lg:pb-24">
+        {/* Mobile: in-flow mockup so text never sits under absolute artwork */}
+        <div className="relative mx-auto h-[min(38svh,300px)] w-full max-w-[min(92vw,380px)] shrink-0 md:hidden">
+          <Image
+              src="/images/823_1x_shots_so.png"
+              alt="Posematic app on two tablets: Scenes library and Profile with bento-style settings"
+              fill
+              className="object-contain object-center brightness-[1.06] drop-shadow-[0_24px_80px_rgba(0,0,0,0.45)]"
+              sizes="92vw"
+              priority
+            />
+        </div>
+
+        <div className="flex w-full max-w-2xl flex-col items-start text-left">
+          <div className="mb-6 flex w-full items-center justify-start gap-3 self-start">
             <Image
               src="/images/posematic-default-profile-logo.svg"
               alt=""
@@ -103,7 +115,7 @@ export function Hero() {
             and sketch-to-pose AI that turns rough lines into clear 3D
             reference.
           </p>
-          <div className="mt-9 flex flex-wrap items-center gap-4">
+          <div className="mt-9 flex flex-wrap items-center justify-start gap-4">
             <a
               href="#waitlist"
               className="inline-flex items-center gap-2 rounded-lg bg-[var(--color-brand-purple)] px-6 py-3.5 text-[15px] font-medium text-white shadow-[0_12px_40px_rgba(75,59,255,0.35)] transition hover:bg-[var(--color-brand-violet)]"
