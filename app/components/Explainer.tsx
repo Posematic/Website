@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { PAGE_EDGE, PAGE_MAX } from "@/app/lib/pageLayout";
 
 const POSING_DEMO = {
   src: "/images/app_posing_posematic.gif",
@@ -7,8 +8,10 @@ const POSING_DEMO = {
 
 export function Explainer() {
   return (
-    <section className="relative px-4 py-16 sm:px-6 lg:px-10 lg:py-24">
-      <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
+    <section className={`relative py-16 lg:py-24 ${PAGE_EDGE}`}>
+      <div
+        className={`grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-16 ${PAGE_MAX}`}
+      >
         <div>
           <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
             What is a posing app?

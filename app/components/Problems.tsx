@@ -1,4 +1,5 @@
 import { Clock, Cpu, DollarSign, UserX } from "lucide-react";
+import { PAGE_EDGE, PAGE_MAX } from "@/app/lib/pageLayout";
 
 const problems = [
   {
@@ -41,8 +42,8 @@ const problems = [
 
 export function Problems() {
   return (
-    <section className="relative px-4 py-16 sm:px-6 lg:px-10 lg:py-24">
-      <div className="mx-auto max-w-7xl">
+    <section className={`relative py-16 lg:py-24 ${PAGE_EDGE}`}>
+      <div className={PAGE_MAX}>
         <h2 className="max-w-2xl text-3xl font-semibold tracking-tight text-white sm:text-4xl">
           Existing posing apps are broken
         </h2>

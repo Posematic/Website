@@ -1,9 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import { useEffect, useState } from "react";
+import { PAGE_EDGE, PAGE_MAX } from "@/app/lib/pageLayout";
 import { HeroBackdrop } from "./HeroBackdrop";
 
 const wordCycle = [
@@ -38,7 +38,7 @@ function WordCycle({
 
   return (
     <span
-      className={`relative inline-grid justify-items-start ${className}`}
+      className={`relative inline-grid min-w-0 max-w-full justify-items-start [word-break:break-word] ${className}`}
       aria-live="polite"
     >
       {words.map((w) => (
@@ -50,8 +50,8 @@ function WordCycle({
           {w}
         </span>
       ))}
-      <span className="col-start-1 row-start-1 z-1 justify-self-start">
-        <span key={index} className="inline-block hero-word-cycle-in text-[var(--color-brand-highlight)]">
+      <span className="col-start-1 row-start-1 z-1 min-w-0 max-w-full justify-self-start">
+        <span key={index} className="inline-block max-w-full break-words hero-word-cycle-in text-[var(--color-brand-highlight)]">
           {words[index] ?? ""}
         </span>
       </span>
@@ -76,37 +76,42 @@ export function Hero() {
         aria-hidden
       />
 
-      <div className="relative z-10 mx-auto flex min-h-[100svh] w-full max-w-7xl flex-col justify-center px-4 pb-16 pt-24 sm:px-8 sm:pb-20 sm:pt-28 lg:px-1 lg:pb-24">
-        <div className="max-w-2xl">
-          <div className="mb-6 flex items-center gap-3">
+      <div
+        className={`relative z-10 flex min-h-[100svh] w-full flex-col justify-start pb-16 pt-24 max-md:gap-6 sm:pb-20 sm:pt-28 md:justify-center lg:pb-24 ${PAGE_MAX} ${PAGE_EDGE}`}
+      >
+        {/* Mobile: in-flow mockup so text never sits under absolute artwork */}
+        
+
+        <div className="flex w-full min-w-0 max-w-2xl flex-col items-start text-left">
+          <div className="mb-5 flex w-full min-w-0 items-center justify-start gap-2.5 self-start sm:mb-6 sm:gap-3">
             <Image
               src="/images/posematic-default-profile-logo.svg"
               alt=""
               width={40}
               height={40}
-              className="h-10 w-10 drop-shadow-md"
+              className="h-9 w-9 shrink-0 drop-shadow-md sm:h-10 sm:w-10"
               aria-hidden
             />
-            <span className="text-2xl font-semibold tracking-tight text-white drop-shadow-md sm:text-[26px]">
+            <span className="text-xl font-semibold tracking-tight text-white drop-shadow-md sm:text-[26px]">
               Posematic
             </span>
           </div>
-          <h1 className="text-balance text-4xl font-semibold leading-[1.12] tracking-tight text-white drop-shadow-sm sm:text-5xl lg:text-[2.75rem]">
-            Posing that continues to keep up with your {" "}
+          <h1 className="w-full min-w-0 text-pretty text-[clamp(1.3125rem,4vw+0.5rem,2.05rem)] font-semibold leading-snug tracking-tight text-white drop-shadow-sm sm:text-4xl sm:leading-[1.18] md:text-5xl md:leading-[1.14] lg:text-[2.75rem] lg:leading-[1.12]">
+            Posing that continues to keep up with your&nbsp;
             <WordCycle
               words={wordCycle}
               className="text-[var(--color-brand-highlight)]"
             />
           </h1>
-          <p className="mt-5 max-w-xl text-lg leading-relaxed text-[var(--color-text-secondary)] drop-shadow-sm">
+          <p className="mt-4 max-w-xl text-sm leading-relaxed text-[var(--color-text-secondary)] drop-shadow-sm sm:mt-5 sm:text-base md:text-lg">
             A modern posing app for the modern artist: fast anatomy, modern UI,
             and sketch-to-pose AI that turns rough lines into clear 3D
             reference.
           </p>
-          <div className="mt-9 flex flex-wrap items-center gap-4">
+          <div className="mt-8 flex w-full min-w-0 flex-wrap items-center justify-start gap-3 sm:mt-9 sm:gap-4">
             <a
               href="#waitlist"
-              className="inline-flex items-center gap-2 rounded-lg bg-[var(--color-brand-purple)] px-6 py-3.5 text-[15px] font-medium text-white shadow-[0_12px_40px_rgba(75,59,255,0.35)] transition hover:bg-[var(--color-brand-violet)]"
+              className="inline-flex max-w-full items-center gap-2 rounded-lg bg-[var(--color-brand-purple)] px-5 py-3 text-[13px] font-medium text-white shadow-[0_12px_40px_rgba(75,59,255,0.35)] transition hover:bg-[var(--color-brand-violet)] sm:px-6 sm:py-3.5 sm:text-[15px]"
             >
               Get early access
               <ChevronRight className="h-4 w-4" strokeWidth={2} aria-hidden />
@@ -121,6 +126,16 @@ export function Hero() {
               </span>
             </Link> */}
           </div>
+          <div className="relative mx-auto h-[min(40svh,360px)] w-full max-w-[min(92vw,380px)] shrink-0 md:hidden">
+          <Image
+              src="/images/823_1x_shots_so.png"
+              alt="Posematic app on two tablets: Scenes library and Profile with bento-style settings"
+              fill
+              className="origin-top scale-[1.1] object-contain object-center brightness-[1.06] drop-shadow-[0_24px_80px_rgba(0,0,0,0.45)]"
+              sizes="92vw"
+              priority
+            />
+        </div>
         </div>
       </div>
     </section>

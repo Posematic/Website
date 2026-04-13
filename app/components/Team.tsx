@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { PAGE_EDGE } from "@/app/lib/pageLayout";
 
 export type TeamMember = {
   name: string;
@@ -29,7 +30,7 @@ const team: TeamMember[] = [
   {
     name: "Ritvik Gupta",
     role: "Co-founder",
-    bio: "AI&CS @ CMU and UoE. Worked on the sketch-to-pose pipeline, brush engine, design and business operations. Certified dork.",
+    bio: "AI&CS @ CMU and UoE. Worked on the sketch-to-pose pipeline, brush and 3D engine, design and business operations. Certified dork.",
     imageSrc: "/images/vik.png",
     imageAlt: "Portrait placeholder for Ritvik Gupta",
     founder: true,
@@ -96,9 +97,9 @@ export function Team() {
   return (
     <section
       id="team"
-      className="relative scroll-mt-5 px-4 py-16 sm:scroll-mt-5 sm:px-6 lg:px-10 lg:py-24"
+      className={`relative scroll-mt-5 py-16 sm:scroll-mt-5 lg:py-24 ${PAGE_EDGE}`}
     >
-      <div className="mx-auto max-w-5xl">
+      <div className="mx-auto w-full max-w-5xl">
         <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
           Team
         </h2>

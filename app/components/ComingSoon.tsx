@@ -1,9 +1,12 @@
 import { Apple } from "lucide-react";
+import { PAGE_EDGE, PAGE_MAX } from "@/app/lib/pageLayout";
 
 export function ComingSoon() {
   return (
-    <section className="relative px-4 py-16 sm:px-6 lg:px-10 lg:py-20">
-      <div className="mx-auto max-w-7xl rounded-[28px] border border-[var(--color-border-subtle)] bg-[rgba(12,12,26,0.6)] px-8 py-12 text-center backdrop-blur-sm sm:px-12">
+    <section className={`relative py-16 lg:py-20 ${PAGE_EDGE}`}>
+      <div
+        className={`rounded-[28px] border border-[var(--color-border-subtle)] bg-[rgba(12,12,26,0.6)] px-8 py-12 text-center backdrop-blur-sm sm:px-12 ${PAGE_MAX}`}
+      >
         <p className="text-sm font-medium uppercase tracking-wider text-[var(--color-text-tertiary)]">
           Coming soon
         </p>

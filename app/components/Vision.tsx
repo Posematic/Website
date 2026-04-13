@@ -10,6 +10,7 @@ import {
   Video,
   Wind,
 } from "lucide-react";
+import { PAGE_EDGE, PAGE_MAX } from "@/app/lib/pageLayout";
 
 const animationFeatures = [
   {
@@ -82,9 +83,9 @@ export function Vision() {
   return (
     <section
       id="vision"
-      className="relative px-4 py-16 sm:px-6 lg:px-10 lg:py-24"
+      className={`relative py-16 lg:py-24 ${PAGE_EDGE}`}
     >
-      <div className="mx-auto max-w-7xl">
+      <div className={PAGE_MAX}>
         <h2 className="max-w-3xl text-3xl font-semibold tracking-tight text-white sm:text-4xl">
           More than a posing app: a reference hub built for every artist
         </h2>

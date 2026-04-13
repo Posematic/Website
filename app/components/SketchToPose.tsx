@@ -1,4 +1,5 @@
 import { Fragment } from "react";
+import { PAGE_EDGE, PAGE_MAX } from "@/app/lib/pageLayout";
 import Image from "next/image";
 import { ArrowDown, ArrowRight, Sparkles } from "lucide-react";
 
@@ -28,8 +29,10 @@ const STAGE_COL = "w-full max-w-[290px] min-w-0 shrink-0";
 
 export function SketchToPose() {
   return (
-    <section className="relative px-4 py-20 sm:px-6 lg:px-10 lg:py-28">
-      <div className="grain relative mx-auto max-w-7xl overflow-hidden rounded-[28px] border border-[var(--color-border-subtle)] p-8 sm:p-12 lg:p-16 surface-liquid shadow-[0_20px_60px_rgba(10,5,40,0.5)]">
+    <section className={`relative py-20 lg:py-28 ${PAGE_EDGE}`}>
+      <div
+        className={`grain relative overflow-hidden rounded-[28px] border border-[var(--color-border-subtle)] p-8 sm:p-12 lg:p-16 surface-liquid shadow-[0_20px_60px_rgba(10,5,40,0.5)] ${PAGE_MAX}`}
+      >
         <div className="relative z-[1]">
           <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/10 bg-black/20 px-3 py-1 text-xs font-medium uppercase tracking-wider text-[var(--color-brand-highlight)]">
             <Sparkles className="h-3.5 w-3.5" strokeWidth={1.5} aria-hidden />

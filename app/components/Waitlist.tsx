@@ -1,5 +1,6 @@
 "use client";
 
+import { PAGE_EDGE } from "@/app/lib/pageLayout";
 import { useState, type SubmitEvent } from "react";
 import { Check, Loader2 } from "lucide-react";
 
@@ -33,9 +34,9 @@ export function Waitlist() {
   return (
     <section
       id="waitlist"
-      className="relative scroll-mt-15 px-4 py-20 sm:scroll-mt-20 sm:px-6 lg:px-10 lg:py-28"
+      className={`relative scroll-mt-15 py-20 sm:scroll-mt-20 lg:py-28 ${PAGE_EDGE}`}
     >
-      <div className="grain relative mx-auto max-w-4xl overflow-hidden rounded-[28px] border border-[var(--color-border-subtle)] p-10 sm:p-14 surface-liquid shadow-[0_20px_60px_rgba(10,5,40,0.5)]">
+      <div className="grain relative mx-auto w-full max-w-4xl overflow-hidden rounded-[28px] border border-[var(--color-border-subtle)] p-10 sm:p-14 surface-liquid shadow-[0_20px_60px_rgba(10,5,40,0.5)]">
         <div className="relative z-[1] text-center">
           <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
             Get Posematic Pro free for one month, for life

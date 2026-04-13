@@ -30,7 +30,7 @@ export function Nav() {
               <Image
                 src="/images/profile-circle.svg"
                 alt=""
-                width={95 }
+                width={95}
                 height={90}
                 className="h-full w-full object-contain"
                 priority
@@ -46,7 +46,7 @@ export function Nav() {
                 />
               </span>
             </span>
-            <span className="truncate">Posematic</span>
+            <span className="hidden truncate sm:inline">Posematic</span>
           </Link>
 
           <ul className="hidden items-center gap-6 md:gap-7 md:flex">

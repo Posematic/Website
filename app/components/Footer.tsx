@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { PAGE_EDGE, PAGE_MAX } from "@/app/lib/pageLayout";
 import type { LucideIcon } from "lucide-react";
 import { Github, Linkedin } from "lucide-react";
 
@@ -41,8 +42,8 @@ const social: readonly {
 
 export function Footer() {
   return (
-    <footer className="border-t border-white/10 px-4 py-12 sm:px-6 lg:px-10">
-      <div className="mx-auto flex max-w-7xl flex-col gap-8 sm:flex-row sm:items-center sm:justify-between">
+    <footer className={`border-t border-white/10 py-12 ${PAGE_EDGE}`}>
+      <div className={`flex flex-col gap-8 sm:flex-row sm:items-center sm:justify-between ${PAGE_MAX}`}>
         <div>
           <p className="text-sm font-medium text-white">Posematic</p>
           <a
@@ -74,7 +75,9 @@ export function Footer() {
           })}
         </div>
       </div>
-      <p className="mx-auto mt-10 max-w-7xl text-center text-xs text-[var(--color-text-tertiary)] sm:text-left">
+      <p
+        className={`mt-10 text-center text-xs text-[var(--color-text-tertiary)] sm:text-left ${PAGE_MAX}`}
+      >
         © {new Date().getFullYear()} Posematic. All rights reserved.
       </p>
     </footer>
