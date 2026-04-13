@@ -13,9 +13,9 @@ const team: TeamMember[] = [
   {
     name: "Craig Mellor",
     role: "Co-founder",
-    bio: "AI @ CMU.",
-    imageSrc: "/images/team-placeholder.svg",
-    imageAlt: "Portrait placeholder for Alex Rivera",
+    bio: "AI @ CMU. Created the project. Worked on all aspects, from the brush engine, sketch to pose pipeline, backend, etc.",
+    imageSrc: "/images/craig.jpeg",
+    imageAlt: "Portrait for Craig Mellor",
     founder: true,
   },
   {
