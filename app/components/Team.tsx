@@ -29,9 +29,9 @@ const team: TeamMember[] = [
   {
     name: "Ritvik Gupta",
     role: "Co-founder",
-    bio: "Visiting AI student @ CMU.",
-    imageSrc: "/images/team-placeholder.svg",
-    imageAlt: "Portrait placeholder for Sam Okonkwo",
+    bio: "AI&CS @ CMU and UoE. Worked on the sketch-to-pose pipeline, brush engine, design and business operations. Certified dork.",
+    imageSrc: "/images/vik.png",
+    imageAlt: "Portrait placeholder for Ritvik Gupta",
   },
   {
     name: "Nicholas \"Nick\" Mino",
