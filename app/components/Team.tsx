@@ -36,7 +36,7 @@ const team: TeamMember[] = [
   {
     name: "Nicholas \"Nick\" Mino",
     role: "Co-founder",
-    bio: "AI @ CMU.",
+    bio: "AI @ CMU. Co-founder of Posematic, building core ML systems, production inference, frontend, authentication, and the interactive 3D editor, while helping drive product design and business strategy.",
     imageSrc: "/images/nmino_headshot.jpg",
     imageAlt: "Portrait placeholder for Nick Mino",
   },
