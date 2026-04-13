@@ -21,7 +21,7 @@ const team: TeamMember[] = [
   {
     name: "Daniel Yang",
     role: "Co-founder",
-    bio: "CS @ UMD College Park, involved in developing visualization systems for Posematic's model-backend, app front-end, system design, and design lead.",
+    bio: "CS @ UMD College Park, involved in developing visualization systems for Posematic's model-backend, app front-end, system design, and  design lead.",
     imageSrc: "/images/team-placeholder.svg",
     imageAlt: "Portrait placeholder for Jordan Lee",
     founder: true,
@@ -102,7 +102,7 @@ export function Team() {
         </h2>
         <p className="mt-4 max-w-2xl text-lg text-[var(--color-text-secondary)]">
           Developers who care about the craft as much as the code, with backgrounds
-          in graphics, ML, and real-time 3D. We're a small team, but with a focused roadmap: Posematic.
+          in graphics, ML, and real-time 3D. We&apos;re a small team, but with a focused roadmap: Posematic.
         </p>
 
         {/*

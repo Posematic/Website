@@ -9,7 +9,7 @@ const links = [
   { href: "#mission", label: "Mission" },
   { href: "#product", label: "Product" },
   { href: "#team", label: "Team" },
-  { href: "#waitlist", label: "Waitlist" },
+  // { href: "#waitlist", label: "Waitlist" },
 ] as const;
 
 export function Nav() {
@@ -68,7 +68,7 @@ export function Nav() {
               href="#product"
               className="hidden rounded-md border border-white/20 bg-white/6 px-5 py-2.5 text-[15px] font-medium text-white/90 transition-colors hover:border-white/30 hover:bg-white/10 sm:inline-flex"
             >
-              Watch demo
+              Join Waitlist
             </a>
             <button
               type="button"

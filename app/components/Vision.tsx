@@ -92,46 +92,11 @@ export function Vision() {
           We are building toward a single place where creatives{" "}
           {/* {" "}
           <span className="text-white/90">3D animators</span>   
-          */}        
-          can trust their references of the body, 
-          face, clothing, and more, plus physics and perspective tools most
-          competitors simply do not ship.
+          */}
+          can trust their references of the body, face, clothing, and more, plus
+          physics and perspective tools most competitors simply do not ship.
         </p>
-
         <div className="mt-14 space-y-14">
-          <div>
-            <h3 className="text-lg font-semibold tracking-tight text-[var(--color-brand-highlight)]">
-              Animation
-            </h3>
-            <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-              {animationFeatures.map((f) => {
-                const Icon = f.icon;
-                return (
-                  <div
-                    key={f.title}
-                    className="surface-matte rounded-2xl border border-[var(--color-border-subtle)] p-6 shadow-[0_20px_60px_rgba(10,5,40,0.35)]"
-                  >
-                    <div className="icon-ring mb-4 w-fit">
-                      <div className="icon-ring-inner h-11 w-11">
-                        <Icon
-                          className="h-5 w-5 text-white"
-                          strokeWidth={1.5}
-                          aria-hidden
-                        />
-                      </div>
-                    </div>
-                    <h4 className="text-lg font-semibold text-white">
-                      {f.title}
-                    </h4>
-                    <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-secondary)]">
-                      {f.description}
-                    </p>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-
           <div>
             <h3 className="text-lg font-semibold tracking-tight text-[var(--color-brand-highlight)]">
               Reference
@@ -167,6 +132,39 @@ export function Vision() {
                         </span>
                       ) : null}
                     </div>
+                    <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-secondary)]">
+                      {f.description}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold tracking-tight text-[var(--color-brand-highlight)]">
+              Animation
+            </h3>
+            <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {animationFeatures.map((f) => {
+                const Icon = f.icon;
+                return (
+                  <div
+                    key={f.title}
+                    className="surface-matte rounded-2xl border border-[var(--color-border-subtle)] p-6 shadow-[0_20px_60px_rgba(10,5,40,0.35)]"
+                  >
+                    <div className="icon-ring mb-4 w-fit">
+                      <div className="icon-ring-inner h-11 w-11">
+                        <Icon
+                          className="h-5 w-5 text-white"
+                          strokeWidth={1.5}
+                          aria-hidden
+                        />
+                      </div>
+                    </div>
+                    <h4 className="text-lg font-semibold text-white">
+                      {f.title}
+                    </h4>
                     <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-secondary)]">
                       {f.description}
                     </p>
