@@ -49,8 +49,8 @@ export function Problems() {
         <p className="mt-4 max-w-2xl text-lg text-[var(--color-text-secondary)]">
           Four pain points we hear a lot, each with how we aim to tackle these problems.
         </p>
-        <p className="mt-2 max-w-2xl text-lg text-[var(--color-text-secondary)]">
-          Four pain points we hear a lot, each with how we aim to tackle these problems.
+        <p className="mt-3 max-w-2xl text-sm leading-relaxed text-[var(--color-text-tertiary)] italic">
+          From real testimonies
         </p>
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:gap-6">
           {problems.map((p) => {

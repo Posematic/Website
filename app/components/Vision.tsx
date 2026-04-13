@@ -40,13 +40,13 @@ const referenceFeatures: Array<{
 }> = [
   {
     icon: Smile,
-    title: "Sketch to facial pose",
+    title: "Sketch to face pose",
     description:
       "Turn doodles of faces into a readable adn accurate facial pose you can maniuplate.",
   },
   {
     icon: Camera,
-    title: "Image to facial pose",
+    title: "Image to face pose",
     description:
       "Find the right image to the right expressions. Especially when you need a fast match to a photo.",
   },
