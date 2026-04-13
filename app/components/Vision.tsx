@@ -10,7 +10,12 @@ import {
   Video,
   Wind,
 } from "lucide-react";
-import { PAGE_EDGE, PAGE_MAX } from "@/app/lib/pageLayout";
+import {
+  PAGE_EDGE,
+  PAGE_MAX,
+  SECTION_H2,
+  SECTION_LEDE,
+} from "@/app/lib/pageLayout";
 
 const animationFeatures = [
   {
@@ -83,13 +88,13 @@ export function Vision() {
   return (
     <section
       id="vision"
-      className={`relative py-16 lg:py-24 ${PAGE_EDGE}`}
+      className={`relative py-16 lg:py-24 xl:py-28 2xl:py-32 ${PAGE_EDGE}`}
     >
       <div className={PAGE_MAX}>
-        <h2 className="max-w-3xl text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+        <h2 className={`max-w-3xl ${SECTION_H2}`}>
           More than a posing app: a reference hub built for every artist
         </h2>
-        <p className="mt-4 max-w-3xl text-lg text-[var(--color-text-secondary)]">
+        <p className={`mt-4 max-w-3xl ${SECTION_LEDE}`}>
           We are building toward a single place where creatives{" "}
           {/* {" "}
           <span className="text-white/90">3D animators</span>   
@@ -99,7 +104,7 @@ export function Vision() {
         </p>
         <div className="mt-14 space-y-14">
           <div>
-            <h3 className="text-lg font-semibold tracking-tight text-[var(--color-brand-highlight)]">
+            <h3 className="text-lg font-semibold tracking-tight text-[var(--color-brand-highlight)] xl:text-xl 2xl:text-2xl">
               Reference
             </h3>
             <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -108,7 +113,7 @@ export function Vision() {
                 return (
                   <div
                     key={f.title}
-                    className={`rounded-2xl border p-6 shadow-[0_20px_60px_rgba(10,5,40,0.35)] ${
+                    className={`rounded-2xl border p-6 shadow-[0_20px_60px_rgba(10,5,40,0.35)] xl:p-8 2xl:p-9 ${
                       f.highlight
                         ? "surface-liquid border-[var(--color-brand-purple)]/30"
                         : "surface-matte border-[var(--color-border-subtle)]"
@@ -143,7 +148,7 @@ export function Vision() {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold tracking-tight text-[var(--color-brand-highlight)]">
+            <h3 className="text-lg font-semibold tracking-tight text-[var(--color-brand-highlight)] xl:text-xl 2xl:text-2xl">
               Animation
             </h3>
             <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -152,7 +157,7 @@ export function Vision() {
                 return (
                   <div
                     key={f.title}
-                    className="surface-matte rounded-2xl border border-[var(--color-border-subtle)] p-6 shadow-[0_20px_60px_rgba(10,5,40,0.35)]"
+                    className="surface-matte rounded-2xl border border-[var(--color-border-subtle)] p-6 shadow-[0_20px_60px_rgba(10,5,40,0.35)] xl:p-8 2xl:p-9"
                   >
                     <div className="icon-ring mb-4 w-fit">
                       <div className="icon-ring-inner h-11 w-11">

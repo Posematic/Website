@@ -1,5 +1,10 @@
 import { Clock, Cpu, DollarSign, UserX } from "lucide-react";
-import { PAGE_EDGE, PAGE_MAX } from "@/app/lib/pageLayout";
+import {
+  PAGE_EDGE,
+  PAGE_MAX,
+  SECTION_H2,
+  SECTION_LEDE,
+} from "@/app/lib/pageLayout";
 
 const problems = [
   {
@@ -42,12 +47,12 @@ const problems = [
 
 export function Problems() {
   return (
-    <section className={`relative py-16 lg:py-24 ${PAGE_EDGE}`}>
+    <section className={`relative py-16 lg:py-24 xl:py-28 2xl:py-32 ${PAGE_EDGE}`}>
       <div className={PAGE_MAX}>
-        <h2 className="max-w-2xl text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+        <h2 className={`max-w-2xl ${SECTION_H2}`}>
           Existing posing apps are broken
         </h2>
-        <p className="mt-4 max-w-2xl text-lg text-[var(--color-text-secondary)]">
+        <p className={`mt-4 max-w-2xl ${SECTION_LEDE}`}>
           Four pain points we hear a lot, each with how we aim to tackle these problems.
         </p>
         <p className="mt-3 max-w-2xl text-sm leading-relaxed text-[var(--color-text-tertiary)] italic">
@@ -63,23 +68,23 @@ export function Problems() {
             return (
               <article
                 key={p.title}
-                className={`grain relative flex flex-col rounded-[24px] border border-[var(--color-border-subtle)] p-8 shadow-[0_20px_60px_rgba(10,5,40,0.45)] ${cardClass}`}
+                className={`grain relative flex flex-col rounded-[24px] border border-[var(--color-border-subtle)] p-8 shadow-[0_20px_60px_rgba(10,5,40,0.45)] xl:p-10 2xl:p-12 ${cardClass}`}
               >
-                <div className="mb-6 flex items-center gap-4">
+                <div className="mb-6 flex items-center gap-4 xl:mb-8">
                   <div className="icon-ring shrink-0">
-                    <div className="icon-ring-inner h-12 w-12">
+                    <div className="icon-ring-inner h-12 w-12 xl:h-14 xl:w-14">
                       <Icon
-                        className="h-5 w-5 text-white"
+                        className="h-5 w-5 text-white xl:h-6 xl:w-6"
                         strokeWidth={1.5}
                         aria-hidden
                       />
                     </div>
                   </div>
-                  <h3 className="min-w-0 flex-1 text-xl font-semibold leading-snug text-white">
+                  <h3 className="min-w-0 flex-1 text-xl font-semibold leading-snug text-white xl:text-2xl 2xl:text-[1.75rem]">
                     {p.title}
                   </h3>
                 </div>
-                <blockquote className="flex-1 text-[var(--color-text-secondary)] leading-relaxed">
+                <blockquote className="flex-1 text-[var(--color-text-secondary)] leading-relaxed xl:text-lg 2xl:text-xl">
                   {p.quote}
                 </blockquote>
                 <p className="mt-4 text-sm text-[var(--color-text-tertiary)]">

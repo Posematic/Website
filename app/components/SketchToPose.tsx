@@ -1,5 +1,10 @@
 import { Fragment } from "react";
-import { PAGE_EDGE, PAGE_MAX } from "@/app/lib/pageLayout";
+import {
+  PAGE_EDGE,
+  PAGE_MAX,
+  SECTION_H2,
+  SECTION_LEDE,
+} from "@/app/lib/pageLayout";
 import Image from "next/image";
 import { ArrowDown, ArrowRight, Sparkles } from "lucide-react";
 
@@ -25,23 +30,24 @@ const stages = [
 ] as const;
 
 /** Same width for image + caption columns so titles line up under the boxes */
-const STAGE_COL = "w-full max-w-[290px] min-w-0 shrink-0";
+const STAGE_COL =
+  "w-full max-w-[290px] min-w-0 shrink-0 xl:max-w-[320px] 2xl:max-w-[360px]";
 
 export function SketchToPose() {
   return (
-    <section className={`relative py-20 lg:py-28 ${PAGE_EDGE}`}>
+    <section className={`relative py-20 lg:py-28 xl:py-32 2xl:py-36 ${PAGE_EDGE}`}>
       <div
-        className={`grain relative overflow-hidden rounded-[28px] border border-[var(--color-border-subtle)] p-8 sm:p-12 lg:p-16 surface-liquid shadow-[0_20px_60px_rgba(10,5,40,0.5)] ${PAGE_MAX}`}
+        className={`grain relative overflow-hidden rounded-[28px] border border-[var(--color-border-subtle)] p-8 sm:p-12 lg:p-16 xl:p-20 2xl:p-24 surface-liquid shadow-[0_20px_60px_rgba(10,5,40,0.5)] ${PAGE_MAX}`}
       >
         <div className="relative z-[1]">
-          <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/10 bg-black/20 px-3 py-1 text-xs font-medium uppercase tracking-wider text-[var(--color-brand-highlight)]">
-            <Sparkles className="h-3.5 w-3.5" strokeWidth={1.5} aria-hidden />
+          <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/10 bg-black/20 px-3 py-1 text-xs font-medium uppercase tracking-wider text-[var(--color-brand-highlight)] xl:px-4 xl:py-1.5 xl:text-sm">
+            <Sparkles className="h-3.5 w-3.5 xl:h-4 xl:w-4" strokeWidth={1.5} aria-hidden />
             Flagship
           </div>
-          <h2 className="max-w-3xl text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+          <h2 className={`max-w-3xl ${SECTION_H2}`}>
             Sketch to pose, powered by machine learning and proven algorithms.
           </h2>
-          <p className="mt-4 max-w-2xl text-lg text-[var(--color-text-secondary)]">
+          <p className={`mt-4 max-w-2xl ${SECTION_LEDE}`}>
             We are empowering the next generation of posing apps: go from a
             sketch to a believable pose, then keep iterating without disrupting
             your creative flow.
@@ -65,10 +71,10 @@ export function SketchToPose() {
                       className="object-cover"
                     />
                   </div>
-                  <h3 className="text-lg font-semibold text-white">
+                  <h3 className="text-lg font-semibold text-white xl:text-xl">
                     {stage.title}
                   </h3>
-                  <p className="mt-1 text-sm text-[var(--color-text-tertiary)]">
+                  <p className="mt-1 text-sm text-[var(--color-text-tertiary)] xl:text-base">
                     {stage.caption}
                   </p>
                 </div>
@@ -118,10 +124,10 @@ export function SketchToPose() {
               {stages.map((stage, i) => (
                 <Fragment key={`copy-${stage.title}`}>
                   <div className={`${STAGE_COL} text-center`}>
-                    <h3 className="text-lg font-semibold text-white">
+                    <h3 className="text-lg font-semibold text-white xl:text-xl 2xl:text-2xl">
                       {stage.title}
                     </h3>
-                    <p className="mt-1 text-sm text-[var(--color-text-tertiary)]">
+                    <p className="mt-1 text-sm text-[var(--color-text-tertiary)] xl:text-base">
                       {stage.caption}
                     </p>
                   </div>

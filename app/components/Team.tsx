@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { PAGE_EDGE } from "@/app/lib/pageLayout";
+import { PAGE_EDGE, SECTION_H2, SECTION_LEDE } from "@/app/lib/pageLayout";
 
 export type TeamMember = {
   name: string;
@@ -29,7 +29,7 @@ const team: TeamMember[] = [
   },
   {
     name: "Ritvik Gupta",
-    role: "Co-founder",
+    role: "Full stack engineer and Product Designer",
     bio: "AI&CS @ CMU and UoE. Worked on the sketch-to-pose pipeline, brush and 3D engine, design and business operations. Certified dork.",
     imageSrc: "/images/vik.png",
     imageAlt: "Portrait placeholder for Ritvik Gupta",
@@ -37,8 +37,8 @@ const team: TeamMember[] = [
   },
   {
     name: "Nicholas Mino",
-    role: "Co-founder",
-    bio: "AI @ CMU. Co-founder of Posematic, building core ML systems, production inference, frontend, authentication, and the interactive 3D editor, while helping drive product design and business strategy.",
+    role: "Full stack engineer and Product Designer",
+    bio: "AI @ CMU. Building core ML systems, production inference, frontend, authentication, and the interactive 3D editor, while helping drive product design and business strategy.",
     imageSrc: "/images/nmino_headshot.jpg",
     imageAlt: "Portrait placeholder for Nick Mino",
     founder: true,
@@ -65,7 +65,7 @@ function MemberCard({
     >
       {/* Smaller, equal portrait frames; width-capped so all match */}
       <div className="flex justify-center px-4 pt-5 sm:px-5 sm:pt-6">
-        <div className="relative aspect-[3/4] w-full max-w-[148px] overflow-hidden rounded-xl bg-gradient-to-b from-[#1a1535] to-[var(--color-bg-card-dark)] sm:max-w-[168px]">
+        <div className="relative aspect-[3/4] w-full max-w-[148px] overflow-hidden rounded-xl bg-gradient-to-b from-[#1a1535] to-[var(--color-bg-card-dark)] sm:max-w-[168px] xl:max-w-[184px] 2xl:max-w-[200px]">
           <Image
             src={member.imageSrc}
             alt={member.imageAlt}
@@ -76,13 +76,13 @@ function MemberCard({
         </div>
       </div>
       <div className="flex flex-1 flex-col px-4 pb-5 pt-4 sm:px-5 sm:pb-6 sm:pt-5">
-        <h3 className="text-base font-semibold text-white sm:text-lg">
+        <h3 className="text-base font-semibold text-white sm:text-lg xl:text-xl 2xl:text-2xl">
           {member.name}
         </h3>
-        <p className="mt-1 text-xs font-medium text-[var(--color-brand-highlight)] sm:text-sm">
+        <p className="mt-1 text-xs font-medium text-[var(--color-brand-highlight)] sm:text-sm xl:text-base">
           {member.role}
         </p>
-        <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-secondary)]">
+        <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-secondary)] xl:text-base 2xl:text-lg">
           {member.bio}
         </p>
       </div>
@@ -97,13 +97,11 @@ export function Team() {
   return (
     <section
       id="team"
-      className={`relative scroll-mt-5 py-16 sm:scroll-mt-5 lg:py-24 ${PAGE_EDGE}`}
+      className={`relative scroll-mt-5 py-16 sm:scroll-mt-5 lg:py-24 xl:py-28 2xl:py-32 ${PAGE_EDGE}`}
     >
-      <div className="mx-auto w-full max-w-5xl">
-        <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-          Team
-        </h2>
-        <p className="mt-4 max-w-2xl text-lg text-[var(--color-text-secondary)]">
+      <div className="mx-auto w-full max-w-5xl xl:max-w-6xl 2xl:max-w-7xl">
+        <h2 className={SECTION_H2}>Team</h2>
+        <p className={`mt-4 max-w-2xl ${SECTION_LEDE}`}>
           Developers who care about the craft as much as the code, with backgrounds
           in graphics, ML, and real-time 3D. We&apos;re a small team, but with a focused roadmap: Posematic.
         </p>
