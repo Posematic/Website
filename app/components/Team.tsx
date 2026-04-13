@@ -32,6 +32,7 @@ const team: TeamMember[] = [
     bio: "AI&CS @ CMU and UoE. Worked on the sketch-to-pose pipeline, brush engine, design and business operations. Certified dork.",
     imageSrc: "/images/vik.png",
     imageAlt: "Portrait placeholder for Ritvik Gupta",
+    founder: true,
   },
   {
     name: "Nicholas \"Nick\" Mino",
@@ -39,6 +40,7 @@ const team: TeamMember[] = [
     bio: "AI @ CMU. Co-founder of Posematic, building core ML systems, production inference, frontend, authentication, and the interactive 3D editor, while helping drive product design and business strategy.",
     imageSrc: "/images/nmino_headshot.jpg",
     imageAlt: "Portrait placeholder for Nick Mino",
+    founder: true,
   },
   {
     name: "Ivan Zhang",
@@ -88,8 +90,8 @@ function MemberCard({
 }
 
 export function Team() {
-  const row1 = team.slice(0, 3);
-  const row2 = team.slice(3, 5);
+  const founders = team.filter((member) => member.founder);
+  const nonFounders = team.filter((member) => !member.founder);
 
   return (
     <section
@@ -105,30 +107,20 @@ export function Team() {
           in graphics, ML, and real-time 3D. We&apos;re a small team, but with a focused roadmap: Posematic.
         </p>
 
-        {/*
-          Balanced 3 + 2: six-column grid, three cards on row one (span 2 each),
-          two cards centered on row two (span 2, starts 2 and 4), equal widths.
-        */}
-        <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-6 sm:gap-6">
-          {row1.map((member) => (
-            <MemberCard
-              key={member.name}
-              member={member}
-              className="sm:col-span-2"
-            />
-          ))}
-          {row2.map((member, i) => (
-            <MemberCard
-              key={member.name}
-              member={member}
-              className={
-                i === 0
-                  ? "sm:col-span-2 sm:col-start-2"
-                  : "sm:col-span-2 sm:col-start-4"
-              }
-            />
+        <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6">
+          {founders.map((member) => (
+            <MemberCard key={member.name} member={member} />
           ))}
         </div>
+
+        {nonFounders.length > 0 && (
+          <div className="mt-6 flex justify-center">
+            <MemberCard
+              member={nonFounders[0]}
+              className="w-full sm:max-w-[calc(50%-0.75rem)]"
+            />
+          </div>
+        )}
         {/* <header className="justifyContent-center">
           <p className="mt-4 max-w-2xl text-sm text-[var(--color-text-secondary)]">
             Disclaimer: Order is of when each individual joined the project
