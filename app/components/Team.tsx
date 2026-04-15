@@ -1,6 +1,6 @@
 import Image from "next/image";
 import {
-  PAGE_EDGE,
+  SECTION_EDGE,
   SECTION_H2,
   SECTION_LEDE,
   SECTION_PY,
@@ -34,7 +34,7 @@ const team: TeamMember[] = [
   },
   {
     name: "Ritvik Gupta",
-    role: "Full stack engineer and Product Designer",
+    role: "Fullstack Engineer & Product Designer",
     bio: "AI&CS @ CMU and UoE. Worked on the sketch-to-pose pipeline, brush and 3D engine, design and business operations. Certified dork.",
     imageSrc: "/images/vik.png",
     imageAlt: "Portrait placeholder for Ritvik Gupta",
@@ -42,7 +42,7 @@ const team: TeamMember[] = [
   },
   {
     name: "Nicholas Mino",
-    role: "Full stack engineer and Product Designer",
+    role: "Fullstack Engineer & Product Designer",
     bio: "AI @ CMU. Building core ML systems, production inference, frontend, authentication, and the interactive 3D editor, while helping drive product design and business strategy.",
     imageSrc: "/images/nmino_headshot.jpg",
     imageAlt: "Portrait placeholder for Nick Mino",
@@ -102,7 +102,7 @@ export function Team() {
   return (
     <section
       id="team"
-      className={`relative scroll-mt-5 sm:scroll-mt-5 ${SECTION_PY} ${PAGE_EDGE}`}
+      className={`relative scroll-mt-5 sm:scroll-mt-5 ${SECTION_PY} ${SECTION_EDGE}`}
     >
       <div className="mx-auto w-full max-w-5xl desktop:max-w-5xl wide:max-w-6xl">
         <h2 className={SECTION_H2}>Team</h2>

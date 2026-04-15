@@ -11,8 +11,8 @@ import {
   Wind,
 } from "lucide-react";
 import {
-  PAGE_EDGE,
   PAGE_MAX,
+  SECTION_EDGE,
   SECTION_H2,
   SECTION_LEDE,
   SECTION_PY,
@@ -89,7 +89,7 @@ export function Vision() {
   return (
     <section
       id="vision"
-      className={`relative ${SECTION_PY} ${PAGE_EDGE}`}
+      className={`relative ${SECTION_PY} ${SECTION_EDGE}`}
     >
       <div className={PAGE_MAX}>
         <h2 className={`max-w-3xl ${SECTION_H2}`}>
@@ -105,7 +105,7 @@ export function Vision() {
         </p>
         <div className="mt-14 space-y-14">
           <div>
-            <h3 className="text-lg font-semibold tracking-tight text-[var(--color-brand-highlight)] xl:text-4xl wide:text-[1.35rem]">
+            <h3 className="text-lg font-semibold tracking-tight text-[var(--color-brand-highlight)] xl:text-3xl wide:text-[1.35rem]">
               Reference
             </h3>
             <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -149,7 +149,7 @@ export function Vision() {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold tracking-tight text-[var(--color-brand-highlight)] xl:text-xl wide:text-[1.35rem]">
+            <h3 className="text-lg font-semibold tracking-tight text-[var(--color-brand-highlight)] xl:text-3xl wide:text-[1.35rem]">
               Animation
             </h3>
             <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">

@@ -140,20 +140,3 @@ body {
 .hero-word-cycle-in {
   animation: hero-word-cycle-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
-
-/*
- * Below `sm` (640px): one body size for all copy in main + footer.
- * Nav/header is outside <main> and keeps its own sizing.
- */
-@media (max-width: 639px) {
-  main,
-  footer {
-    font-size: 1rem;
-    line-height: 1.5;
-  }
-  main *,
-  footer * {
-    font-size: inherit !important;
-    line-height: 1.5 !important;
-  }
-}

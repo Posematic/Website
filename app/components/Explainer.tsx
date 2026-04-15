@@ -1,7 +1,7 @@
 import Image from "next/image";
 import {
-  PAGE_EDGE,
   PAGE_MAX,
+  SECTION_EDGE,
   SECTION_H2,
   SECTION_LEDE,
   SECTION_PY,
@@ -14,9 +14,9 @@ const POSING_DEMO = {
 
 export function Explainer() {
   return (
-    <section className={`relative ${SECTION_PY} ${PAGE_EDGE}`}>
+    <section className={`relative ${SECTION_PY} ${SECTION_EDGE}`}>
       <div
-        className={`grid gap-12 laptop:grid-cols-2 laptop:items-center laptop:gap-14 desktop:gap-16 wide:gap-20 ${PAGE_MAX}`}
+        className={`grid gap-12 laptop:grid-cols-2 laptop:items-center laptop:gap-10 desktop:gap-14 wide:gap-18 ${PAGE_MAX}`}
       >
         <div>
           <h2 className={SECTION_H2}>What is a posing app?</h2>

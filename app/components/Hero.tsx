@@ -120,9 +120,9 @@ export function Hero() {
           <div className="flex w-full justify-center laptop:justify-end">
             <div
               className={
-                "relative -mt-4 h-[min(60svh,580px)] w-[min(96vw,560px)] max-w-full shrink-0 " +
-                "sm:-mt-2 sm:h-[min(58svh,600px)] sm:w-[min(94vw,600px)] " +
-                "md:h-[min(58svh,640px)] md:w-[min(94vw,660px)] " +
+                "relative -mt-2 h-[min(46svh,400px)] w-[min(96vw,560px)] max-w-full shrink-0 " +
+                "sm:h-[min(50svh,460px)] sm:w-[min(94vw,600px)] " +
+                "md:h-[min(52svh,520px)] md:w-[min(94vw,660px)] " +
                 "laptop:mt-0 laptop:h-[min(64svh,680px)] laptop:w-full " +
                 "xl:h-[min(68svh,740px)] " +
                 "2xl:h-[min(72svh,800px)]"
@@ -132,7 +132,7 @@ export function Hero() {
                 src="/images/823_1x_shots_so.png"
                 alt="Posematic app on two tablets: Scenes library and Profile with bento-style settings"
                 fill
-                className="object-contain object-center brightness-[1.06] drop-shadow-[0_24px_80px_rgba(0,0,0,0.45)] scale-[1.15] sm:scale-[1.18] md:scale-[1.22] laptop:scale-115"
+                className="object-contain object-center brightness-[1.06] drop-shadow-[0_24px_80px_rgba(0,0,0,0.45)] sm:scale-[1.05] md:scale-[1.08] laptop:scale-125"
                 sizes="(max-width: 1023px) 92vw, (max-width: 1279px) 45vw, (max-width: 1535px) 48vw, 50vw"
                 priority
               />

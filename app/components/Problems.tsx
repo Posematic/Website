@@ -1,7 +1,7 @@
 import { Clock, Cpu, DollarSign, UserX } from "lucide-react";
 import {
-  PAGE_EDGE,
   PAGE_MAX,
+  SECTION_EDGE,
   SECTION_H2,
   SECTION_LEDE,
   SECTION_PY,
@@ -19,7 +19,7 @@ const problems = [
   },
   {
     icon: Cpu,
-    title: "Archaic UI/UX",
+    title: "Archaic & Inefficient UI/UX",
     quote:
       "“It’s easy to start, but once you need more control, the UI gets confusing and unintuitive.”",
     attribution: "Casual Artist, Hobbyist",
@@ -28,7 +28,7 @@ const problems = [
   },
   {
     icon: UserX,
-    title: "Terrible anatomy",
+    title: "Inaccurate anatomy",
     quote:
       "“I wish the models were more accurate, the models lack useful anatomical landmarks.”",
     attribution: "Professional entertainment artist, Freelance",
@@ -37,7 +37,7 @@ const problems = [
   },
   {
     icon: DollarSign,
-    title: "Expensive for professionals and hobbyists",
+    title: "Expensive for casuals and professionals",
     quote:
       "“A lot of the features I need are locked behind paywalls, and they’re just too expensive.”",
     attribution: "From many artists interviewed",
@@ -48,7 +48,7 @@ const problems = [
 
 export function Problems() {
   return (
-    <section className={`relative ${SECTION_PY} ${PAGE_EDGE}`}>
+    <section className={`relative ${SECTION_PY} ${SECTION_EDGE}`}>
       <div className={PAGE_MAX}>
         <h2 className={`max-w-2xl ${SECTION_H2}`}>
           Existing posing apps are broken
