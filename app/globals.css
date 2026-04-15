@@ -139,6 +139,7 @@ body {
 
 .hero-word-cycle-in {
   animation: hero-word-cycle-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+<<<<<<< HEAD
 }
 
 /*
@@ -157,3 +158,10 @@ body {
     line-height: 1.5 !important;
   }
 }
+=======
+<<<<<<< Updated upstream
+}
+=======
+}
+>>>>>>> Stashed changes
+>>>>>>> f7ef86b (changes1)

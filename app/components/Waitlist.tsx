@@ -1,11 +1,22 @@
 "use client";
 
+<<<<<<< HEAD
 import {
   PAGE_EDGE,
+=======
+<<<<<<< Updated upstream
+=======
+import {
+  SECTION_EDGE,
+>>>>>>> f7ef86b (changes1)
   SECTION_H2,
   SECTION_LEDE,
   SECTION_PY_TALL,
 } from "@/app/lib/pageLayout";
+<<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
+>>>>>>> f7ef86b (changes1)
 import { useState, type SubmitEvent } from "react";
 import { Check, Loader2 } from "lucide-react";
 
@@ -39,9 +50,21 @@ export function Waitlist() {
   return (
     <section
       id="waitlist"
+<<<<<<< HEAD
       className={`relative scroll-mt-15 sm:scroll-mt-20 ${SECTION_PY_TALL} ${PAGE_EDGE}`}
     >
       <div className="grain relative mx-auto w-full max-w-4xl overflow-hidden rounded-[28px] border border-[var(--color-border-subtle)] p-10 sm:p-14 desktop:max-w-[48rem] desktop:p-14 wide:max-w-[52rem] wide:p-16 surface-liquid shadow-[0_20px_60px_rgba(10,5,40,0.5)]">
+=======
+<<<<<<< Updated upstream
+      className="relative scroll-mt-15 px-4 py-20 sm:scroll-mt-20 sm:px-6 lg:px-10 lg:py-28"
+    >
+      <div className="grain relative mx-auto max-w-4xl overflow-hidden rounded-[28px] border border-[var(--color-border-subtle)] p-10 sm:p-14 surface-liquid shadow-[0_20px_60px_rgba(10,5,40,0.5)]">
+=======
+      className={`relative scroll-mt-15 sm:scroll-mt-20 ${SECTION_PY_TALL} ${SECTION_EDGE}`}
+    >
+      <div className="grain relative mx-auto w-full max-w-5xl overflow-hidden rounded-[28px] border border-[var(--color-border-subtle)] p-10 sm:p-12 laptop:p-10 desktop:max-w-[55rem] desktop:p-14 wide:max-w-[60rem] wide:p-16 surface-liquid shadow-[0_20px_60px_rgba(10,5,40,0.5)]">
+>>>>>>> Stashed changes
+>>>>>>> f7ef86b (changes1)
         <div className="relative z-[1] text-center">
           <h2 className={SECTION_H2}>Get notified when we launch</h2>
           <p className={`mx-auto mt-4 max-w-2xl ${SECTION_LEDE}`}>

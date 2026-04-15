@@ -76,6 +76,7 @@ export function Hero() {
         aria-hidden
       />
 
+<<<<<<< HEAD
       <div
         className={`relative z-10 flex min-h-[100svh] w-full flex-col justify-start pb-16 pt-30 sm:pb-20 sm:pt-28 laptop:justify-center laptop:pb-24 laptop:pt-28 desktop:pb-26 desktop:pt-30 wide:pb-30 wide:pt-34 ${PAGE_MAX} ${PAGE_EDGE}`}
       >
@@ -116,13 +117,67 @@ export function Hero() {
               </a>
             </div>
           </div>
+=======
+      <div className="relative z-10 mx-auto flex min-h-[100svh] w-full max-w-7xl flex-col justify-center px-4 pb-16 pt-24 sm:px-8 sm:pb-20 sm:pt-28 lg:px-1 lg:pb-24">
+        <div className="max-w-2xl">
+          <div className="mb-6 flex items-center gap-3">
+            <Image
+              src="/images/posematic-default-profile-logo.svg"
+              alt=""
+              width={40}
+              height={40}
+              className="h-10 w-10 drop-shadow-md"
+              aria-hidden
+            />
+            <span className="text-2xl font-semibold tracking-tight text-white drop-shadow-md sm:text-[26px]">
+              Posematic
+            </span>
+          </div>
+<<<<<<< Updated upstream
+          <h1 className="text-balance text-4xl font-semibold leading-[1.12] tracking-tight text-white drop-shadow-sm sm:text-5xl lg:text-[2.75rem]">
+            Posing that continues to keep up with your {" "}
+            <WordCycle
+              words={wordCycle}
+              className="text-[var(--color-brand-highlight)]"
+            />
+          </h1>
+          <p className="mt-5 max-w-xl text-lg leading-relaxed text-[var(--color-text-secondary)] drop-shadow-sm">
+            A modern posing app for the modern artist: fast anatomy, modern UI,
+            and sketch-to-pose AI that turns rough lines into clear 3D
+            reference.
+          </p>
+          <div className="mt-9 flex flex-wrap items-center gap-4">
+            <a
+              href="#waitlist"
+              className="inline-flex items-center gap-2 rounded-lg bg-[var(--color-brand-purple)] px-6 py-3.5 text-[15px] font-medium text-white shadow-[0_12px_40px_rgba(75,59,255,0.35)] transition hover:bg-[var(--color-brand-violet)]"
+            >
+              Get early access
+              <ChevronRight className="h-4 w-4" strokeWidth={2} aria-hidden />
+            </a>
+            {/* <Link
+              href="#product"
+              className="inline-flex items-center gap-1.5 text-[15px] font-medium text-white transition hover:text-white/95"
+            >
+              Watch demo
+              <span className="text-[var(--color-brand-highlight)]" aria-hidden>
+                ›
+              </span>
+            </Link> */}
+=======
+>>>>>>> f7ef86b (changes1)
 
           <div className="flex w-full justify-center laptop:justify-end">
             <div
               className={
+<<<<<<< HEAD
                 "relative -mt-4 h-[min(60svh,580px)] w-[min(96vw,560px)] max-w-full shrink-0 " +
                 "sm:-mt-2 sm:h-[min(58svh,600px)] sm:w-[min(94vw,600px)] " +
                 "md:h-[min(58svh,640px)] md:w-[min(94vw,660px)] " +
+=======
+                "relative -mt-2 h-[min(46svh,400px)] w-[min(96vw,560px)] max-w-full shrink-0 " +
+                "sm:h-[min(50svh,460px)] sm:w-[min(94vw,600px)] " +
+                "md:h-[min(52svh,520px)] md:w-[min(94vw,660px)] " +
+>>>>>>> f7ef86b (changes1)
                 "laptop:mt-0 laptop:h-[min(64svh,680px)] laptop:w-full " +
                 "xl:h-[min(68svh,740px)] " +
                 "2xl:h-[min(72svh,800px)]"
@@ -132,11 +187,19 @@ export function Hero() {
                 src="/images/823_1x_shots_so.png"
                 alt="Posematic app on two tablets: Scenes library and Profile with bento-style settings"
                 fill
+<<<<<<< HEAD
                 className="object-contain object-center brightness-[1.06] drop-shadow-[0_24px_80px_rgba(0,0,0,0.45)] scale-[1.15] sm:scale-[1.18] md:scale-[1.22] laptop:scale-115"
+=======
+                className="object-contain object-center brightness-[1.06] drop-shadow-[0_24px_80px_rgba(0,0,0,0.45)] sm:scale-[1.05] md:scale-[1.08] laptop:scale-125"
+>>>>>>> f7ef86b (changes1)
                 sizes="(max-width: 1023px) 92vw, (max-width: 1279px) 45vw, (max-width: 1535px) 48vw, 50vw"
                 priority
               />
             </div>
+<<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
+>>>>>>> f7ef86b (changes1)
           </div>
         </div>
       </div>

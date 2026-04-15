@@ -9,6 +9,7 @@ import { PAGE_EDGE, PAGE_MAX } from "@/app/lib/pageLayout";
 const links = [
   { href: "#mission", label: "Mission" },
   { href: "#product", label: "Product" },
+  { href: "#vision", label: "Features"}, 
   { href: "#team", label: "Team" },
 ] as const;
 
@@ -21,7 +22,15 @@ export function Nav() {
     >
       <div className={`relative ${PAGE_MAX}`}>
         <nav
+<<<<<<< HEAD
           className="pointer-events-auto flex h-16 items-center justify-between gap-4 rounded-xl border border-white/[0.1] bg-[rgba(8,8,15,0.35)] px-4 shadow-[0_12px_48px_rgba(0,0,0,0.35)] backdrop-blur-xl backdrop-saturate-150 sm:h-[4.5rem] sm:px-8 laptop:px-10"
+=======
+<<<<<<< Updated upstream
+          className="pointer-events-auto flex h-16 items-center justify-between gap-4 rounded-xl border border-white/[0.1] bg-[rgba(8,8,15,0.35)] px-4 shadow-[0_12px_48px_rgba(0,0,0,0.35)] backdrop-blur-xl backdrop-saturate-150 sm:h-[4.5rem] sm:px-8 lg:px-10"
+=======
+          className="pointer-events-auto flex h-16 items-center justify-between gap-4 rounded-xl border border-white/[0.1] bg-[rgba(8,8,15,0.35)] px-4 shadow-[0_12px_48px_rgba(0,0,0,0.35)] backdrop-blur-xl backdrop-saturate-150 sm:px-6 laptop:px-8 desktop:h-[4.25rem] desktop:px-10 wide:h-[4.5rem]"
+>>>>>>> Stashed changes
+>>>>>>> f7ef86b (changes1)
           aria-label="Primary"
         >
           <Link
@@ -29,7 +38,7 @@ export function Nav() {
             className="flex min-w-0 shrink items-center gap-2.5 text-[17px] font-medium tracking-tight text-white sm:gap-3"
             onClick={() => setOpen(false)}
           >
-            <span className="relative inline-flex h-10 w-10 shrink-0 sm:h-12 sm:w-12">
+            <span className="relative inline-flex h-10 w-10 shrink-0 desktop:h-11 desktop:w-11 wide:h-12 wide:w-12">
               <Image
                 src="/images/profile-circle.svg"
                 alt=""
