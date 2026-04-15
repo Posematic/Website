@@ -12,7 +12,7 @@ export const PAGE_EDGE =
 
 /** Wider gutters than PAGE_EDGE so section content sits visibly inset from the nav rail */
 export const SECTION_EDGE =
-  "px-3 sm:px-6 tablet:px-10 laptop:px-18 desktop:px-35 wide:px-35";
+  "px-3 sm:px-6 tablet:px-10 laptop:px-18 desktop:px-38 wide:px-35";
 
 /** 7xl-style rail from `sm`/`laptop` until `wide:`; ultrawide gets the 1580px cap */
 export const PAGE_MAX =

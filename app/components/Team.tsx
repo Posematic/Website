@@ -19,7 +19,7 @@ const team: TeamMember[] = [
   {
     name: "Craig Mellor",
     role: "Co-founder",
-    bio: "AI @ CMU. Created the project. Worked on all aspects, from the brush engine, sketch to pose pipeline, backend, etc.",
+    bio: "AI @ CMU. Initiated and created the project. Worked on all aspects, from the brush engine, sketch to pose pipeline, backend, etc.",
     imageSrc: "/images/craig.jpeg",
     imageAlt: "Portrait for Craig Mellor",
     founder: true,
@@ -27,7 +27,7 @@ const team: TeamMember[] = [
   {
     name: "Daniel Yang",
     role: "Co-founder",
-    bio: "CS @ UMD College Park, involved in developing visualization systems for Posematic's model-backend, app front-end, system design, and design lead.",
+    bio: "CS @ UMD College Park. Built visualization systems for ML backend, brush engine, system design, front-end brainstorming and devlopment, and design/UI-UX lead.",
     imageSrc: "/images/daniel_pfp.jpg",
     imageAlt: "Portrait placeholder for Daniel Yang",
     founder: true,
