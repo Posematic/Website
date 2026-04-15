@@ -28,7 +28,7 @@ const team: TeamMember[] = [
     name: "Daniel Yang",
     role: "Co-founder",
     bio: "CS @ UMD College Park, involved in developing visualization systems for Posematic's model-backend, app front-end, system design, and design lead.",
-    imageSrc: "/images/team-placeholder.svg",
+    imageSrc: "/images/daniel_pfp.jpg",
     imageAlt: "Portrait placeholder for Daniel Yang",
     founder: true,
   },
