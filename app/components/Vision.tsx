@@ -15,6 +15,7 @@ import {
   PAGE_MAX,
   SECTION_H2,
   SECTION_LEDE,
+  SECTION_PY,
 } from "@/app/lib/pageLayout";
 
 const animationFeatures = [
@@ -88,7 +89,7 @@ export function Vision() {
   return (
     <section
       id="vision"
-      className={`relative py-16 lg:py-24 xl:py-28 2xl:py-32 ${PAGE_EDGE}`}
+      className={`relative ${SECTION_PY} ${PAGE_EDGE}`}
     >
       <div className={PAGE_MAX}>
         <h2 className={`max-w-3xl ${SECTION_H2}`}>
@@ -104,7 +105,7 @@ export function Vision() {
         </p>
         <div className="mt-14 space-y-14">
           <div>
-            <h3 className="text-lg font-semibold tracking-tight text-[var(--color-brand-highlight)] xl:text-xl 2xl:text-2xl">
+            <h3 className="text-lg font-semibold tracking-tight text-[var(--color-brand-highlight)] xl:text-4xl wide:text-[1.35rem]">
               Reference
             </h3>
             <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -113,7 +114,7 @@ export function Vision() {
                 return (
                   <div
                     key={f.title}
-                    className={`rounded-2xl border p-6 shadow-[0_20px_60px_rgba(10,5,40,0.35)] xl:p-8 2xl:p-9 ${
+                    className={`rounded-2xl border p-6 shadow-[0_20px_60px_rgba(10,5,40,0.35)] xl:p-7 wide:p-8 ${
                       f.highlight
                         ? "surface-liquid border-[var(--color-brand-purple)]/30"
                         : "surface-matte border-[var(--color-border-subtle)]"
@@ -148,7 +149,7 @@ export function Vision() {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold tracking-tight text-[var(--color-brand-highlight)] xl:text-xl 2xl:text-2xl">
+            <h3 className="text-lg font-semibold tracking-tight text-[var(--color-brand-highlight)] xl:text-xl wide:text-[1.35rem]">
               Animation
             </h3>
             <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -157,7 +158,7 @@ export function Vision() {
                 return (
                   <div
                     key={f.title}
-                    className="surface-matte rounded-2xl border border-[var(--color-border-subtle)] p-6 shadow-[0_20px_60px_rgba(10,5,40,0.35)] xl:p-8 2xl:p-9"
+                    className="surface-matte rounded-2xl border border-[var(--color-border-subtle)] p-6 shadow-[0_20px_60px_rgba(10,5,40,0.35)] xl:p-7 wide:p-8"
                   >
                     <div className="icon-ring mb-4 w-fit">
                       <div className="icon-ring-inner h-11 w-11">

@@ -4,6 +4,7 @@ import {
   PAGE_MAX,
   SECTION_H2,
   SECTION_LEDE,
+  SECTION_PY,
 } from "@/app/lib/pageLayout";
 
 const POSING_DEMO = {
@@ -13,9 +14,9 @@ const POSING_DEMO = {
 
 export function Explainer() {
   return (
-    <section className={`relative py-16 lg:py-24 xl:py-28 2xl:py-32 ${PAGE_EDGE}`}>
+    <section className={`relative ${SECTION_PY} ${PAGE_EDGE}`}>
       <div
-        className={`grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-16 xl:gap-20 2xl:gap-24 ${PAGE_MAX}`}
+        className={`grid gap-12 laptop:grid-cols-2 laptop:items-center laptop:gap-14 desktop:gap-16 wide:gap-20 ${PAGE_MAX}`}
       >
         <div>
           <h2 className={SECTION_H2}>What is a posing app?</h2>

@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import { PAGE_MAX } from "@/app/lib/pageLayout";
+import { PAGE_EDGE, PAGE_MAX } from "@/app/lib/pageLayout";
 
 const links = [
   { href: "#mission", label: "Mission" },
@@ -16,18 +16,20 @@ export function Nav() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="pointer-events-none fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-5 sm:pt-4 xl:px-8 xl:pt-6 2xl:px-10 2xl:pt-7">
+    <header
+      className={`pointer-events-none fixed inset-x-0 top-0 z-50 pt-3 sm:pt-4 ${PAGE_EDGE}`}
+    >
       <div className={`relative ${PAGE_MAX}`}>
         <nav
-          className="pointer-events-auto flex h-16 items-center justify-between gap-4 rounded-xl border border-white/[0.1] bg-[rgba(8,8,15,0.35)] px-4 shadow-[0_12px_48px_rgba(0,0,0,0.35)] backdrop-blur-xl backdrop-saturate-150 sm:h-[4.5rem] sm:px-8 lg:px-10 xl:h-[5.75rem] xl:gap-6 xl:rounded-2xl xl:px-12 xl:shadow-[0_16px_56px_rgba(0,0,0,0.4)] 2xl:h-[6.75rem] 2xl:gap-8 2xl:rounded-3xl 2xl:px-16 2xl:shadow-[0_20px_64px_rgba(0,0,0,0.42)]"
+          className="pointer-events-auto flex h-16 items-center justify-between gap-4 rounded-xl border border-white/[0.1] bg-[rgba(8,8,15,0.35)] px-4 shadow-[0_12px_48px_rgba(0,0,0,0.35)] backdrop-blur-xl backdrop-saturate-150 sm:h-[4.5rem] sm:px-8 laptop:px-10"
           aria-label="Primary"
         >
           <Link
             href="#mission"
-            className="flex min-w-0 shrink items-center gap-2.5 text-[17px] font-medium tracking-tight text-white sm:gap-3 xl:gap-4 xl:text-xl xl:tracking-tight 2xl:gap-5 2xl:text-2xl 2xl:font-semibold"
+            className="flex min-w-0 shrink items-center gap-2.5 text-[17px] font-medium tracking-tight text-white sm:gap-3"
             onClick={() => setOpen(false)}
           >
-            <span className="relative inline-flex h-10 w-10 shrink-0 sm:h-12 sm:w-12 xl:h-16 xl:w-16 2xl:h-[4.5rem] 2xl:w-[4.5rem]">
+            <span className="relative inline-flex h-10 w-10 shrink-0 sm:h-12 sm:w-12">
               <Image
                 src="/images/profile-circle.svg"
                 alt=""
@@ -47,15 +49,17 @@ export function Nav() {
                 />
               </span>
             </span>
-            <span className="hidden truncate sm:inline">Posematic</span>
+            <span className="hidden laptop:inline-block laptop:min-w-0 laptop:truncate">
+              Posematic
+            </span>
           </Link>
 
-          <ul className="hidden items-center gap-6 md:gap-7 md:flex xl:gap-10 2xl:gap-12">
+          <ul className="hidden items-center gap-6 md:gap-7 md:flex">
             {links.map((l) => (
               <li key={l.href}>
                 <a
                   href={l.href}
-                  className="text-[15px] font-normal text-white/70 transition-colors hover:text-white xl:text-lg xl:font-medium 2xl:text-xl 2xl:tracking-tight"
+                  className="text-[15px] font-normal text-white/70 transition-colors hover:text-white"
                 >
                   {l.label}
                 </a>
@@ -63,10 +67,10 @@ export function Nav() {
             ))}
           </ul>
 
-          <div className="flex shrink-0 items-center gap-2 sm:gap-3 xl:gap-4">
+          <div className="flex shrink-0 items-center gap-2 sm:gap-3">
             <a
               href="#waitlist"
-              className="hidden rounded-lg border border-white/20 bg-white/6 px-5 py-2.5 text-[15px] font-medium text-white/90 transition-colors hover:border-white/30 hover:bg-white/10 sm:inline-flex xl:rounded-xl xl:px-8 xl:py-3.5 xl:text-lg xl:font-semibold 2xl:px-10 2xl:py-4 2xl:text-xl"
+              className="hidden rounded-md border border-white/20 bg-white/6 px-5 py-2.5 text-[15px] font-medium text-white/90 transition-colors hover:border-white/30 hover:bg-white/10 sm:inline-flex"
             >
               Get early access
             </a>

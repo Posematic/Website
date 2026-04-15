@@ -1,5 +1,10 @@
 import Image from "next/image";
-import { PAGE_EDGE, SECTION_H2, SECTION_LEDE } from "@/app/lib/pageLayout";
+import {
+  PAGE_EDGE,
+  SECTION_H2,
+  SECTION_LEDE,
+  SECTION_PY,
+} from "@/app/lib/pageLayout";
 
 export type TeamMember = {
   name: string;
@@ -97,9 +102,9 @@ export function Team() {
   return (
     <section
       id="team"
-      className={`relative scroll-mt-5 py-16 sm:scroll-mt-5 lg:py-24 xl:py-28 2xl:py-32 ${PAGE_EDGE}`}
+      className={`relative scroll-mt-5 sm:scroll-mt-5 ${SECTION_PY} ${PAGE_EDGE}`}
     >
-      <div className="mx-auto w-full max-w-5xl xl:max-w-6xl 2xl:max-w-7xl">
+      <div className="mx-auto w-full max-w-5xl desktop:max-w-5xl wide:max-w-6xl">
         <h2 className={SECTION_H2}>Team</h2>
         <p className={`mt-4 max-w-2xl ${SECTION_LEDE}`}>
           Developers who care about the craft as much as the code, with backgrounds

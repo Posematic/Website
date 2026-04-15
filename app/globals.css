@@ -3,6 +3,20 @@
 @import "tailwindcss";
 
 @theme inline {
+  /*
+   * Semantic breakpoints (min-width). Use in classes: tablet: laptop: desktop: wide:
+   * - Base (no prefix): phones & small handhelds
+   * - sm: (640px) Tailwind default — large phone / small phablet
+   * - tablet: 768px — tablets, small landscape
+   * - laptop: 1024px — laptops, small desktops
+   * - desktop: 1280px — standard desktops
+   * - wide: 1536px — large / ultrawide
+   */
+  --breakpoint-tablet: 48rem;
+  --breakpoint-laptop: 64rem;
+  --breakpoint-desktop: 80rem;
+  --breakpoint-wide: 96rem;
+
   /* Slightly lifted from prior values; page reads a touch brighter without losing depth */
   --color-bg-deepest: #07051e;
   --color-bg-primary: #0c0c14;
@@ -56,17 +70,17 @@ body {
 .icon-ring {
   background: conic-gradient(
     from -90deg,
-    #3366ff 0deg,
-    #1a3bcc 36deg,
-    #3366ff 72deg,
-    #4d88ff 108deg,
-    #6633cc 144deg,
-    #8833cc 180deg,
-    #c4b8ff 216deg,
-    #d6cfff 252deg,
+    #4733ff 0deg,
+    #4733ff 36deg,
+    #581acc 72deg,
+    #4d13ab 108deg,
+    #8905db 144deg,
+    #6633cc 180deg,
+    #8833cc 216deg,
+    #c4b8ff 252deg,
     #e8d8ff 288deg,
-    #3366ff 324deg,
-    #3366ff 360deg
+    #8833cc 324deg,
+    #4733ff 360deg
   );
   padding: 2px;
   border-radius: 9999px;
@@ -128,7 +142,7 @@ body {
 }
 
 /*
- * Below Tailwind `sm` (640px): one body size for all copy in main + footer.
+ * Below `sm` (640px): one body size for all copy in main + footer.
  * Nav/header is outside <main> and keeps its own sizing.
  */
 @media (max-width: 639px) {

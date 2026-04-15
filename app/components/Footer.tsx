@@ -29,11 +29,6 @@ const social: readonly {
     render: "x",
   },
   {
-    href: "https://github.com",
-    label: "GitHub",
-    icon: Github,
-  },
-  {
     href: "https://www.linkedin.com",
     label: "LinkedIn",
     icon: Linkedin,
@@ -42,15 +37,15 @@ const social: readonly {
 
 export function Footer() {
   return (
-    <footer className={`border-t border-white/10 py-12 xl:py-16 ${PAGE_EDGE}`}>
+    <footer className={`border-t border-white/10 py-12 desktop:py-16 ${PAGE_EDGE}`}>
       <div className={`flex flex-col gap-8 sm:flex-row sm:items-center sm:justify-between ${PAGE_MAX}`}>
         <div>
-          <p className="text-sm font-medium text-white xl:text-base 2xl:text-lg">
+          <p className="text-sm font-medium text-white desktop:text-[0.95rem] wide:text-base">
             Posematic
           </p>
           <a
             href="mailto:hello@posematic.com"
-            className="mt-1 block text-sm text-[var(--color-text-secondary)] transition hover:text-white xl:text-base 2xl:text-lg"
+            className="mt-1 block text-sm text-[var(--color-text-secondary)] transition hover:text-white desktop:text-[0.95rem] wide:text-base"
           >
             posematic.team@gmail.com
           </a>
@@ -68,9 +63,9 @@ export function Footer() {
                 rel="noopener noreferrer"
               >
                 {s.render === "x" ? (
-                  <XLogo className="h-5 w-5 xl:h-6 xl:w-6" />
+                  <XLogo className="h-5 w-5 desktop:h-6 desktop:w-6" />
                 ) : Icon ? (
-                  <Icon className="h-5 w-5 xl:h-6 xl:w-6" strokeWidth={1.5} />
+                  <Icon className="h-5 w-5 desktop:h-6 desktop:w-6" strokeWidth={1.5} />
                 ) : null}
               </Link>
             );
@@ -78,7 +73,7 @@ export function Footer() {
         </div>
       </div>
       <p
-        className={`mt-10 text-center text-xs text-[var(--color-text-tertiary)] sm:text-left xl:text-sm ${PAGE_MAX}`}
+        className={`mt-10 text-center text-xs text-[var(--color-text-tertiary)] sm:text-left desktop:text-sm ${PAGE_MAX}`}
       >
         © {new Date().getFullYear()} Posematic. All rights reserved.
       </p>

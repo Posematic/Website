@@ -4,6 +4,7 @@ import {
   PAGE_MAX,
   SECTION_H2,
   SECTION_LEDE,
+  SECTION_PY,
 } from "@/app/lib/pageLayout";
 
 const problems = [
@@ -47,7 +48,7 @@ const problems = [
 
 export function Problems() {
   return (
-    <section className={`relative py-16 lg:py-24 xl:py-28 2xl:py-32 ${PAGE_EDGE}`}>
+    <section className={`relative ${SECTION_PY} ${PAGE_EDGE}`}>
       <div className={PAGE_MAX}>
         <h2 className={`max-w-2xl ${SECTION_H2}`}>
           Existing posing apps are broken
@@ -61,14 +62,11 @@ export function Problems() {
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:gap-6">
           {problems.map((p) => {
             const Icon = p.icon;
-            const cardClass =
-              p.variant === "liquid"
-                ? "surface-liquid"
-                : "surface-matte bg-[var(--color-bg-card-dark)]";
+            const cardClass = "surface-matte bg-[var(--color-bg-card-dark)]";
             return (
               <article
                 key={p.title}
-                className={`grain relative flex flex-col rounded-[24px] border border-[var(--color-border-subtle)] p-8 shadow-[0_20px_60px_rgba(10,5,40,0.45)] xl:p-10 2xl:p-12 ${cardClass}`}
+                className={`grain relative flex flex-col rounded-[24px] border border-[var(--color-border-subtle)] p-8 shadow-[0_20px_60px_rgba(10,5,40,0.45)] xl:p-9 wide:p-11 ${cardClass}`}
               >
                 <div className="mb-6 flex items-center gap-4 xl:mb-8">
                   <div className="icon-ring shrink-0">
@@ -80,11 +78,11 @@ export function Problems() {
                       />
                     </div>
                   </div>
-                  <h3 className="min-w-0 flex-1 text-xl font-semibold leading-snug text-white xl:text-2xl 2xl:text-[1.75rem]">
+                  <h3 className="min-w-0 flex-1 text-xl font-semibold leading-snug text-white xl:text-[1.35rem] wide:text-[1.5rem]">
                     {p.title}
                   </h3>
                 </div>
-                <blockquote className="flex-1 text-[var(--color-text-secondary)] leading-relaxed xl:text-lg 2xl:text-xl">
+                <blockquote className="flex-1 text-[var(--color-text-secondary)] leading-relaxed xl:text-base wide:text-lg">
                   {p.quote}
                 </blockquote>
                 <p className="mt-4 text-sm text-[var(--color-text-tertiary)]">
