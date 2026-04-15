@@ -1,23 +1,11 @@
 import { Clock, Cpu, DollarSign, UserX } from "lucide-react";
-<<<<<<< HEAD
 import {
   PAGE_EDGE,
   PAGE_MAX,
-=======
-<<<<<<< Updated upstream
-=======
-import {
-  PAGE_MAX,
-  SECTION_EDGE,
->>>>>>> f7ef86b (changes1)
   SECTION_H2,
   SECTION_LEDE,
   SECTION_PY,
 } from "@/app/lib/pageLayout";
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
->>>>>>> f7ef86b (changes1)
 
 const problems = [
   {
@@ -31,7 +19,7 @@ const problems = [
   },
   {
     icon: Cpu,
-    title: "Archaic & Inefficient UI/UX",
+    title: "Archaic UI/UX",
     quote:
       "“It’s easy to start, but once you need more control, the UI gets confusing and unintuitive.”",
     attribution: "Casual Artist, Hobbyist",
@@ -40,7 +28,7 @@ const problems = [
   },
   {
     icon: UserX,
-    title: "Inaccurate anatomy",
+    title: "Terrible anatomy",
     quote:
       "“I wish the models were more accurate, the models lack useful anatomical landmarks.”",
     attribution: "Professional entertainment artist, Freelance",
@@ -49,7 +37,7 @@ const problems = [
   },
   {
     icon: DollarSign,
-    title: "Expensive for casuals and professionals",
+    title: "Expensive for professionals and hobbyists",
     quote:
       "“A lot of the features I need are locked behind paywalls, and they’re just too expensive.”",
     attribution: "From many artists interviewed",
@@ -60,21 +48,9 @@ const problems = [
 
 export function Problems() {
   return (
-<<<<<<< HEAD
     <section className={`relative ${SECTION_PY} ${PAGE_EDGE}`}>
       <div className={PAGE_MAX}>
         <h2 className={`max-w-2xl ${SECTION_H2}`}>
-=======
-<<<<<<< Updated upstream
-    <section className="relative px-4 py-16 sm:px-6 lg:px-10 lg:py-24">
-      <div className="mx-auto max-w-7xl">
-        <h2 className="max-w-2xl text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-=======
-    <section className={`relative ${SECTION_PY} ${SECTION_EDGE}`}>
-      <div className={PAGE_MAX}>
-        <h2 className={`max-w-2xl ${SECTION_H2}`}>
->>>>>>> Stashed changes
->>>>>>> f7ef86b (changes1)
           Existing posing apps are broken
         </h2>
         <p className={`mt-4 max-w-2xl ${SECTION_LEDE}`}>

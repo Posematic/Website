@@ -1,5 +1,4 @@
 import { Apple } from "lucide-react";
-<<<<<<< HEAD
 import {
   PAGE_EDGE,
   PAGE_MAX,
@@ -14,31 +13,6 @@ export function ComingSoon() {
         className={`rounded-[28px] border border-[var(--color-border-subtle)] bg-[rgba(12,12,26,0.6)] px-8 py-12 text-center backdrop-blur-sm sm:px-12 desktop:px-14 desktop:py-14 wide:px-16 wide:py-16 ${PAGE_MAX}`}
       >
         <p className="text-sm font-medium uppercase tracking-wider text-[var(--color-text-tertiary)] desktop:text-base">
-=======
-<<<<<<< Updated upstream
-
-export function ComingSoon() {
-  return (
-    <section className="relative px-4 py-16 sm:px-6 lg:px-10 lg:py-20">
-      <div className="mx-auto max-w-7xl rounded-[28px] border border-[var(--color-border-subtle)] bg-[rgba(12,12,26,0.6)] px-8 py-12 text-center backdrop-blur-sm sm:px-12">
-        <p className="text-sm font-medium uppercase tracking-wider text-[var(--color-text-tertiary)]">
-=======
-import {
-  PAGE_MAX,
-  SECTION_EDGE,
-  SECTION_LEDE,
-  SECTION_PY_COMPACT,
-} from "@/app/lib/pageLayout";
-
-export function ComingSoon() {
-  return (
-    <section className={`relative ${SECTION_PY_COMPACT} ${SECTION_EDGE}`}>
-      <div
-        className={`rounded-[28px] border border-[var(--color-border-subtle)] bg-[rgba(12,12,26,0.6)] px-8 py-12 text-center backdrop-blur-sm sm:px-10 laptop:px-10 laptop:py-10 desktop:px-14 desktop:py-14 wide:px-16 wide:py-16 ${PAGE_MAX}`}
-      >
-        <p className="text-sm font-medium uppercase tracking-wider text-[var(--color-text-tertiary)] desktop:text-base">
->>>>>>> Stashed changes
->>>>>>> f7ef86b (changes1)
           Coming soon
         </p>
         <h2 className="mt-3 text-2xl font-semibold tracking-tight text-white sm:text-3xl desktop:text-[1.75rem] wide:text-[2rem] wide:leading-tight">

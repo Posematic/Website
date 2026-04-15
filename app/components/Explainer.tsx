@@ -1,23 +1,11 @@
 import Image from "next/image";
-<<<<<<< HEAD
 import {
   PAGE_EDGE,
   PAGE_MAX,
-=======
-<<<<<<< Updated upstream
-=======
-import {
-  PAGE_MAX,
-  SECTION_EDGE,
->>>>>>> f7ef86b (changes1)
   SECTION_H2,
   SECTION_LEDE,
   SECTION_PY,
 } from "@/app/lib/pageLayout";
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
->>>>>>> f7ef86b (changes1)
 
 const POSING_DEMO = {
   src: "/images/app_posing_posematic.gif",
@@ -26,22 +14,10 @@ const POSING_DEMO = {
 
 export function Explainer() {
   return (
-<<<<<<< HEAD
     <section className={`relative ${SECTION_PY} ${PAGE_EDGE}`}>
       <div
         className={`grid gap-12 laptop:grid-cols-2 laptop:items-center laptop:gap-14 desktop:gap-16 wide:gap-20 ${PAGE_MAX}`}
       >
-=======
-<<<<<<< Updated upstream
-    <section className="relative px-4 py-16 sm:px-6 lg:px-10 lg:py-24">
-      <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
-=======
-    <section className={`relative ${SECTION_PY} ${SECTION_EDGE}`}>
-      <div
-        className={`grid gap-12 laptop:grid-cols-2 laptop:items-center laptop:gap-10 desktop:gap-14 wide:gap-18 ${PAGE_MAX}`}
-      >
->>>>>>> Stashed changes
->>>>>>> f7ef86b (changes1)
         <div>
           <h2 className={SECTION_H2}>What is a posing app?</h2>
           <p className={`mt-5 ${SECTION_LEDE}`}>

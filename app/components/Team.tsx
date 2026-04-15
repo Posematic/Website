@@ -1,21 +1,10 @@
 import Image from "next/image";
-<<<<<<< HEAD
 import {
   PAGE_EDGE,
-=======
-<<<<<<< Updated upstream
-=======
-import {
-  SECTION_EDGE,
->>>>>>> f7ef86b (changes1)
   SECTION_H2,
   SECTION_LEDE,
   SECTION_PY,
 } from "@/app/lib/pageLayout";
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
->>>>>>> f7ef86b (changes1)
 
 export type TeamMember = {
   name: string;
@@ -45,36 +34,16 @@ const team: TeamMember[] = [
   },
   {
     name: "Ritvik Gupta",
-<<<<<<< HEAD
     role: "Full stack engineer and Product Designer",
     bio: "AI&CS @ CMU and UoE. Worked on the sketch-to-pose pipeline, brush and 3D engine, design and business operations. Certified dork.",
-=======
-<<<<<<< Updated upstream
-    role: "Co-founder",
-    bio: "AI&CS @ CMU and UoE. Worked on the sketch-to-pose pipeline, brush engine, design and business operations. Certified dork.",
-=======
-    role: "Fullstack Engineer & Product Designer",
-    bio: "AI&CS @ CMU and UoE. Worked on the sketch-to-pose pipeline, brush and 3D engine, design and business operations. Certified dork.",
->>>>>>> Stashed changes
->>>>>>> f7ef86b (changes1)
     imageSrc: "/images/vik.png",
     imageAlt: "Portrait placeholder for Ritvik Gupta",
     founder: true,
   },
   {
     name: "Nicholas Mino",
-<<<<<<< HEAD
     role: "Full stack engineer and Product Designer",
     bio: "AI @ CMU. Building core ML systems, production inference, frontend, authentication, and the interactive 3D editor, while helping drive product design and business strategy.",
-=======
-<<<<<<< Updated upstream
-    role: "Co-founder",
-    bio: "AI @ CMU. Co-founder of Posematic, building core ML systems, production inference, frontend, authentication, and the interactive 3D editor, while helping drive product design and business strategy.",
-=======
-    role: "Fullstack Engineer & Product Designer",
-    bio: "AI @ CMU. Building core ML systems, production inference, frontend, authentication, and the interactive 3D editor, while helping drive product design and business strategy.",
->>>>>>> Stashed changes
->>>>>>> f7ef86b (changes1)
     imageSrc: "/images/nmino_headshot.jpg",
     imageAlt: "Portrait placeholder for Nick Mino",
     founder: true,
@@ -133,15 +102,7 @@ export function Team() {
   return (
     <section
       id="team"
-<<<<<<< HEAD
       className={`relative scroll-mt-5 sm:scroll-mt-5 ${SECTION_PY} ${PAGE_EDGE}`}
-=======
-<<<<<<< Updated upstream
-      className="relative scroll-mt-5 px-4 py-16 sm:scroll-mt-5 sm:px-6 lg:px-10 lg:py-24"
-=======
-      className={`relative scroll-mt-5 sm:scroll-mt-5 ${SECTION_PY} ${SECTION_EDGE}`}
->>>>>>> Stashed changes
->>>>>>> f7ef86b (changes1)
     >
       <div className="mx-auto w-full max-w-5xl desktop:max-w-5xl wide:max-w-6xl">
         <h2 className={SECTION_H2}>Team</h2>

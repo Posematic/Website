@@ -10,25 +10,13 @@ import {
   Video,
   Wind,
 } from "lucide-react";
-<<<<<<< HEAD
 import {
   PAGE_EDGE,
   PAGE_MAX,
-=======
-<<<<<<< Updated upstream
-=======
-import {
-  PAGE_MAX,
-  SECTION_EDGE,
->>>>>>> f7ef86b (changes1)
   SECTION_H2,
   SECTION_LEDE,
   SECTION_PY,
 } from "@/app/lib/pageLayout";
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
->>>>>>> f7ef86b (changes1)
 
 const animationFeatures = [
   {
@@ -101,15 +89,7 @@ export function Vision() {
   return (
     <section
       id="vision"
-<<<<<<< HEAD
       className={`relative ${SECTION_PY} ${PAGE_EDGE}`}
-=======
-<<<<<<< Updated upstream
-      className="relative px-4 py-16 sm:px-6 lg:px-10 lg:py-24"
-=======
-      className={`relative ${SECTION_PY} ${SECTION_EDGE}`}
->>>>>>> Stashed changes
->>>>>>> f7ef86b (changes1)
     >
       <div className={PAGE_MAX}>
         <h2 className={`max-w-3xl ${SECTION_H2}`}>
@@ -125,15 +105,7 @@ export function Vision() {
         </p>
         <div className="mt-14 space-y-14">
           <div>
-<<<<<<< HEAD
             <h3 className="text-lg font-semibold tracking-tight text-[var(--color-brand-highlight)] xl:text-4xl wide:text-[1.35rem]">
-=======
-<<<<<<< Updated upstream
-            <h3 className="text-lg font-semibold tracking-tight text-[var(--color-brand-highlight)]">
-=======
-            <h3 className="text-lg font-semibold tracking-tight text-[var(--color-brand-highlight)] xl:text-3xl wide:text-[1.35rem]">
->>>>>>> Stashed changes
->>>>>>> f7ef86b (changes1)
               Reference
             </h3>
             <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -177,15 +149,7 @@ export function Vision() {
           </div>
 
           <div>
-<<<<<<< HEAD
             <h3 className="text-lg font-semibold tracking-tight text-[var(--color-brand-highlight)] xl:text-xl wide:text-[1.35rem]">
-=======
-<<<<<<< Updated upstream
-            <h3 className="text-lg font-semibold tracking-tight text-[var(--color-brand-highlight)]">
-=======
-            <h3 className="text-lg font-semibold tracking-tight text-[var(--color-brand-highlight)] xl:text-3xl wide:text-[1.35rem]">
->>>>>>> Stashed changes
->>>>>>> f7ef86b (changes1)
               Animation
             </h3>
             <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
