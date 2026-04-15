@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { PAGE_EDGE, PAGE_MAX } from "@/app/lib/pageLayout";
 
 const links = [
   { href: "#mission", label: "Mission" },
@@ -15,10 +16,12 @@ export function Nav() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="pointer-events-none fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-5 sm:pt-4">
-      <div className="relative mx-auto w-full max-w-[min(1240px,calc(100%-1.5rem))] sm:max-w-[min(1320px,calc(100%-2.5rem))]">
+    <header
+      className={`pointer-events-none fixed inset-x-0 top-0 z-50 pt-3 sm:pt-4 ${PAGE_EDGE}`}
+    >
+      <div className={`relative ${PAGE_MAX}`}>
         <nav
-          className="pointer-events-auto flex h-16 items-center justify-between gap-4 rounded-xl border border-white/[0.1] bg-[rgba(8,8,15,0.35)] px-4 shadow-[0_12px_48px_rgba(0,0,0,0.35)] backdrop-blur-xl backdrop-saturate-150 sm:h-[4.5rem] sm:px-8 lg:px-10"
+          className="pointer-events-auto flex h-16 items-center justify-between gap-4 rounded-xl border border-white/[0.1] bg-[rgba(8,8,15,0.35)] px-4 shadow-[0_12px_48px_rgba(0,0,0,0.35)] backdrop-blur-xl backdrop-saturate-150 sm:h-[4.5rem] sm:px-8 laptop:px-10"
           aria-label="Primary"
         >
           <Link
@@ -30,7 +33,7 @@ export function Nav() {
               <Image
                 src="/images/profile-circle.svg"
                 alt=""
-                width={95 }
+                width={95}
                 height={90}
                 className="h-full w-full object-contain"
                 priority
@@ -46,7 +49,9 @@ export function Nav() {
                 />
               </span>
             </span>
-            <span className="truncate">Posematic</span>
+            <span className="hidden laptop:inline-block laptop:min-w-0 laptop:truncate">
+              Posematic
+            </span>
           </Link>
 
           <ul className="hidden items-center gap-6 md:gap-7 md:flex">

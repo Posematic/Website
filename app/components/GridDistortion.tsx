@@ -133,11 +133,20 @@ const GridDistortion: React.FC<GridDistortionProps> = ({
       if (width === 0 || height === 0) return;
 
       const containerAspect = width / height;
+      const imageAspect = imageAspectRef.current;
 
       renderer.setSize(width, height);
 
       if (plane) {
-        plane.scale.set(containerAspect, 1, 1);
+        // "cover" — scale the plane so the image fills the container without letterboxing
+        let scaleX = containerAspect;
+        let scaleY = 1;
+        if (containerAspect < imageAspect) {
+          // container is taller than image → widen plane to fill width, crop top/bottom
+          scaleX = imageAspect;
+          scaleY = imageAspect / containerAspect;
+        }
+        plane.scale.set(scaleX, scaleY, 1);
       }
 
       const frustumHeight = 1;
@@ -195,7 +204,10 @@ const GridDistortion: React.FC<GridDistortionProps> = ({
       Object.assign(mouseState, { x, y, prevX: x, prevY: y });
     };
 
-    window.addEventListener('mousemove', handlePointerMove, { passive: true });
+    const checkCoarsePointer = window.matchMedia('(pointer: coarse)').matches;
+    if (!checkCoarsePointer) {
+      window.addEventListener('mousemove', handlePointerMove, { passive: true });
+    }
 
     handleResize();
 
@@ -249,7 +261,9 @@ const GridDistortion: React.FC<GridDistortionProps> = ({
         window.removeEventListener('resize', handleResize);
       }
 
-      window.removeEventListener('mousemove', handlePointerMove);
+      if (!checkCoarsePointer) {
+        window.removeEventListener('mousemove', handlePointerMove);
+      }
 
       if (renderer) {
         renderer.dispose();

@@ -1,4 +1,11 @@
 import Image from "next/image";
+import {
+  PAGE_EDGE,
+  PAGE_MAX,
+  SECTION_H2,
+  SECTION_LEDE,
+  SECTION_PY,
+} from "@/app/lib/pageLayout";
 
 const POSING_DEMO = {
   src: "/images/app_posing_posematic.gif",
@@ -7,20 +14,20 @@ const POSING_DEMO = {
 
 export function Explainer() {
   return (
-    <section className="relative px-4 py-16 sm:px-6 lg:px-10 lg:py-24">
-      <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
+    <section className={`relative ${SECTION_PY} ${PAGE_EDGE}`}>
+      <div
+        className={`grid gap-12 laptop:grid-cols-2 laptop:items-center laptop:gap-14 desktop:gap-16 wide:gap-20 ${PAGE_MAX}`}
+      >
         <div>
-          <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-            What is a posing app?
-          </h2>
-          <p className="mt-5 text-lg leading-relaxed text-[var(--color-text-secondary)]">
+          <h2 className={SECTION_H2}>What is a posing app?</h2>
+          <p className={`mt-5 ${SECTION_LEDE}`}>
             A posing app lets you position a 3D figure (limbs, torso, camera)
             so you can light, frame, and capture reference for illustration or
             animation. It is the bridge between &ldquo;I know what I want to
             draw&rdquo; and &ldquo;I can see it clearly enough to commit ink to
             canvas.&rdquo;
           </p>
-          <p className="mt-4 text-lg leading-relaxed text-[var(--color-text-secondary)]">
+          <p className={`mt-4 ${SECTION_LEDE}`}>
             Posematic treats that bridge as a core product: fast
             iteration, readable anatomy, and workflows that respect how artists and creatives
             actually work.
