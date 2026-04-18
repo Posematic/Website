@@ -20,7 +20,7 @@ export function ComingSoon() {
         </h2>
         <p className={`mx-auto mt-4 max-w-xl ${SECTION_LEDE}`}>
           We are polishing our core posing features, such as, sketch-to-pose, and account flows before
-          our full release. Get early access so you can try Posematic as soon as
+          our full release. Get development updates so you can try Posematic as soon as
           it drops. 
         </p>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
