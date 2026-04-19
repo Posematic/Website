@@ -95,7 +95,7 @@ export function Hero() {
               </span>
             </div>
             <h1 className="w-full min-w-0 text-balance text-[clamp(1.3125rem,4vw+0.5rem,2.05rem)] font-semibold leading-snug tracking-tight text-white drop-shadow-sm sm:text-4xl sm:leading-[1.18] md:text-5xl md:leading-[1.14] laptop:text-[2.75rem] laptop:leading-[1.12] wide:text-[3.2rem] wide:leading-[1.08]">
-              Posing that keeps up with your&nbsp;
+              Redefining references that keeps up with your&nbsp;
               <WordCycle
                 words={wordCycle}
                 className="text-[var(--color-brand-highlight)]"
