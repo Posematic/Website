@@ -129,10 +129,10 @@ export function Hero() {
               }
             >
               <Image
-                src="/images/823_1x_shots_so.png"
+                src="/images/497_1x_shots_so.png"
                 alt="Posematic app on two tablets: Scenes library and Profile with bento-style settings"
                 fill
-                className="object-contain object-center brightness-[1.06] drop-shadow-[0_24px_80px_rgba(0,0,0,0.45)] sm:scale-[1.05] md:scale-[1.08] laptop:scale-125"
+                className="object-contain object-center brightness-[1.06] drop-shadow-[0_24px_80px_rgba(0,0,0,0.45)] sm:scale-[1.06] md:scale-[1.09] laptop:scale-130"
                 sizes="(max-width: 1023px) 92vw, (max-width: 1279px) 45vw, (max-width: 1535px) 48vw, 50vw"
                 priority
               />
