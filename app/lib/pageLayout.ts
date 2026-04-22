@@ -20,20 +20,20 @@ export const PAGE_MAX =
 
 /** Shared section headings — compact on phones, scales up through breakpoints */
 export const SECTION_H2 =
-  "text-[1.625rem] font-semibold leading-snug tracking-tight text-white sm:text-3xl tablet:text-4xl desktop:text-[2.25rem] wide:text-[2.5rem] wide:leading-[1.1]";
+  "text-[1.625rem] font-semibold leading-snug tracking-tight text-white sm:text-[1.75rem] tablet:text-[1.875rem] laptop:text-[1.875rem] desktop:text-[2rem] wide:text-[2.25rem] wide:leading-[1.1]";
 
-/** Section body copy — 16px on phones, 18px from sm up */
+/** Section body copy — 16px on phones, a touch larger on sm, caps at 18px on wide */
 export const SECTION_LEDE =
-  "text-base leading-relaxed text-[var(--color-text-secondary)] sm:text-lg";
+  "text-base leading-relaxed text-[var(--color-text-secondary)] sm:text-[1.0625rem] wide:text-lg";
 
 /** Default vertical padding for standard sections */
 export const SECTION_PY =
-  "py-16 laptop:py-20 desktop:py-24 wide:py-28";
+  "py-12 laptop:py-14 desktop:py-16 wide:py-20";
 
 /** Taller sections (e.g. waitlist, sketch-to-pose) */
 export const SECTION_PY_TALL =
-  "py-20 laptop:py-24 desktop:py-28 wide:py-32";
+  "py-16 laptop:py-18 desktop:py-20 wide:py-24";
 
 /** Shorter vertical rhythm (e.g. coming soon band) */
 export const SECTION_PY_COMPACT =
-  "py-16 laptop:py-18 desktop:py-20 wide:py-24";
+  "py-12 laptop:py-14 desktop:py-16 wide:py-20";

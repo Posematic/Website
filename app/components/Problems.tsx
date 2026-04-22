@@ -59,36 +59,36 @@ export function Problems() {
         <p className="mt-3 max-w-2xl text-sm leading-relaxed text-[var(--color-text-tertiary)] italic">
           From real testimonies
         </p>
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:gap-6">
+        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:gap-5">
           {problems.map((p) => {
             const Icon = p.icon;
             const cardClass = "surface-matte bg-[var(--color-bg-card-dark)]";
             return (
               <article
                 key={p.title}
-                className={`grain relative flex flex-col rounded-[24px] border border-[var(--color-border-subtle)] p-8 shadow-[0_20px_60px_rgba(10,5,40,0.45)] xl:p-9 wide:p-11 ${cardClass}`}
+                className={`grain relative flex flex-col rounded-[22px] border border-[var(--color-border-subtle)] p-6 shadow-[0_20px_60px_rgba(10,5,40,0.45)] laptop:p-6 desktop:p-7 wide:p-9 ${cardClass}`}
               >
-                <div className="mb-6 flex items-center gap-4 xl:mb-8">
+                <div className="mb-4 flex items-center gap-3 laptop:mb-5 desktop:gap-4">
                   <div className="icon-ring shrink-0">
-                    <div className="icon-ring-inner h-12 w-12 xl:h-14 xl:w-14">
+                    <div className="icon-ring-inner h-11 w-11 desktop:h-12 desktop:w-12">
                       <Icon
-                        className="h-5 w-5 text-white xl:h-6 xl:w-6"
+                        className="h-[18px] w-[18px] text-white desktop:h-5 desktop:w-5"
                         strokeWidth={1.5}
                         aria-hidden
                       />
                     </div>
                   </div>
-                  <h3 className="min-w-0 flex-1 text-xl font-semibold leading-snug text-white xl:text-[1.35rem] wide:text-[1.5rem]">
+                  <h3 className="min-w-0 flex-1 text-lg font-semibold leading-snug text-white laptop:text-[1.125rem] desktop:text-[1.25rem] wide:text-[1.375rem]">
                     {p.title}
                   </h3>
                 </div>
-                <blockquote className="flex-1 text-[var(--color-text-secondary)] leading-relaxed xl:text-base wide:text-lg">
+                <blockquote className="flex-1 text-sm text-[var(--color-text-secondary)] leading-relaxed laptop:text-[0.9375rem] desktop:text-base wide:text-[1.0625rem]">
                   {p.quote}
                 </blockquote>
-                <p className="mt-4 text-sm text-[var(--color-text-tertiary)]">
+                <p className="mt-3 text-xs text-[var(--color-text-tertiary)] desktop:text-sm">
                   {p.attribution}
                 </p>
-                <p className="mt-6 border-t border-white/10 pt-6 text-sm leading-relaxed text-[var(--color-brand-highlight)]">
+                <p className="mt-4 border-t border-white/10 pt-4 text-[0.8125rem] leading-relaxed text-[var(--color-brand-highlight)] laptop:mt-5 laptop:pt-5 desktop:text-sm">
                   <span className="font-medium text-white">Our fix: </span>
                   {p.fix}
                 </p>

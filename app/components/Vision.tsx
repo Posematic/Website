@@ -103,34 +103,34 @@ export function Vision() {
           can trust their references of the body, face, clothing, and more, plus
           physics and perspective tools most competitors simply do not ship.
         </p>
-        <div className="mt-14 space-y-14">
+        <div className="mt-10 space-y-10 laptop:mt-12 laptop:space-y-12">
           <div>
-            <h3 className="text-lg font-semibold tracking-tight text-[var(--color-brand-highlight)] xl:text-3xl wide:text-[1.35rem]">
+            <h3 className="text-base font-semibold tracking-tight text-[var(--color-brand-highlight)] laptop:text-[1.35rem] wide:text-[1.45rem]">
               Reference
             </h3>
-            <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 laptop:mt-5">
               {referenceFeatures.map((f) => {
                 const Icon = f.icon;
                 return (
                   <div
                     key={f.title}
-                    className={`rounded-2xl border p-6 shadow-[0_20px_60px_rgba(10,5,40,0.35)] xl:p-7 wide:p-8 ${
+                    className={`rounded-2xl border p-5 shadow-[0_20px_60px_rgba(10,5,40,0.35)] laptop:p-5 desktop:p-6 wide:p-7 ${
                       f.highlight
                         ? "surface-liquid border-[var(--color-brand-purple)]/30"
                         : "surface-matte border-[var(--color-border-subtle)]"
                     }`}
                   >
-                    <div className="icon-ring mb-4 w-fit">
-                      <div className="icon-ring-inner h-11 w-11">
+                    <div className="icon-ring mb-3 w-fit">
+                      <div className="icon-ring-inner h-10 w-10">
                         <Icon
-                          className="h-5 w-5 text-white"
+                          className="h-[18px] w-[18px] text-white"
                           strokeWidth={1.5}
                           aria-hidden
                         />
                       </div>
                     </div>
                     <div className="flex flex-wrap items-center gap-2">
-                      <h4 className="text-lg font-semibold text-white">
+                      <h4 className="text-[0.9375rem] font-semibold text-white laptop:text-base">
                         {f.title}
                       </h4>
                       {f.highlight ? (
@@ -139,7 +139,7 @@ export function Vision() {
                         </span>
                       ) : null}
                     </div>
-                    <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-secondary)]">
+                    <p className="mt-2 text-[0.8125rem] leading-relaxed text-[var(--color-text-secondary)] laptop:text-sm">
                       {f.description}
                     </p>
                   </div>
@@ -149,30 +149,30 @@ export function Vision() {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold tracking-tight text-[var(--color-brand-highlight)] xl:text-3xl wide:text-[1.35rem]">
+            <h3 className="text-base font-semibold tracking-tight text-[var(--color-brand-highlight)] laptop:text-[1.35rem] wide:text-[1.45rem]">
               Animation
             </h3>
-            <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 laptop:mt-5">
               {animationFeatures.map((f) => {
                 const Icon = f.icon;
                 return (
                   <div
                     key={f.title}
-                    className="surface-matte rounded-2xl border border-[var(--color-border-subtle)] p-6 shadow-[0_20px_60px_rgba(10,5,40,0.35)] xl:p-7 wide:p-8"
+                    className="surface-matte rounded-2xl border border-[var(--color-border-subtle)] p-5 shadow-[0_20px_60px_rgba(10,5,40,0.35)] laptop:p-5 desktop:p-6 wide:p-7"
                   >
-                    <div className="icon-ring mb-4 w-fit">
-                      <div className="icon-ring-inner h-11 w-11">
+                    <div className="icon-ring mb-3 w-fit">
+                      <div className="icon-ring-inner h-10 w-10">
                         <Icon
-                          className="h-5 w-5 text-white"
+                          className="h-[18px] w-[18px] text-white"
                           strokeWidth={1.5}
                           aria-hidden
                         />
                       </div>
                     </div>
-                    <h4 className="text-lg font-semibold text-white">
+                    <h4 className="text-[0.9375rem] font-semibold text-white laptop:text-base">
                       {f.title}
                     </h4>
-                    <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-secondary)]">
+                    <p className="mt-2 text-[0.8125rem] leading-relaxed text-[var(--color-text-secondary)] laptop:text-sm">
                       {f.description}
                     </p>
                   </div>

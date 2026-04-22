@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { useEffect, useState } from "react";
+import { ChevronRight, Menu, X } from "lucide-react";
 import { PAGE_EDGE, PAGE_MAX } from "@/app/lib/pageLayout";
 
 const links = [
@@ -15,6 +15,31 @@ const links = [
 
 export function Nav() {
   const [open, setOpen] = useState(false);
+  /**
+   * `compact` is true once the user has scrolled past the Hero (`#mission`).
+   * Drives the wordmark fade-out-to-left and the CTA collapsing to an icon.
+   */
+  const [compact, setCompact] = useState(false);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const hero = document.getElementById("mission");
+    if (!hero) return;
+
+    if (typeof IntersectionObserver === "undefined") {
+      const onScroll = () => setCompact(window.scrollY > hero.offsetHeight - 80);
+      onScroll();
+      window.addEventListener("scroll", onScroll, { passive: true });
+      return () => window.removeEventListener("scroll", onScroll);
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => setCompact(!entry.isIntersecting),
+      { rootMargin: "-72px 0px 0px 0px", threshold: 0 },
+    );
+    observer.observe(hero);
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <header
@@ -22,7 +47,7 @@ export function Nav() {
     >
       <div className={`relative ${PAGE_MAX}`}>
         <nav
-          className="pointer-events-auto flex h-16 items-center justify-between gap-4 rounded-xl border border-white/[0.1] bg-[rgba(8,8,15,0.35)] px-4 shadow-[0_12px_48px_rgba(0,0,0,0.35)] backdrop-blur-xl backdrop-saturate-150 sm:px-6 laptop:px-8 desktop:h-[4.25rem] desktop:px-10 wide:h-[4.5rem]"
+          className="pointer-events-auto relative flex h-16 items-center justify-between gap-4 rounded-xl border border-white/[0.1] bg-[rgba(8,8,15,0.35)] px-4 shadow-[0_12px_48px_rgba(0,0,0,0.35)] backdrop-blur-xl backdrop-saturate-150 sm:px-6 laptop:px-8 desktop:h-[4.25rem] desktop:px-10 wide:h-[4.5rem]"
           aria-label="Primary"
         >
           <Link
@@ -50,14 +75,21 @@ export function Nav() {
                 />
               </span>
             </span>
-            <span className="hidden laptop:inline-block laptop:min-w-0 laptop:truncate">
+            <span
+              className={`hidden whitespace-nowrap transition-[opacity,transform] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] [transform:translateZ(0)] [will-change:opacity,transform] laptop:inline-block ${
+                compact
+                  ? "laptop:pointer-events-none laptop:-translate-x-3 laptop:opacity-0"
+                  : "laptop:translate-x-0 laptop:opacity-100"
+              }`}
+              aria-hidden={compact}
+            >
               Posematic
             </span>
           </Link>
 
-          <ul className="hidden items-center gap-6 md:gap-7 md:flex">
+          <ul className="pointer-events-none absolute left-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-1/2 items-center gap-6 md:gap-7 md:flex">
             {links.map((l) => (
-              <li key={l.href}>
+              <li key={l.href} className="pointer-events-auto">
                 <a
                   href={l.href}
                   className="text-[15px] font-normal text-white/70 transition-colors hover:text-white"
@@ -71,9 +103,23 @@ export function Nav() {
           <div className="flex shrink-0 items-center gap-2 sm:gap-3">
             <a
               href="#waitlist"
-              className="hidden rounded-md border border-white/20 bg-white/6 px-5 py-2.5 text-[15px] font-medium text-white/90 transition-colors hover:border-white/30 hover:bg-white/10 sm:inline-flex"
+              aria-label={compact ? "Get early access" : undefined}
+              className={`hidden items-center justify-center overflow-hidden whitespace-nowrap rounded-md border border-white/20 bg-white/6 py-2.5 text-[15px] font-medium leading-none text-white/90 transition-[padding,gap,background-color,border-color] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:border-white/30 hover:bg-white/10 sm:inline-flex ${
+                compact ? "gap-0 px-2.5" : "gap-2 px-5"
+              }`}
             >
-              Get early access
+              <span
+                className={`inline-flex items-center overflow-hidden leading-none transition-[max-width,opacity] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+                  compact ? "max-w-0 opacity-0" : "max-w-[160px] opacity-100"
+                }`}
+              >
+                Get early access
+              </span>
+              <ChevronRight
+                className="h-4 w-4 shrink-0"
+                strokeWidth={2}
+                aria-hidden
+              />
             </a>
             <button
               type="button"
