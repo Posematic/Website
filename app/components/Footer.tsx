@@ -29,7 +29,7 @@ const social: readonly {
     render: "x",
   },
   {
-    href: "https://www.linkedin.com",
+    href: "https://www.linkedin.com/company/posematic/",
     label: "LinkedIn",
     icon: Linkedin,
   },
@@ -44,7 +44,7 @@ export function Footer() {
             Posematic
           </p>
           <a
-            href="mailto:hello@posematic.com"
+            href="mailto:posematic.team@gmail.com"
             className="mt-1 block text-sm text-[var(--color-text-secondary)] transition hover:text-white desktop:text-[0.95rem] wide:text-base"
           >
             posematic.team@gmail.com
