@@ -49,7 +49,7 @@ const referenceFeatures: Array<{
     icon: Smile,
     title: "Sketch to face pose",
     description:
-      "Turn doodles of faces into a readable adn accurate facial pose you can maniuplate.",
+      "Turn drawings of faces into readable and accurate facial poses you can maniuplate.",
   },
   {
     icon: Camera,
