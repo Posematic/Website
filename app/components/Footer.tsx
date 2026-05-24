@@ -4,32 +4,12 @@ import { PAGE_EDGE, PAGE_MAX } from "@/app/lib/pageLayout";
 import type { LucideIcon } from "lucide-react";
 import { Github, Linkedin } from "lucide-react";
 
-
-/** X (formerly Twitter) wordmark; filled mark reads clearly at small sizes */
-function XLogo({ className }: { className?: string }) {
-  return (
-    <svg
-      className={className}
-      viewBox="0 0 24 24"
-      aria-hidden
-      fill="currentColor"
-    >
-      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-    </svg>
-  );
-}
-
 const social: readonly {
   href: string;
   label: string;
   icon?: LucideIcon;
   render?: "x";
 }[] = [
-  {
-    href: "https://x.com",
-    label: "X",
-    render: "x",
-  },
   {
     href: "https://www.linkedin.com/company/posematic/",
     label: "LinkedIn",
@@ -74,9 +54,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                {s.render === "x" ? (
-                  <XLogo className="h-[22px] w-[22px] desktop:h-6 desktop:w-6" />
-                ) : Icon ? (
+                {Icon ? (
                   <Icon className="h-[22px] w-[22px] desktop:h-6 desktop:w-6" strokeWidth={1.5} />
                 ) : null}
               </Link>
