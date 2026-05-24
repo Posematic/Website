@@ -8,7 +8,7 @@ import {
 } from "@/app/lib/pageLayout";
 
 const POSING_DEMO = {
-  src: "/images/app_posing_posematic.gif",
+  src: "/images/posematic_posing_ver2.gif",
   alt: "3D mannequin with pose markers transitioning from T-pose to a dynamic pose on a grid",
 } as const;
 
@@ -32,12 +32,9 @@ export function Explainer() {
             iteration, readable anatomy, and workflows that respect how artists and creatives
             actually work.
           </p>
-          <p className="mt-3 max-w-2xl text-sm leading-relaxed text-[var(--color-text-tertiary)] italic">
-            Disclaimer: Using Magic Poser to give context, placeholder, all credit to Wombat Studios
-          </p>
         </div>
         <figure className="min-w-0 w-full">
-          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-[var(--color-border-subtle)] bg-gradient-to-b from-[#12122a] to-[#0a0a18] surface-matte">
+          <div className="relative aspect-[3.25/3] w-full overflow-hidden rounded-2xl border border-[var(--color-border-subtle)] bg-gradient-to-b from-[#12122a] to-[#0a0a18] surface-matte">
             <Image
               src={POSING_DEMO.src}
               alt={POSING_DEMO.alt}
