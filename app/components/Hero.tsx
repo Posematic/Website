@@ -150,7 +150,7 @@ export function Hero() {
               style={heroDelay(260)}
             >
               <Image
-                src="/images/497_1x_shots_so.png"
+                src="/images/posematic_ipad_concept.png"
                 alt="Posematic app on two tablets: Scenes library and Profile with bento-style settings"
                 fill
                 className="object-contain object-center brightness-[1.06] drop-shadow-[0_24px_80px_rgba(0,0,0,0.45)] sm:scale-[1.07] md:scale-[1.10] laptop:scale-140"
