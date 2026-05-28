@@ -41,7 +41,7 @@ const problems = [
     quote:
       "“A lot of the features I need are locked behind paywalls, and they’re just too expensive.”",
     attribution: "From many artists interviewed",
-    fix: "Fair tiers with a generous path for students and early supporters. More details to be provided at launch.",
+    fix: "Fair and generous tiers for all users. More details to be provided at launch.",
     variant: "liquid" as const,
   },
 ];

@@ -11,7 +11,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Posematic · Optimizing workflows for artists",
   description:
-    "Sketch-to-pose AI and a modern posing workflow built for illustrators, animators, and every artist who needs reference fast.",
+    "Sketch-to-pose algorithm and a modern posing workflow built for illustrators, animators, and every artist who needs reference fast.",
 };
 
 export default function RootLayout({

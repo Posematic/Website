@@ -120,7 +120,7 @@ export function Hero() {
               style={heroDelay(320)}
             >
               A modern posing app for the modern artist: fast anatomy, modern UI,
-              and sketch-to-pose AI that turns rough lines into clear 3D
+              and sketch-to-pose algorithm that turns rough lines into clear 3D
               reference.
             </p>
             <div

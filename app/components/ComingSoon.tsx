@@ -1,4 +1,4 @@
-import { Apple } from "lucide-react";
+import { SiAppstore, SiGoogleplay } from "react-icons/si";
 import {
   PAGE_MAX,
   SECTION_EDGE,
@@ -29,7 +29,7 @@ export function ComingSoon() {
             disabled
             className="inline-flex items-center gap-2 rounded-xl border border-white/15 bg-white/5 px-5 py-3 text-sm font-medium text-white/50 desktop:px-6 desktop:py-3.5 desktop:text-base"
           >
-            <Apple className="h-5 w-5 desktop:h-6 desktop:w-6" strokeWidth={1.5} aria-hidden />
+            <SiAppstore className="h-5 w-5 desktop:h-6 desktop:w-6" aria-hidden />
             App Store
           </button>
           <button
@@ -37,9 +37,7 @@ export function ComingSoon() {
             disabled
             className="inline-flex items-center gap-2 rounded-xl border border-white/15 bg-white/5 px-5 py-3 text-sm font-medium text-white/50 desktop:px-6 desktop:py-3.5 desktop:text-base"
           >
-            <span className="font-semibold" aria-hidden>
-              ▶
-            </span>
+            <SiGoogleplay className="h-5 w-5 desktop:h-6 desktop:w-6" aria-hidden />
             Google Play
           </button>
           <button
