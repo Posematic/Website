@@ -14,22 +14,23 @@ import {
   PAGE_MAX,
   SECTION_EDGE,
   SECTION_H2,
-  SECTION_LEDE,
+  SECTION_LEDE_NARROW,
   SECTION_PY,
 } from "@/app/lib/pageLayout";
+import { CARD_BASE, CARD_INTERACTIVE, SECTION_EYEBROW } from "@/app/lib/uiTokens";
 
 const animationFeatures = [
   {
     icon: Sparkles,
     title: "Sketch to animation",
     description:
-      "Turn animations into useable reference material. We aim for fast previews and iteration.",
+      "Turn animations into usable reference material with fast previews and iteration.",
   },
   {
     icon: Video,
     title: "Video to animation",
     description:
-      "Take motion videos and convert it into reliable poses, animated and all.",
+      "Convert motion videos into reliable poses—animated and ready to reference.",
   },
   {
     icon: Box,
@@ -49,17 +50,17 @@ const referenceFeatures: Array<{
     icon: Smile,
     title: "Sketch to face pose",
     description:
-      "Turn drawings of faces into readable and accurate facial poses you can maniuplate.",
+      "Turn face drawings into readable, accurate expressions you can manipulate.",
   },
   {
     icon: Camera,
     title: "Image to face pose",
     description:
-      "Find the right image to the right expressions. Especially when you need a fast match to a photo.",
+      "Match expressions to photos quickly when you need a fast reference.",
   },
   {
     icon: Grid3x3,
-    title: "3D perspective grids & live vanishing points",
+    title: "3D perspective grids",
     description:
       "Draw with proper perspective that updates as you move the camera.",
   },
@@ -67,117 +68,98 @@ const referenceFeatures: Array<{
     icon: Shirt,
     title: "Cloth physics",
     description:
-      "Draping that reacts to changes in the environment. Uncommon in similar tools.",
+      "Draping that reacts to pose and environment changes—uncommon in similar tools.",
     highlight: true,
   },
   {
     icon: Wind,
     title: "Hair physics",
     description:
-      "Strand motion that follows head turns and movements. Another area we want to nail.",
+      "Strand motion that follows head turns and movement—another area we want to nail.",
     highlight: true,
   },
   {
     icon: Layers,
     title: "Asaro head references",
     description:
-      "Undertand the human head, providing a reference you can rotate under studio lighting.",
+      "Understand head form with a reference you can rotate under studio lighting.",
   },
 ];
 
+function FeatureCard({
+  icon: Icon,
+  title,
+  description,
+  highlight = false,
+}: {
+  icon: LucideIcon;
+  title: string;
+  description: string;
+  highlight?: boolean;
+}) {
+  return (
+    <div
+      className={`rounded-[22px] border p-5 laptop:p-5 desktop:p-6 wide:p-7 ${CARD_INTERACTIVE} ${
+        highlight
+          ? "surface-liquid border-[var(--color-brand-purple)]/30 shadow-[0_20px_60px_rgba(75,59,255,0.22)]"
+          : `${CARD_BASE}`
+      }`}
+    >
+      <div className="icon-ring mb-3 w-fit">
+        <div className="icon-ring-inner h-10 w-10">
+          <Icon className="h-[18px] w-[18px] text-white" strokeWidth={1.5} aria-hidden />
+        </div>
+      </div>
+      <div className="flex flex-wrap items-center gap-2">
+        <h4 className="text-[0.9375rem] font-semibold tracking-[-0.01em] text-white laptop:text-base">
+          {title}
+        </h4>
+        {highlight ? (
+          <span className="rounded-md border border-white/10 bg-white/[0.06] px-2 py-0.5 text-[10px] font-medium tracking-[0.02em] text-[var(--color-brand-highlight)]">
+            Uncommon
+          </span>
+        ) : null}
+      </div>
+      <p className="mt-2 text-[0.8125rem] leading-[1.65] text-[var(--color-text-secondary)] laptop:text-sm">
+        {description}
+      </p>
+    </div>
+  );
+}
+
 export function Vision() {
   return (
-    <section
-      id="vision"
-      className={`relative ${SECTION_PY} ${SECTION_EDGE}`}
-    >
+    <section id="vision" className={`relative ${SECTION_PY} ${SECTION_EDGE}`}>
       <div className={PAGE_MAX}>
-        <h2 className={`max-w-3xl ${SECTION_H2}`}>
+        <div className={SECTION_EYEBROW}>Roadmap</div>
+        <h2 className={`max-w-[62ch] ${SECTION_H2}`}>
           More than a posing app: a reference hub built for every artist
         </h2>
-        <p className={`mt-4 max-w-3xl ${SECTION_LEDE}`}>
-          We are building toward a single place where creatives{" "}
-          {/* {" "}
-          <span className="text-white/90">3D animators</span>   
-          */}
-          can trust their references of the body, face, clothing, and more, plus
-          physics and perspective tools most competitors simply do not ship.
+        <p className={`mt-4 ${SECTION_LEDE_NARROW}`}>
+          We are building toward one place where creatives can trust references
+          for the body, face, clothing, and more—plus physics and perspective
+          tools most competitors do not ship.
         </p>
-        <div className="mt-10 space-y-10 laptop:mt-12 laptop:space-y-12">
+        <div className="mt-12 space-y-12 laptop:mt-14 laptop:space-y-14">
           <div>
-            <h3 className="text-base font-semibold tracking-tight text-[var(--color-brand-highlight)] laptop:text-[1.35rem] wide:text-[1.45rem]">
+            <h3 className="text-base font-semibold tracking-[-0.01em] text-[var(--color-brand-highlight)] laptop:text-[1.35rem] wide:text-[1.45rem]">
               Reference
             </h3>
-            <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 laptop:mt-5">
-              {referenceFeatures.map((f) => {
-                const Icon = f.icon;
-                return (
-                  <div
-                    key={f.title}
-                    className={`rounded-2xl border p-5 shadow-[0_20px_60px_rgba(10,5,40,0.35)] laptop:p-5 desktop:p-6 wide:p-7 ${
-                      f.highlight
-                        ? "surface-liquid border-[var(--color-brand-purple)]/30"
-                        : "surface-matte border-[var(--color-border-subtle)]"
-                    }`}
-                  >
-                    <div className="icon-ring mb-3 w-fit">
-                      <div className="icon-ring-inner h-10 w-10">
-                        <Icon
-                          className="h-[18px] w-[18px] text-white"
-                          strokeWidth={1.5}
-                          aria-hidden
-                        />
-                      </div>
-                    </div>
-                    <div className="flex flex-wrap items-center gap-2">
-                      <h4 className="text-[0.9375rem] font-semibold text-white laptop:text-base">
-                        {f.title}
-                      </h4>
-                      {f.highlight ? (
-                        <span className="rounded-full bg-white/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-[var(--color-brand-highlight)]">
-                          Uncommon
-                        </span>
-                      ) : null}
-                    </div>
-                    <p className="mt-2 text-[0.8125rem] leading-relaxed text-[var(--color-text-secondary)] laptop:text-sm">
-                      {f.description}
-                    </p>
-                  </div>
-                );
-              })}
+            <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {referenceFeatures.map((f) => (
+                <FeatureCard key={f.title} {...f} />
+              ))}
             </div>
           </div>
 
           <div>
-            <h3 className="text-base font-semibold tracking-tight text-[var(--color-brand-highlight)] laptop:text-[1.35rem] wide:text-[1.45rem]">
+            <h3 className="text-base font-semibold tracking-[-0.01em] text-[var(--color-brand-highlight)] laptop:text-[1.35rem] wide:text-[1.45rem]">
               Animation
             </h3>
-            <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 laptop:mt-5">
-              {animationFeatures.map((f) => {
-                const Icon = f.icon;
-                return (
-                  <div
-                    key={f.title}
-                    className="surface-matte rounded-2xl border border-[var(--color-border-subtle)] p-5 shadow-[0_20px_60px_rgba(10,5,40,0.35)] laptop:p-5 desktop:p-6 wide:p-7"
-                  >
-                    <div className="icon-ring mb-3 w-fit">
-                      <div className="icon-ring-inner h-10 w-10">
-                        <Icon
-                          className="h-[18px] w-[18px] text-white"
-                          strokeWidth={1.5}
-                          aria-hidden
-                        />
-                      </div>
-                    </div>
-                    <h4 className="text-[0.9375rem] font-semibold text-white laptop:text-base">
-                      {f.title}
-                    </h4>
-                    <p className="mt-2 text-[0.8125rem] leading-relaxed text-[var(--color-text-secondary)] laptop:text-sm">
-                      {f.description}
-                    </p>
-                  </div>
-                );
-              })}
+            <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {animationFeatures.map((f) => (
+                <FeatureCard key={f.title} {...f} />
+              ))}
             </div>
           </div>
         </div>

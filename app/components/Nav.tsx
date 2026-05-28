@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { ChevronRight, Menu, X } from "lucide-react";
 import { PAGE_EDGE, PAGE_MAX } from "@/app/lib/pageLayout";
+import { CTA_GHOST, FOCUS_RING, LINK_MUTED } from "@/app/lib/uiTokens";
 
 const links = [
   { href: "#mission", label: "Mission" },
@@ -47,12 +48,12 @@ export function Nav() {
     >
       <div className={`relative ${PAGE_MAX}`}>
         <nav
-          className="pointer-events-auto relative flex h-16 items-center justify-between gap-4 rounded-xl border border-white/[0.1] bg-[rgba(8,8,15,0.35)] px-4 shadow-[0_12px_48px_rgba(0,0,0,0.35)] backdrop-blur-xl backdrop-saturate-150 sm:px-6 laptop:px-8 desktop:h-[4.25rem] desktop:px-10 wide:h-[4.5rem]"
+          className="pointer-events-auto relative flex h-16 items-center justify-between gap-4 rounded-xl border border-white/10 bg-[rgba(8,8,15,0.42)] px-4 shadow-[0_12px_48px_rgba(46,27,158,0.28)] backdrop-blur-xl backdrop-saturate-150 sm:px-6 laptop:px-8 desktop:h-[4.25rem] desktop:px-10 wide:h-[4.5rem]"
           aria-label="Primary"
         >
           <Link
             href="#mission"
-            className="flex min-w-0 shrink items-center gap-2.5 text-[17px] font-medium tracking-tight text-white sm:gap-3"
+            className={`flex min-w-0 shrink items-center gap-2.5 text-[17px] font-medium tracking-[-0.02em] text-white sm:gap-3 ${FOCUS_RING} rounded-lg`}
             onClick={() => setOpen(false)}
           >
             <span className="relative inline-flex h-10 w-10 shrink-0 desktop:h-11 desktop:w-11 wide:h-12 wide:w-12">
@@ -92,7 +93,7 @@ export function Nav() {
               <li key={l.href} className="pointer-events-auto">
                 <a
                   href={l.href}
-                  className="text-[15px] font-normal text-white/70 transition-colors hover:text-white"
+                  className={LINK_MUTED}
                 >
                   {l.label}
                 </a>
@@ -104,7 +105,7 @@ export function Nav() {
             <a
               href="#waitlist"
               aria-label={compact ? "Get early access" : undefined}
-              className={`hidden items-center justify-center overflow-hidden whitespace-nowrap rounded-md border border-white/20 bg-white/6 py-2.5 text-[15px] font-medium leading-none text-white/90 transition-[padding,gap,background-color,border-color] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:border-white/30 hover:bg-white/10 sm:inline-flex ${
+              className={`${CTA_GHOST} hidden sm:inline-flex ${
                 compact ? "gap-0 px-2.5" : "gap-2 px-5"
               }`}
             >
@@ -123,7 +124,7 @@ export function Nav() {
             </a>
             <button
               type="button"
-              className="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-white/15 bg-white/[0.06] text-white transition-colors hover:bg-white/10 md:hidden"
+              className={`inline-flex h-11 w-11 items-center justify-center rounded-lg border border-white/15 bg-white/[0.06] text-white transition-[background-color,transform] duration-200 hover:bg-white/10 active:scale-[0.98] md:hidden ${FOCUS_RING}`}
               aria-expanded={open}
               aria-controls="mobile-nav"
               onClick={() => setOpen((v) => !v)}
@@ -144,13 +145,13 @@ export function Nav() {
             open ? "block" : "hidden"
           }`}
         >
-          <div className="rounded-2xl border border-white/10 bg-[rgba(8,8,15,0.92)] p-2 shadow-[0_20px_60px_rgba(10,5,40,0.5)] backdrop-blur-xl backdrop-saturate-150">
+          <div className="grain rounded-2xl border border-white/10 bg-[rgba(8,8,15,0.92)] p-2 shadow-[0_20px_60px_rgba(46,27,158,0.35)] backdrop-blur-xl backdrop-saturate-150">
             <ul className="flex flex-col gap-0.5">
               {links.map((l) => (
                 <li key={l.href}>
                   <a
                     href={l.href}
-                    className="block rounded-xl px-4 py-3 text-[15px] text-white/85 transition-colors hover:bg-white/5 hover:text-white"
+                    className={`block rounded-xl px-4 py-3 text-[15px] text-white/85 transition-colors duration-200 hover:bg-white/5 hover:text-white ${FOCUS_RING}`}
                     onClick={() => setOpen(false)}
                   >
                     {l.label}
@@ -160,7 +161,7 @@ export function Nav() {
               <li className="border-t border-white/10 pt-2 sm:hidden">
                 <a
                   href="#waitlist"
-                  className="block rounded-xl px-4 py-3 text-center text-[15px] font-medium text-white"
+                  className={`block rounded-xl px-4 py-3 text-center text-[15px] font-medium text-white transition-colors duration-200 hover:bg-white/5 ${FOCUS_RING}`}
                   onClick={() => setOpen(false)}
                 >
                   Get early access

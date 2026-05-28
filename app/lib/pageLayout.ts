@@ -20,11 +20,19 @@ export const PAGE_MAX =
 
 /** Shared section headings — compact on phones, scales up through breakpoints */
 export const SECTION_H2 =
-  "text-[1.625rem] font-semibold leading-snug tracking-tight text-white sm:text-[1.75rem] tablet:text-[1.875rem] laptop:text-[1.875rem] desktop:text-[2rem] wide:text-[2.25rem] wide:leading-[1.1]";
+  "text-[1.625rem] font-semibold leading-[1.12] tracking-[-0.02em] text-white sm:text-[1.75rem] tablet:text-[1.875rem] laptop:text-[1.875rem] desktop:text-[2rem] wide:text-[2.25rem] wide:leading-[1.1]";
 
 /** Section body copy — 16px on phones, a touch larger on sm, caps at 18px on wide */
 export const SECTION_LEDE =
-  "text-base leading-relaxed text-[var(--color-text-secondary)] sm:text-[1.0625rem] wide:text-lg";
+  "text-base leading-[1.65] text-[var(--color-text-secondary)] sm:text-[1.0625rem] wide:text-lg";
+
+/** Narrow intro copy (~62 characters) for hero-like or marketing ledes */
+export const SECTION_LEDE_NARROW =
+  "max-w-[62ch] text-base leading-[1.65] text-[var(--color-text-secondary)] sm:text-[1.0625rem] wide:text-lg";
+
+/** Muted supporting line under section headings */
+export const SECTION_KICKER =
+  "text-sm leading-relaxed text-[var(--color-text-tertiary)] italic";
 
 /** Default vertical padding for standard sections */
 export const SECTION_PY =

@@ -83,6 +83,17 @@ Single-page **landing site** for Posematic: section-based storytelling, scroll-d
 - **No new dependencies** unless the task requires it (e.g. already have `gsap`, `three`, `lucide-react`).
 - **Do not commit** `.env` or credentials. Do not run git commit/push unless asked.
 
+## Design taste (experimental branch)
+
+Project skill: `.cursor/skills/redesign-existing-projects/` ([taste-skill redesign](https://github.com/Leonxlnx/taste-skill)).
+
+When doing visual/UI polish, follow that skill’s audit-and-fix workflow **but** these repo rules override it:
+
+- Keep **Satoshi**, CSS variables in `globals.css`, and layout tokens in `pageLayout.ts` — do not swap fonts or invent new color/spacing scales.
+- Keep **Server Components** by default; use existing **`Reveal`** for scroll motion (respect `prefers-reduced-motion`).
+- Do not re-enable **`GridDistortion`** on mobile without iOS QA.
+- One section or concern per change; no new dependencies unless required.
+
 ## Adding a new section
 
 1. Create `app/components/MySection.tsx` (Server Component unless it needs client behavior).

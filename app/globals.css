@@ -49,6 +49,11 @@ textarea,
 
 body {
   background-color: var(--color-bg-primary);
+  background-image: radial-gradient(
+    ellipse 90% 55% at 50% -15%,
+    rgba(91, 75, 255, 0.09),
+    transparent 55%
+  );
   color: var(--color-text-primary);
   font-family: var(--font-sans);
 }
@@ -108,7 +113,11 @@ body {
 }
 
 .surface-matte {
-  background: linear-gradient(135deg, #0c0c1c 0%, #16132e 100%);
+  background: linear-gradient(
+    135deg,
+    var(--color-bg-primary) 0%,
+    var(--color-bg-card-gradient-base) 100%
+  );
 }
 
 /* Frosted nav: dark variant from design json */
@@ -195,6 +204,7 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .hero-reveal,
   .hero-reveal-image,
+  .hero-word-cycle-in,
   .reveal {
     animation: none !important;
     transition: none !important;
