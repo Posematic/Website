@@ -2,7 +2,7 @@
   <img src="public/images/posematic_logo_4px.svg" alt="Posematic" width="72" />
 </p>
 
-# Posematic Product Website
+<h1 style="text-align: center;"> Posematic Product Website> </h1>
 
 Marketing site for Posematic — A reference workflow optimizer for artists, illustrators, and animators. The page covers the product (sketch-to-pose, posing workflows, and more), team introductions, and a waitlist for early access. Platforms we aim to launch on are listed as coming soon.
 
