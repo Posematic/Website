@@ -34,6 +34,9 @@ export function Explainer() {
             readable anatomy, and workflows that respect how artists actually
             work.
           </p>
+          <p className={`mt-3 ${SECTION_LEDE}`}>
+            For initial release, we aim to ship with a feature-complete and innovative posing app. 
+          </p>
         </div>
         <figure className="min-w-0 w-full">
           <div className="grain relative aspect-[3.25/3] w-full overflow-hidden rounded-[22px] border border-[var(--color-border-subtle)] bg-gradient-to-b from-[var(--color-bg-card-gradient-base)] to-[var(--color-bg-deepest)] surface-matte shadow-[0_20px_60px_rgba(46,27,158,0.28)]">

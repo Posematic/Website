@@ -130,8 +130,9 @@ export function Hero() {
               className="hero-reveal mt-4 max-w-[34ch] text-sm leading-[1.65] text-[var(--color-text-secondary)] drop-shadow-sm sm:mt-5 sm:text-base md:text-[1.0625rem] laptop:mt-6 laptop:max-w-[36ch] laptop:text-lg laptop:leading-[1.65] wide:max-w-[38ch] wide:text-[1.1875rem]"
               style={heroDelay(320)}
             >
-              Fast anatomy, a focused UI, and sketch-to-pose AI that turns rough
-              lines into clear 3D reference.
+              A modern posing app for the modern artist: fast anatomy, modern UI,
+              and sketch-to-pose algorithm that turns rough lines into clear 3D
+              reference.
             </p>
             <div
               className="hero-reveal mt-8 flex w-full min-w-0 flex-wrap items-center justify-start gap-3 sm:mt-9 sm:gap-4"
