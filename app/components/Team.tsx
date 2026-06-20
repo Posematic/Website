@@ -71,7 +71,7 @@ function MemberCard({
       className={`flex flex-col overflow-hidden ${CARD_BASE} ${CARD_INTERACTIVE} ${className}`}
     >
       <div className="flex justify-center px-4 pt-5 sm:px-5 sm:pt-6">
-        <div className="relative aspect-[3/4] w-full max-w-[132px] overflow-hidden rounded-xl border border-white/[0.06] bg-gradient-to-b from-[var(--color-bg-card-gradient-base)] to-[var(--color-bg-card-dark)] shadow-[0_12px_36px_rgba(46,27,158,0.2)] sm:max-w-[148px] laptop:max-w-[152px] desktop:max-w-[164px] wide:max-w-[180px]">
+        <div className="relative aspect-[3/4] w-full max-w-[132px] overflow-hidden rounded-xl border border-white/[0.08] bg-gradient-to-b from-[var(--color-bg-card-gradient-base)] to-[var(--color-bg-card-dark)] shadow-[0_12px_36px_rgba(0,0,0,0.5)] sm:max-w-[148px] laptop:max-w-[152px] desktop:max-w-[164px] wide:max-w-[180px]">
           <Image
             src={member.imageSrc}
             alt={member.imageAlt}
@@ -85,7 +85,7 @@ function MemberCard({
         <h3 className="text-base font-semibold tracking-[-0.01em] text-white sm:text-[1.0625rem] desktop:text-lg wide:text-xl">
           {member.name}
         </h3>
-        <p className="mt-1 text-xs font-medium text-[var(--color-brand-highlight)] sm:text-[0.8125rem] desktop:text-sm">
+        <p className="mt-1 text-xs font-medium uppercase tracking-[0.08em] text-white/55 sm:text-[0.8125rem] desktop:text-sm">
           {member.role}
         </p>
         <p className="mt-2 text-[0.8125rem] leading-[1.65] text-[var(--color-text-secondary)] sm:text-sm desktop:text-[0.9375rem] wide:text-base">

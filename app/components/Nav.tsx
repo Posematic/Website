@@ -48,7 +48,7 @@ export function Nav() {
     >
       <div className={`relative ${PAGE_MAX}`}>
         <nav
-          className="pointer-events-auto relative flex h-16 items-center justify-between gap-4 rounded-xl border border-white/10 bg-[rgba(8,8,15,0.42)] px-4 shadow-[0_12px_48px_rgba(46,27,158,0.28)] backdrop-blur-xl backdrop-saturate-150 sm:px-6 laptop:px-8 desktop:h-[4.25rem] desktop:px-10 wide:h-[4.5rem]"
+          className="pointer-events-auto relative flex h-16 items-center justify-between gap-4 rounded-2xl border border-white/10 bg-[rgba(0,0,0,0.6)] px-4 shadow-[0_12px_48px_rgba(0,0,0,0.45)] backdrop-blur-xl backdrop-saturate-150 sm:px-6 laptop:px-8 desktop:h-[4.25rem] desktop:px-10 wide:h-[4.5rem]"
           aria-label="Primary"
         >
           <Link
@@ -145,7 +145,7 @@ export function Nav() {
             open ? "block" : "hidden"
           }`}
         >
-          <div className="grain rounded-2xl border border-white/10 bg-[rgba(8,8,15,0.92)] p-2 shadow-[0_20px_60px_rgba(46,27,158,0.35)] backdrop-blur-xl backdrop-saturate-150">
+          <div className="grain rounded-2xl border border-white/10 bg-[rgba(0,0,0,0.92)] p-2 shadow-[0_20px_60px_rgba(0,0,0,0.5)] backdrop-blur-xl backdrop-saturate-150">
             <ul className="flex flex-col gap-0.5">
               {links.map((l) => (
                 <li key={l.href}>

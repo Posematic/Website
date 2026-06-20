@@ -72,7 +72,7 @@ function WordCycle({
       <span className="col-start-1 row-start-1 z-1 min-w-0 max-w-full justify-self-start">
         <span
           key={reduceMotion ? words[0] : index}
-          className={`inline-block max-w-full break-words text-[var(--color-brand-highlight)] ${reduceMotion ? "" : "hero-word-cycle-in"}`}
+          className={`text-feather inline-block max-w-full break-words ${reduceMotion ? "" : "hero-word-cycle-in"}`}
         >
           {words[reduceMotion ? 0 : index] ?? ""}
         </span>
@@ -112,7 +112,7 @@ export function Hero() {
                 alt=""
                 width={40}
                 height={40}
-                className="h-9 w-9 shrink-0 drop-shadow-[0_4px_12px_rgba(46,27,158,0.35)] sm:h-10 sm:w-10 laptop:h-10 laptop:w-10 wide:h-12 wide:w-12"
+                className="h-9 w-9 shrink-0 drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)] sm:h-10 sm:w-10 laptop:h-10 laptop:w-10 wide:h-12 wide:w-12"
                 aria-hidden
               />
               <span className="text-xl font-semibold tracking-[-0.02em] text-white drop-shadow-md sm:text-[26px] laptop:text-[26px] wide:text-[1.75rem]">
@@ -120,7 +120,7 @@ export function Hero() {
               </span>
             </div>
             <h1
-              className="hero-reveal w-full min-w-0 text-balance text-[clamp(1.3125rem,4vw+0.5rem,2.05rem)] font-semibold leading-[1.12] tracking-[-0.025em] text-white drop-shadow-sm sm:text-4xl sm:leading-[1.14] md:text-5xl md:leading-[1.1] laptop:text-[2.875rem] laptop:leading-[1.08] wide:text-[3.25rem] wide:leading-[1.06]"
+              className="hero-reveal w-full min-w-0 text-balance text-[clamp(1.5rem,4vw+0.5rem,2.25rem)] font-bold leading-[1.08] tracking-[-0.03em] text-white drop-shadow-sm sm:text-[2.75rem] sm:leading-[1.06] md:text-[3.25rem] md:leading-[1.04] laptop:text-[3.25rem] laptop:leading-[1.03] wide:text-[3.75rem] wide:leading-[1.02]"
               style={heroDelay(180)}
             >
               Redefining references that keep up with your&nbsp;
@@ -162,7 +162,7 @@ export function Hero() {
                 src="/images/posematic_ipad_concept.png"
                 alt="Posematic app on two tablets: Scenes library and Profile with bento-style settings"
                 fill
-                className="object-contain object-center brightness-[1.06] drop-shadow-[0_28px_90px_rgba(46,27,158,0.38)] sm:scale-[1.07] md:scale-[1.10] laptop:scale-140"
+                className="object-contain object-center brightness-[1.06] drop-shadow-[0_28px_90px_rgba(0,0,0,0.6)] sm:scale-[1.07] md:scale-[1.10] laptop:scale-140"
                 sizes="(max-width: 1023px) 95vw, (max-width: 1279px) 50vw, (max-width: 1535px) 55vw, 60vw"
                 priority
               />

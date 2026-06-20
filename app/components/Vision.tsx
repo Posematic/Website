@@ -99,9 +99,9 @@ function FeatureCard({
 }) {
   return (
     <div
-      className={`rounded-[22px] border p-5 laptop:p-5 desktop:p-6 wide:p-7 ${CARD_INTERACTIVE} ${
+      className={`rounded-[20px] border p-5 laptop:p-5 desktop:p-6 wide:p-7 ${CARD_INTERACTIVE} ${
         highlight
-          ? "surface-liquid border-[var(--color-brand-purple)]/30 shadow-[0_20px_60px_rgba(75,59,255,0.22)]"
+          ? "surface-liquid border-white/15 shadow-[0_20px_60px_rgba(0,0,0,0.5)]"
           : `${CARD_BASE}`
       }`}
     >
@@ -115,7 +115,7 @@ function FeatureCard({
           {title}
         </h4>
         {highlight ? (
-          <span className="rounded-md border border-white/10 bg-white/[0.06] px-2 py-0.5 text-[10px] font-medium tracking-[0.02em] text-[var(--color-brand-highlight)]">
+          <span className="rounded-full border border-white/10 bg-white/[0.06] px-2 py-0.5 text-[10px] font-medium uppercase tracking-[0.1em] text-white/55">
             Uncommon
           </span>
         ) : null}
@@ -142,7 +142,7 @@ export function Vision() {
         </p>
         <div className="mt-12 space-y-12 laptop:mt-14 laptop:space-y-14">
           <div>
-            <h3 className="text-base font-semibold tracking-[-0.01em] text-[var(--color-brand-highlight)] laptop:text-[1.35rem] wide:text-[1.45rem]">
+            <h3 className="text-feather w-fit text-lg font-bold tracking-[-0.02em] laptop:text-[1.5rem] wide:text-[1.625rem]">
               Reference
             </h3>
             <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -153,7 +153,7 @@ export function Vision() {
           </div>
 
           <div>
-            <h3 className="text-base font-semibold tracking-[-0.01em] text-[var(--color-brand-highlight)] laptop:text-[1.35rem] wide:text-[1.45rem]">
+            <h3 className="text-feather w-fit text-lg font-bold tracking-[-0.02em] laptop:text-[1.5rem] wide:text-[1.625rem]">
               Animation
             </h3>
             <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

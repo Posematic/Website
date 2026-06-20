@@ -85,8 +85,8 @@ export function Problems() {
                 <p className="mt-3 text-xs text-[var(--color-text-tertiary)] desktop:text-sm">
                   — {p.attribution}
                 </p>
-                <p className="mt-4 border-t border-white/10 pt-4 text-[0.8125rem] leading-[1.65] text-[var(--color-brand-highlight)] laptop:mt-5 laptop:pt-5 desktop:text-sm">
-                  <span className="font-medium text-white">Our fix: </span>
+                <p className="mt-4 border-t border-white/10 pt-4 text-[0.8125rem] leading-[1.65] text-[var(--color-text-secondary)] laptop:mt-5 laptop:pt-5 desktop:text-sm">
+                  <span className="font-semibold text-white">Our fix: </span>
                   {p.fix}
                 </p>
               </article>

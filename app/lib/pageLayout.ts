@@ -18,17 +18,20 @@ export const SECTION_EDGE =
 export const PAGE_MAX =
   "mx-auto w-full max-w-[min(1240px,calc(100%-1.75rem))] sm:max-w-[min(1320px,calc(100%-2.75rem))] laptop:max-w-[min(80rem,calc(100%-2.5rem))] wide:max-w-[min(1580px,calc(100%-4.25rem))]";
 
-/** Shared section headings — compact on phones, scales up through breakpoints */
+/**
+ * Shared section headings. Feather-style display type: large, heavy, tight
+ * tracking, balanced wrap. Fluidly scales from ~32px on phones to ~52px wide.
+ */
 export const SECTION_H2 =
-  "text-[1.625rem] font-semibold leading-[1.12] tracking-[-0.02em] text-white sm:text-[1.75rem] tablet:text-[1.875rem] laptop:text-[1.875rem] desktop:text-[2rem] wide:text-[2.25rem] wide:leading-[1.1]";
+  "text-balance text-[clamp(2rem,4.5vw,3.25rem)] font-bold leading-[1.04] tracking-[-0.03em] text-white";
 
-/** Section body copy — 16px on phones, a touch larger on sm, caps at 18px on wide */
+/** Section body copy — 16px on phones, scaling to 20px on wide */
 export const SECTION_LEDE =
-  "text-base leading-[1.65] text-[var(--color-text-secondary)] sm:text-[1.0625rem] wide:text-lg";
+  "text-base leading-[1.6] text-[var(--color-text-secondary)] sm:text-[1.0625rem] wide:text-xl";
 
 /** Narrow intro copy (~62 characters) for hero-like or marketing ledes */
 export const SECTION_LEDE_NARROW =
-  "max-w-[62ch] text-base leading-[1.65] text-[var(--color-text-secondary)] sm:text-[1.0625rem] wide:text-lg";
+  "max-w-[62ch] text-base leading-[1.6] text-[var(--color-text-secondary)] sm:text-[1.0625rem] wide:text-xl";
 
 /** Muted supporting line under section headings */
 export const SECTION_KICKER =

@@ -36,7 +36,7 @@ const STAGE_COL =
   "min-w-0 flex-1 max-w-[240px] desktop:max-w-[256px] wide:max-w-[280px]";
 
 const STAGE_FRAME =
-  "relative mb-3 aspect-[4/5] w-full overflow-hidden rounded-2xl border border-white/10 bg-[var(--color-bg-card-dark)] shadow-[0_16px_48px_rgba(46,27,158,0.22)] transition-[transform,box-shadow] duration-200 hover:-translate-y-0.5 hover:shadow-[0_20px_56px_rgba(46,27,158,0.3)]";
+  "relative mb-3 aspect-[4/5] w-full overflow-hidden rounded-2xl border border-white/10 bg-[var(--color-bg-card-dark)] shadow-[0_16px_48px_rgba(0,0,0,0.5)] transition-[transform,box-shadow] duration-200 hover:-translate-y-0.5 hover:shadow-[0_20px_56px_rgba(0,0,0,0.6)]";
 
 export function SketchToPose() {
   return (
@@ -80,7 +80,7 @@ export function SketchToPose() {
                 </div>
                 {i < stages.length - 1 ? (
                   <div
-                    className="flex shrink-0 justify-center py-3 text-[var(--color-brand-highlight)]"
+                    className="flex shrink-0 justify-center py-3 text-white/45"
                     aria-hidden
                   >
                     <ArrowDown className="h-6 w-6" strokeWidth={1.25} />
@@ -112,7 +112,7 @@ export function SketchToPose() {
                 </div>
                 {i < stages.length - 1 ? (
                   <div
-                    className="flex shrink-0 items-center justify-center self-center px-1 pb-12 text-[var(--color-brand-highlight)] laptop:px-2"
+                    className="flex shrink-0 items-center justify-center self-center px-1 pb-12 text-white/45 laptop:px-2"
                     aria-hidden
                   >
                     <ArrowRight className="h-6 w-6 desktop:h-7 desktop:w-7" strokeWidth={2} />
