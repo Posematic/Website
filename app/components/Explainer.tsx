@@ -37,6 +37,9 @@ export function Explainer() {
           <p className={`mt-3 ${SECTION_LEDE}`}>
             For initial release, we aim to ship with a feature-complete and innovative posing app. 
           </p>
+          <p className={`mt-3 ${SECTION_LEDE}`}>
+            For initial release, we aim to ship with a feature-complete and innovative posing app. 
+          </p>
         </div>
         <figure className="min-w-0 w-full">
           <div className="device-frame">
