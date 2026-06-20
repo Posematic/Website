@@ -5,8 +5,7 @@ import { ChevronRight } from "lucide-react";
 import type { CSSProperties } from "react";
 import { useEffect, useState } from "react";
 import { PAGE_EDGE, PAGE_MAX } from "@/app/lib/pageLayout";
-import { CTA_PRIMARY } from "@/app/lib/uiTokens";
-import { HeroBackdrop } from "./HeroBackdrop";
+import { CTA_GHOST, CTA_PRIMARY } from "@/app/lib/uiTokens";
 
 /**
  * Inline CSS variable typing helper for `--hero-delay` so we can drive the
@@ -57,7 +56,7 @@ function WordCycle({
 
   return (
     <span
-      className={`relative inline-grid min-w-0 max-w-full justify-items-start [word-break:break-word] ${className}`}
+      className={`relative inline-grid min-w-0 max-w-full justify-items-center [word-break:break-word] ${className}`}
       aria-live="polite"
     >
       {words.map((w) => (
@@ -69,7 +68,7 @@ function WordCycle({
           {w}
         </span>
       ))}
-      <span className="col-start-1 row-start-1 z-1 min-w-0 max-w-full justify-self-start">
+      <span className="col-start-1 row-start-1 z-1 min-w-0 max-w-full justify-self-center">
         <span
           key={reduceMotion ? words[0] : index}
           className={`text-feather inline-block max-w-full break-words ${reduceMotion ? "" : "hero-word-cycle-in"}`}
@@ -85,89 +84,76 @@ export function Hero() {
   return (
     <section
       id="mission"
-      className="grain relative min-h-[100svh] scroll-mt-24 overflow-hidden border-b border-white/[0.06] sm:scroll-mt-28 desktop:scroll-mt-32 wide:scroll-mt-36"
+      className="grain relative isolate min-h-svh scroll-mt-24 overflow-hidden border-b border-white/[0.06]"
     >
-      <HeroBackdrop />
+      {/* Ambient feather glow on pure black */}
+      <div className="pointer-events-none absolute inset-0 -z-10" aria-hidden>
+        <div className="absolute left-1/2 top-[-12%] h-[58vh] w-[85vw] -translate-x-1/2 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(124,92,255,0.20),transparent_70%)] blur-3xl" />
+        <div className="absolute bottom-[6%] left-[12%] h-[40vh] w-[42vw] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(43,217,197,0.12),transparent_70%)] blur-3xl" />
+        <div className="absolute bottom-[10%] right-[10%] h-[42vh] w-[42vw] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(255,111,177,0.12),transparent_70%)] blur-3xl" />
+      </div>
 
       <div
-        className="absolute inset-0 z-[3] bg-gradient-to-b from-[var(--color-bg-primary)]/50 via-[var(--color-bg-primary)]/15 to-[var(--color-bg-primary)]/42"
-        aria-hidden
-      />
-      <div
-        className="pointer-events-none absolute inset-0 z-[4] bg-gradient-to-r from-[var(--color-bg-primary)]/90 via-[var(--color-bg-primary)]/18 to-transparent sm:from-[var(--color-bg-primary)]/85"
-        aria-hidden
-      />
-
-      <div
-        className={`relative z-10 flex min-h-[100svh] w-full flex-col justify-start pb-[4.5rem] pt-30 sm:pb-20 sm:pt-28 laptop:justify-center laptop:pb-26 laptop:pt-28 desktop:pb-28 desktop:pt-30 wide:pb-32 wide:pt-34 ${PAGE_MAX} ${PAGE_EDGE}`}
+        className={`relative z-10 flex min-h-svh flex-col items-center pb-24 pt-[clamp(7rem,16vh,11rem)] text-center ${PAGE_MAX} ${PAGE_EDGE}`}
       >
-        <div className="grid w-full grid-cols-1 items-center gap-4 laptop:grid-cols-2 laptop:gap-10 wide:gap-12">
-          <div className="flex w-full min-w-0 max-w-2xl flex-col items-start text-left px-5 sm:px-6 tablet:px-8 laptop:px-0 wide:max-w-[min(42rem,calc(100%-4rem))]">
-            <div
-              className="hero-reveal mb-5 flex w-full min-w-0 items-center justify-start gap-2.5 self-start sm:mb-6 sm:gap-3 laptop:mb-7 laptop:gap-3 wide:mb-7"
-              style={heroDelay(60)}
-            >
-              <Image
-                src="/images/posematic-default-profile-logo.svg"
-                alt=""
-                width={40}
-                height={40}
-                className="h-9 w-9 shrink-0 drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)] sm:h-10 sm:w-10 laptop:h-10 laptop:w-10 wide:h-12 wide:w-12"
-                aria-hidden
-              />
-              <span className="text-xl font-semibold tracking-[-0.02em] text-white drop-shadow-md sm:text-[26px] laptop:text-[26px] wide:text-[1.75rem]">
-                Posematic
-              </span>
-            </div>
-            <h1
-              className="hero-reveal w-full min-w-0 text-balance text-[clamp(1.5rem,4vw+0.5rem,2.25rem)] font-bold leading-[1.08] tracking-[-0.03em] text-white drop-shadow-sm sm:text-[2.75rem] sm:leading-[1.06] md:text-[3.25rem] md:leading-[1.04] laptop:text-[3.25rem] laptop:leading-[1.03] wide:text-[3.75rem] wide:leading-[1.02]"
-              style={heroDelay(180)}
-            >
-              Redefining references that keep up with your&nbsp;
-              <WordCycle words={wordCycle} />
-            </h1>
-            <p
-              className="hero-reveal mt-4 max-w-[34ch] text-sm leading-[1.65] text-[var(--color-text-secondary)] drop-shadow-sm sm:mt-5 sm:text-base md:text-[1.0625rem] laptop:mt-6 laptop:max-w-[36ch] laptop:text-lg laptop:leading-[1.65] wide:max-w-[38ch] wide:text-[1.1875rem]"
-              style={heroDelay(320)}
-            >
-              A modern posing app for the modern artist: fast anatomy, modern UI,
-              and sketch-to-pose algorithm that turns rough lines into clear 3D
-              reference.
-            </p>
-            <div
-              className="hero-reveal mt-8 flex w-full min-w-0 flex-wrap items-center justify-start gap-3 sm:mt-9 sm:gap-4"
-              style={heroDelay(460)}
-            >
-              <a href="#waitlist" className={CTA_PRIMARY}>
-                Get early access
-                <ChevronRight
-                  className="h-4 w-4 wide:h-[1.125rem] wide:w-[1.125rem]"
-                  strokeWidth={2}
-                  aria-hidden
-                />
-              </a>
-            </div>
-          </div>
+        <div className="hero-reveal" style={heroDelay(40)}>
+          <span className="inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/[0.04] px-4 py-1.5 text-[0.6875rem] font-medium uppercase tracking-[0.14em] text-white/65 backdrop-blur-sm">
+            <span className="h-1.5 w-1.5 rounded-full bg-[var(--color-brand-teal)]" aria-hidden />
+            In development · join early access
+          </span>
+        </div>
 
-          <div className="flex w-full justify-center laptop:justify-end">
-            <div
-              className="hero-reveal-image relative -mt-2 h-[min(46svh,400px)] w-[min(96vw,560px)] max-w-full shrink-0 sm:h-[min(50svh,460px)] sm:w-[min(94vw,600px)] md:h-[min(52svh,520px)] md:w-[min(94vw,660px)] laptop:mt-0 laptop:h-[min(64svh,680px)] laptop:w-full xl:h-[min(68svh,740px)] 2xl:h-[min(72svh,800px)]"
-              style={heroDelay(260)}
-            >
-              <div
-                className="pointer-events-none absolute inset-[8%] -z-10 rounded-full bg-[radial-gradient(ellipse_at_center,var(--color-brand-indigo)_0%,transparent_72%)] opacity-45 blur-3xl"
-                aria-hidden
-              />
-              <Image
-                src="/images/posematic_ipad_concept.png"
-                alt="Posematic app on two tablets: Scenes library and Profile with bento-style settings"
-                fill
-                className="object-contain object-center brightness-[1.06] drop-shadow-[0_28px_90px_rgba(0,0,0,0.6)] sm:scale-[1.07] md:scale-[1.10] laptop:scale-140"
-                sizes="(max-width: 1023px) 95vw, (max-width: 1279px) 50vw, (max-width: 1535px) 55vw, 60vw"
-                priority
-              />
-            </div>
-          </div>
+        <h1
+          className="hero-reveal mt-7 max-w-[20ch] text-balance text-[clamp(2.5rem,7vw,5.25rem)] font-bold leading-[1.0] tracking-[-0.035em] text-white"
+          style={heroDelay(150)}
+        >
+          <span className="block">References that keep up with your</span>
+          <WordCycle words={wordCycle} className="mt-1" />
+        </h1>
+
+        <p
+          className="hero-reveal mt-6 max-w-[52ch] text-base leading-[1.6] text-white/72 sm:text-lg laptop:text-xl"
+          style={heroDelay(280)}
+        >
+          A modern posing app for the modern artist — fast anatomy, a clean
+          interface, and a sketch-to-pose algorithm that turns rough lines into
+          clear 3D reference.
+        </p>
+
+        <div
+          className="hero-reveal mt-9 flex flex-wrap items-center justify-center gap-3"
+          style={heroDelay(400)}
+        >
+          <a href="#waitlist" className={CTA_PRIMARY}>
+            Get early access
+            <ChevronRight
+              className="h-4 w-4 wide:h-[1.125rem] wide:w-[1.125rem]"
+              strokeWidth={2}
+              aria-hidden
+            />
+          </a>
+          <a href="#vision" className={`${CTA_GHOST} px-6`}>
+            Explore features
+          </a>
+        </div>
+
+        <div
+          className="hero-reveal-image relative mt-16 w-full max-w-5xl laptop:mt-20"
+          style={heroDelay(440)}
+        >
+          <div
+            className="pointer-events-none absolute inset-x-[8%] top-[6%] -z-10 h-[80%] rounded-[40%] bg-[radial-gradient(ellipse_at_center,rgba(124,92,255,0.28),rgba(43,217,197,0.10)_45%,transparent_72%)] opacity-70 blur-3xl"
+            aria-hidden
+          />
+          <Image
+            src="/images/posematic_ipad_concept.png"
+            alt="Posematic running on two tablets: the Scenes library and a Profile screen with bento-style settings"
+            width={1400}
+            height={900}
+            className="h-auto w-full object-contain drop-shadow-[0_40px_120px_rgba(0,0,0,0.7)]"
+            sizes="(max-width: 1023px) 95vw, 1024px"
+            priority
+          />
         </div>
       </div>
     </section>

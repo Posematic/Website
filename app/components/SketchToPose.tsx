@@ -1,14 +1,9 @@
 import { Fragment } from "react";
-import {
-  PAGE_MAX,
-  SECTION_EDGE,
-  SECTION_H2,
-  SECTION_LEDE_NARROW,
-  SECTION_PY_TALL,
-} from "@/app/lib/pageLayout";
-import { PANEL_SHELL, SECTION_EYEBROW } from "@/app/lib/uiTokens";
+import { PAGE_MAX, SECTION_EDGE, SECTION_PY_TALL } from "@/app/lib/pageLayout";
+import { PANEL_SHELL } from "@/app/lib/uiTokens";
 import Image from "next/image";
 import { ArrowDown, ArrowRight, Sparkles } from "lucide-react";
+import { SectionHeader } from "./SectionHeader";
 
 const stages = [
   {
@@ -45,20 +40,23 @@ export function SketchToPose() {
         className={`${PANEL_SHELL} p-8 sm:p-11 laptop:p-12 desktop:p-14 wide:p-18 surface-liquid ${PAGE_MAX}`}
       >
         <div className="relative z-[1]">
-          <div className={SECTION_EYEBROW}>
-            <Sparkles className="h-3 w-3 desktop:h-3.5 desktop:w-3.5" strokeWidth={1.5} aria-hidden />
-            Flagship workflow
-          </div>
-          <h2 className={`max-w-[62ch] ${SECTION_H2}`}>
-            Sketch to pose, powered by machine learning and proven algorithms
-          </h2>
-          <p className={`mt-3 ${SECTION_LEDE_NARROW}`}>
-            Go from a rough drawing to a believable pose, then keep iterating
-            without breaking your creative flow.
-          </p>
+          <SectionHeader
+            eyebrow={
+              <>
+                <Sparkles
+                  className="h-3 w-3 desktop:h-3.5 desktop:w-3.5"
+                  strokeWidth={1.5}
+                  aria-hidden
+                />
+                Flagship workflow
+              </>
+            }
+            title="Sketch to pose, powered by machine learning"
+            lede="Go from a rough drawing to a believable pose, then keep iterating without breaking your creative flow."
+          />
 
           {/* Mobile: stack each stage (box + text) then arrow */}
-          <div className="mt-10 flex flex-col items-center tablet:hidden">
+          <div className="mt-12 flex flex-col items-center laptop:mt-16 tablet:hidden">
             {stages.map((stage, i) => (
               <Fragment key={stage.title}>
                 <div className="flex w-full max-w-[240px] flex-col items-center text-center">
@@ -90,7 +88,7 @@ export function SketchToPose() {
             ))}
           </div>
 
-          <div className="mt-10 hidden tablet:flex tablet:flex-nowrap tablet:items-start tablet:justify-center tablet:gap-x-2 laptop:gap-x-3">
+          <div className="mt-12 hidden laptop:mt-16 tablet:flex tablet:flex-nowrap tablet:items-start tablet:justify-center tablet:gap-x-2 laptop:gap-x-3">
             {stages.map((stage, i) => (
               <Fragment key={stage.title}>
                 <div className={`${STAGE_COL} text-center`}>

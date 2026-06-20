@@ -2,12 +2,11 @@ import { Clock, Cpu, DollarSign, UserX } from "lucide-react";
 import {
   PAGE_MAX,
   SECTION_EDGE,
-  SECTION_H2,
   SECTION_KICKER,
-  SECTION_LEDE_NARROW,
   SECTION_PY,
 } from "@/app/lib/pageLayout";
-import { CARD_BASE, CARD_INTERACTIVE, SECTION_EYEBROW } from "@/app/lib/uiTokens";
+import { CARD_BASE, CARD_INTERACTIVE } from "@/app/lib/uiTokens";
+import { SectionHeader } from "./SectionHeader";
 
 const problems = [
   {
@@ -49,15 +48,15 @@ export function Problems() {
   return (
     <section className={`relative ${SECTION_PY} ${SECTION_EDGE}`}>
       <div className={PAGE_MAX}>
-        <div className={SECTION_EYEBROW}>Why we exist</div>
-        <h2 className={`max-w-[62ch] ${SECTION_H2}`}>
-          Existing posing apps are broken
-        </h2>
-        <p className={`mt-4 ${SECTION_LEDE_NARROW}`}>
-          Four pain points we hear often—and how we aim to address each one.
+        <SectionHeader
+          eyebrow="Why we exist"
+          title="Existing posing apps are broken"
+          lede="Four pain points we hear often — and how we aim to address each one."
+        />
+        <p className={`mt-3 text-center ${SECTION_KICKER}`}>
+          From real testimonies
         </p>
-        <p className={`mt-3 ${SECTION_KICKER}`}>From real testimonies</p>
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:gap-5">
+        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:gap-5 laptop:mt-16">
           {problems.map((p) => {
             const Icon = p.icon;
             return (

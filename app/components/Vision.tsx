@@ -10,14 +10,8 @@ import {
   Video,
   Wind,
 } from "lucide-react";
-import {
-  PAGE_MAX,
-  SECTION_EDGE,
-  SECTION_H2,
-  SECTION_LEDE_NARROW,
-  SECTION_PY,
-} from "@/app/lib/pageLayout";
-import { CARD_BASE, CARD_INTERACTIVE, SECTION_EYEBROW } from "@/app/lib/uiTokens";
+import { PAGE_MAX, SECTION_EDGE, SECTION_PY } from "@/app/lib/pageLayout";
+import { SectionHeader } from "./SectionHeader";
 
 const animationFeatures = [
   {
@@ -98,29 +92,23 @@ function FeatureCard({
   highlight?: boolean;
 }) {
   return (
-    <div
-      className={`rounded-[20px] border p-5 laptop:p-5 desktop:p-6 wide:p-7 ${CARD_INTERACTIVE} ${
-        highlight
-          ? "surface-liquid border-white/15 shadow-[0_20px_60px_rgba(0,0,0,0.5)]"
-          : `${CARD_BASE}`
-      }`}
-    >
-      <div className="icon-ring mb-3 w-fit">
-        <div className="icon-ring-inner h-10 w-10">
-          <Icon className="h-[18px] w-[18px] text-white" strokeWidth={1.5} aria-hidden />
-        </div>
-      </div>
-      <div className="flex flex-wrap items-center gap-2">
-        <h4 className="text-[0.9375rem] font-semibold tracking-[-0.01em] text-white laptop:text-base">
+    <div className="group flex flex-col border-t border-white/10 pt-6 transition-colors duration-200 hover:border-white/25">
+      <Icon
+        className="h-9 w-9 text-white/85 transition-colors duration-200 group-hover:text-white"
+        strokeWidth={1.25}
+        aria-hidden
+      />
+      <div className="mt-5 flex flex-wrap items-center gap-2">
+        <h4 className="text-lg font-semibold tracking-[-0.01em] text-white desktop:text-xl">
           {title}
         </h4>
         {highlight ? (
-          <span className="rounded-full border border-white/10 bg-white/[0.06] px-2 py-0.5 text-[10px] font-medium uppercase tracking-[0.1em] text-white/55">
+          <span className="rounded-full border border-white/15 px-2 py-0.5 text-[10px] font-medium uppercase tracking-[0.1em] text-white/55">
             Uncommon
           </span>
         ) : null}
       </div>
-      <p className="mt-2 text-[0.8125rem] leading-[1.65] text-[var(--color-text-secondary)] laptop:text-sm">
+      <p className="mt-2 text-sm leading-[1.6] text-white/60 desktop:text-[0.9375rem]">
         {description}
       </p>
     </div>
@@ -131,21 +119,18 @@ export function Vision() {
   return (
     <section id="vision" className={`relative ${SECTION_PY} ${SECTION_EDGE}`}>
       <div className={PAGE_MAX}>
-        <div className={SECTION_EYEBROW}>Roadmap</div>
-        <h2 className={`max-w-[62ch] ${SECTION_H2}`}>
-          More than a posing app: a reference hub built for every artist
-        </h2>
-        <p className={`mt-4 ${SECTION_LEDE_NARROW}`}>
-          We are building toward one place where creatives can trust references
-          for the body, face, clothing, and more—plus physics and perspective
-          tools most competitors do not ship.
-        </p>
-        <div className="mt-12 space-y-12 laptop:mt-14 laptop:space-y-14">
+        <SectionHeader
+          eyebrow="Roadmap"
+          title="More than a posing app — a reference hub for every artist"
+          lede="One place creatives can trust for the body, face, clothing, and more, plus physics and perspective tools most competitors do not ship."
+        />
+
+        <div className="mt-16 space-y-16 laptop:mt-20 laptop:space-y-20">
           <div>
-            <h3 className="text-feather w-fit text-lg font-bold tracking-[-0.02em] laptop:text-[1.5rem] wide:text-[1.625rem]">
+            <h3 className="text-feather w-fit text-xl font-bold tracking-[-0.02em] laptop:text-[1.625rem]">
               Reference
             </h3>
-            <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-8 grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
               {referenceFeatures.map((f) => (
                 <FeatureCard key={f.title} {...f} />
               ))}
@@ -153,10 +138,10 @@ export function Vision() {
           </div>
 
           <div>
-            <h3 className="text-feather w-fit text-lg font-bold tracking-[-0.02em] laptop:text-[1.5rem] wide:text-[1.625rem]">
+            <h3 className="text-feather w-fit text-xl font-bold tracking-[-0.02em] laptop:text-[1.625rem]">
               Animation
             </h3>
-            <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-8 grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
               {animationFeatures.map((f) => (
                 <FeatureCard key={f.title} {...f} />
               ))}

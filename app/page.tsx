@@ -1,6 +1,7 @@
 import { ComingSoon } from "./components/ComingSoon";
 import { Explainer } from "./components/Explainer";
 import { Footer } from "./components/Footer";
+import { Gallery } from "./components/Gallery";
 import { Hero } from "./components/Hero";
 import { Nav } from "./components/Nav";
 import { Problems } from "./components/Problems";
@@ -19,6 +20,9 @@ export default function Home() {
         <div id="product" className="scroll-mt-3 sm:scroll-mt-3">
           <Reveal>
             <SketchToPose />
+          </Reveal>
+          <Reveal>
+            <Gallery />
           </Reveal>
           <Reveal>
             <Explainer />

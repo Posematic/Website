@@ -5,10 +5,7 @@ import {
   SECTION_LEDE,
   SECTION_PY_COMPACT,
 } from "@/app/lib/pageLayout";
-import { PANEL_SHELL, SECTION_EYEBROW } from "@/app/lib/uiTokens";
-
-const PLATFORM_BTN =
-  "inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/[0.04] px-5 py-3 text-sm font-medium text-white/45 cursor-not-allowed desktop:px-6 desktop:py-3.5 desktop:text-base";
+import { PANEL_SHELL } from "@/app/lib/uiTokens";
 
 export function ComingSoon() {
   return (

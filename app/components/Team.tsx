@@ -1,12 +1,7 @@
 import Image from "next/image";
-import {
-  PAGE_MAX,
-  SECTION_EDGE,
-  SECTION_H2,
-  SECTION_LEDE_NARROW,
-  SECTION_PY,
-} from "@/app/lib/pageLayout";
-import { CARD_BASE, CARD_INTERACTIVE, SECTION_EYEBROW } from "@/app/lib/uiTokens";
+import { PAGE_MAX, SECTION_EDGE, SECTION_PY } from "@/app/lib/pageLayout";
+import { CARD_BASE, CARD_INTERACTIVE } from "@/app/lib/uiTokens";
+import { SectionHeader } from "./SectionHeader";
 
 export type TeamMember = {
   name: string;
@@ -106,14 +101,13 @@ export function Team() {
       className={`relative scroll-mt-5 sm:scroll-mt-5 ${SECTION_PY} ${SECTION_EDGE}`}
     >
       <div className={`${PAGE_MAX}`}>
-        <div className={SECTION_EYEBROW}>People</div>
-        <h2 className={SECTION_H2}>Team</h2>
-        <p className={`mt-4 ${SECTION_LEDE_NARROW}`}>
-          Developers who care about the craft as much as the code—backgrounds in
-          graphics, ML, and real-time 3D. Small team, focused roadmap.
-        </p>
+        <SectionHeader
+          eyebrow="People"
+          title="Team"
+          lede="Developers who care about the craft as much as the code — backgrounds in graphics, ML, and real-time 3D. Small team, focused roadmap."
+        />
 
-        <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 laptop:mt-12">
+        <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 laptop:mt-16">
           {founders.map((member) => (
             <MemberCard key={member.name} member={member} />
           ))}

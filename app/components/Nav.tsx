@@ -3,60 +3,54 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { ChevronRight, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { PAGE_EDGE, PAGE_MAX } from "@/app/lib/pageLayout";
-import { CTA_GHOST, FOCUS_RING, LINK_MUTED } from "@/app/lib/uiTokens";
+import { FOCUS_RING, LINK_MUTED } from "@/app/lib/uiTokens";
 
 const links = [
   { href: "#mission", label: "Mission" },
   { href: "#product", label: "Product" },
-  { href: "#vision", label: "Features"}, 
+  { href: "#vision", label: "Features" },
   { href: "#team", label: "Team" },
 ] as const;
 
+/** Compact white pill, sized for the bar (Feather "Buy now" primary-pill). */
+const NAV_CTA = `inline-flex items-center justify-center rounded-full bg-white px-5 py-2 text-sm font-semibold text-black transition-[transform,opacity] duration-200 ease-out hover:scale-[1.03] hover:opacity-90 active:scale-[0.98] ${FOCUS_RING}`;
+
 export function Nav() {
   const [open, setOpen] = useState(false);
-  /**
-   * `compact` is true once the user has scrolled past the Hero (`#mission`).
-   * Drives the wordmark fade-out-to-left and the CTA collapsing to an icon.
-   */
-  const [compact, setCompact] = useState(false);
+  /** True once the page has scrolled at all — drives transparent → frosted. */
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
-    const hero = document.getElementById("mission");
-    if (!hero) return;
-
-    if (typeof IntersectionObserver === "undefined") {
-      const onScroll = () => setCompact(window.scrollY > hero.offsetHeight - 80);
-      onScroll();
-      window.addEventListener("scroll", onScroll, { passive: true });
-      return () => window.removeEventListener("scroll", onScroll);
-    }
-
-    const observer = new IntersectionObserver(
-      ([entry]) => setCompact(!entry.isIntersecting),
-      { rootMargin: "-72px 0px 0px 0px", threshold: 0 },
-    );
-    observer.observe(hero);
-    return () => observer.disconnect();
+    const onScroll = () => setScrolled(window.scrollY > 16);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  const frosted = scrolled || open;
 
   return (
     <header
-      className={`pointer-events-none fixed inset-x-0 top-0 z-50 pt-3 sm:pt-4 ${PAGE_EDGE}`}
+      className={`fixed inset-x-0 top-0 z-50 border-b transition-[background-color,border-color,backdrop-filter] duration-300 ease-out ${
+        frosted
+          ? "border-white/10 bg-black/60 backdrop-blur-xl backdrop-saturate-150"
+          : "border-transparent bg-transparent"
+      }`}
     >
-      <div className={`relative ${PAGE_MAX}`}>
+      <div className={`${PAGE_MAX} ${PAGE_EDGE}`}>
         <nav
-          className="pointer-events-auto relative flex h-16 items-center justify-between gap-4 rounded-2xl border border-white/10 bg-[rgba(0,0,0,0.6)] px-4 shadow-[0_12px_48px_rgba(0,0,0,0.45)] backdrop-blur-xl backdrop-saturate-150 sm:px-6 laptop:px-8 desktop:h-[4.25rem] desktop:px-10 wide:h-[4.5rem]"
+          className="relative flex h-16 items-center justify-between gap-4"
           aria-label="Primary"
         >
           <Link
             href="#mission"
-            className={`flex min-w-0 shrink items-center gap-2.5 text-[17px] font-medium tracking-[-0.02em] text-white sm:gap-3 ${FOCUS_RING} rounded-lg`}
+            className={`flex min-w-0 shrink items-center gap-2.5 text-[17px] font-semibold tracking-[-0.02em] text-white ${FOCUS_RING} rounded-lg`}
             onClick={() => setOpen(false)}
           >
-            <span className="relative inline-flex h-10 w-10 shrink-0 desktop:h-11 desktop:w-11 wide:h-12 wide:w-12">
+            <span className="relative inline-flex h-9 w-9 shrink-0">
               <Image
                 src="/images/profile-circle.svg"
                 alt=""
@@ -76,25 +70,13 @@ export function Nav() {
                 />
               </span>
             </span>
-            <span
-              className={`hidden whitespace-nowrap transition-[opacity,transform] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] [transform:translateZ(0)] [will-change:opacity,transform] laptop:inline-block ${
-                compact
-                  ? "laptop:pointer-events-none laptop:-translate-x-3 laptop:opacity-0"
-                  : "laptop:translate-x-0 laptop:opacity-100"
-              }`}
-              aria-hidden={compact}
-            >
-              Posematic
-            </span>
+            <span className="whitespace-nowrap">Posematic</span>
           </Link>
 
-          <ul className="pointer-events-none absolute left-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-1/2 items-center gap-6 md:gap-7 md:flex">
+          <ul className="absolute left-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-1/2 items-center gap-8 md:flex">
             {links.map((l) => (
-              <li key={l.href} className="pointer-events-auto">
-                <a
-                  href={l.href}
-                  className={LINK_MUTED}
-                >
+              <li key={l.href}>
+                <a href={l.href} className={LINK_MUTED}>
                   {l.label}
                 </a>
               </li>
@@ -102,29 +84,12 @@ export function Nav() {
           </ul>
 
           <div className="flex shrink-0 items-center gap-2 sm:gap-3">
-            <a
-              href="#waitlist"
-              aria-label={compact ? "Get early access" : undefined}
-              className={`${CTA_GHOST} hidden sm:inline-flex ${
-                compact ? "gap-0 px-2.5" : "gap-2 px-5"
-              }`}
-            >
-              <span
-                className={`inline-flex items-center overflow-hidden leading-none transition-[max-width,opacity] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-                  compact ? "max-w-0 opacity-0" : "max-w-[160px] opacity-100"
-                }`}
-              >
-                Get early access
-              </span>
-              <ChevronRight
-                className="h-4 w-4 shrink-0"
-                strokeWidth={2}
-                aria-hidden
-              />
+            <a href="#waitlist" className={`${NAV_CTA} hidden sm:inline-flex`}>
+              Get early access
             </a>
             <button
               type="button"
-              className={`inline-flex h-11 w-11 items-center justify-center rounded-lg border border-white/15 bg-white/[0.06] text-white transition-[background-color,transform] duration-200 hover:bg-white/10 active:scale-[0.98] md:hidden ${FOCUS_RING}`}
+              className={`inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/[0.06] text-white transition-[background-color,transform] duration-200 hover:bg-white/10 active:scale-[0.98] md:hidden ${FOCUS_RING}`}
               aria-expanded={open}
               aria-controls="mobile-nav"
               onClick={() => setOpen((v) => !v)}
@@ -138,37 +103,37 @@ export function Nav() {
             </button>
           </div>
         </nav>
+      </div>
 
-        <div
-          id="mobile-nav"
-          className={`pointer-events-auto absolute left-0 right-0 top-[calc(100%+10px)] md:hidden ${
-            open ? "block" : "hidden"
-          }`}
-        >
-          <div className="grain rounded-2xl border border-white/10 bg-[rgba(0,0,0,0.92)] p-2 shadow-[0_20px_60px_rgba(0,0,0,0.5)] backdrop-blur-xl backdrop-saturate-150">
-            <ul className="flex flex-col gap-0.5">
-              {links.map((l) => (
-                <li key={l.href}>
-                  <a
-                    href={l.href}
-                    className={`block rounded-xl px-4 py-3 text-[15px] text-white/85 transition-colors duration-200 hover:bg-white/5 hover:text-white ${FOCUS_RING}`}
-                    onClick={() => setOpen(false)}
-                  >
-                    {l.label}
-                  </a>
-                </li>
-              ))}
-              <li className="border-t border-white/10 pt-2 sm:hidden">
+      <div
+        id="mobile-nav"
+        className={`overflow-hidden border-t border-white/10 md:hidden ${
+          open ? "block" : "hidden"
+        }`}
+      >
+        <div className={`${PAGE_MAX} ${PAGE_EDGE} py-3`}>
+          <ul className="flex flex-col gap-0.5">
+            {links.map((l) => (
+              <li key={l.href}>
                 <a
-                  href="#waitlist"
-                  className={`block rounded-xl px-4 py-3 text-center text-[15px] font-medium text-white transition-colors duration-200 hover:bg-white/5 ${FOCUS_RING}`}
+                  href={l.href}
+                  className={`block rounded-xl px-3 py-3 text-[15px] text-white/85 transition-colors duration-200 hover:bg-white/5 hover:text-white ${FOCUS_RING}`}
                   onClick={() => setOpen(false)}
                 >
-                  Get early access
+                  {l.label}
                 </a>
               </li>
-            </ul>
-          </div>
+            ))}
+            <li className="mt-2 border-t border-white/10 pt-3 sm:hidden">
+              <a
+                href="#waitlist"
+                className={`block rounded-full bg-white px-4 py-3 text-center text-[15px] font-semibold text-black transition-opacity duration-200 hover:opacity-90 ${FOCUS_RING}`}
+                onClick={() => setOpen(false)}
+              >
+                Get early access
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </header>

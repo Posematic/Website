@@ -39,15 +39,17 @@ export function Explainer() {
           </p>
         </div>
         <figure className="min-w-0 w-full">
-          <div className="grain relative aspect-[3.25/3] w-full overflow-hidden rounded-[20px] border border-[var(--color-border-subtle)] bg-gradient-to-b from-[var(--color-bg-card-gradient-base)] to-[var(--color-bg-deepest)] surface-matte shadow-[0_20px_60px_rgba(0,0,0,0.5)]">
-            <Image
-              src={POSING_DEMO.src}
-              alt={POSING_DEMO.alt}
-              fill
-              unoptimized
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover"
-            />
+          <div className="device-frame">
+            <div className="device-screen relative aspect-[4/3] w-full">
+              <Image
+                src={POSING_DEMO.src}
+                alt={POSING_DEMO.alt}
+                fill
+                unoptimized
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover"
+              />
+            </div>
           </div>
         </figure>
       </div>

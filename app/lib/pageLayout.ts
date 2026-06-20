@@ -20,10 +20,10 @@ export const PAGE_MAX =
 
 /**
  * Shared section headings. Feather-style display type: large, heavy, tight
- * tracking, balanced wrap. Fluidly scales from ~32px on phones to ~52px wide.
+ * tracking, balanced wrap. Fluidly scales from ~36px on phones to ~64px wide.
  */
 export const SECTION_H2 =
-  "text-balance text-[clamp(2rem,4.5vw,3.25rem)] font-bold leading-[1.04] tracking-[-0.03em] text-white";
+  "text-balance text-[clamp(2.25rem,5vw,4rem)] font-bold leading-[1.02] tracking-[-0.035em] text-white";
 
 /** Section body copy — 16px on phones, scaling to 20px on wide */
 export const SECTION_LEDE =
@@ -37,14 +37,14 @@ export const SECTION_LEDE_NARROW =
 export const SECTION_KICKER =
   "text-sm leading-relaxed text-[var(--color-text-tertiary)] italic";
 
-/** Default vertical padding for standard sections */
+/** Default vertical padding for standard sections — generous Feather-style rhythm */
 export const SECTION_PY =
-  "py-12 laptop:py-14 desktop:py-16 wide:py-20";
+  "py-16 sm:py-20 laptop:py-28 desktop:py-32 wide:py-40";
 
 /** Taller sections (e.g. waitlist, sketch-to-pose) */
 export const SECTION_PY_TALL =
-  "py-16 laptop:py-18 desktop:py-20 wide:py-24";
+  "py-20 sm:py-24 laptop:py-32 desktop:py-40 wide:py-48";
 
 /** Shorter vertical rhythm (e.g. coming soon band) */
 export const SECTION_PY_COMPACT =
-  "py-12 laptop:py-14 desktop:py-16 wide:py-20";
+  "py-14 sm:py-16 laptop:py-20 desktop:py-24 wide:py-28";
