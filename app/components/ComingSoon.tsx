@@ -5,12 +5,13 @@ import {
   SECTION_LEDE,
   SECTION_PY_COMPACT,
 } from "@/app/lib/pageLayout";
+import { PANEL_SHELL } from "@/app/lib/uiTokens";
 
 export function ComingSoon() {
   return (
     <section className={`relative ${SECTION_PY_COMPACT} ${SECTION_EDGE}`}>
       <div
-        className={`rounded-[28px] border border-[var(--color-border-subtle)] bg-[rgba(12,12,26,0.6)] px-8 py-12 text-center backdrop-blur-sm sm:px-10 laptop:px-10 laptop:py-10 desktop:px-14 desktop:py-14 wide:px-16 wide:py-16 ${PAGE_MAX}`}
+        className={`${PANEL_SHELL} px-8 py-12 text-center sm:px-10 laptop:px-12 laptop:py-12 desktop:px-14 desktop:py-14 wide:px-16 wide:py-16 surface-matte ${PAGE_MAX}`}
       >
         <p className="text-sm font-medium uppercase tracking-wider text-[var(--color-text-tertiary)] desktop:text-base">
           Coming soon

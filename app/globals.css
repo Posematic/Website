@@ -17,21 +17,37 @@
   --breakpoint-desktop: 80rem;
   --breakpoint-wide: 96rem;
 
-  /* Slightly lifted from prior values; page reads a touch brighter without losing depth */
-  --color-bg-deepest: #07051e;
-  --color-bg-primary: #0c0c14;
-  --color-bg-card-dark: #10101f;
-  --color-bg-card-gradient-base: #100a34;
-  --color-brand-indigo: #2e1b9e;
-  --color-brand-violet: #4b3bff;
-  --color-brand-purple: #5b4bff;
-  --color-brand-lavender: #8b7bff;
-  --color-brand-highlight: #c8beff;
+  /*
+   * Feather-inspired palette: pure-black surfaces, monochrome text, and a single
+   * restrained "feather" gradient (violet → teal → pink) used as the only accent.
+   * Brand-* names are kept for back-compat; they now point at the feather stops so
+   * any legacy usage reads as an intentional accent instead of the old purple wash.
+   */
+  --color-bg-deepest: #000000;
+  --color-bg-primary: #000000;
+  --color-bg-card-dark: #141414;
+  --color-bg-card-gradient-base: #0a0a0a;
+  --color-brand-indigo: #7c5cff;
+  --color-brand-violet: #7c5cff;
+  --color-brand-teal: #2bd9c5;
+  --color-brand-pink: #ff6fb1;
+  --color-brand-purple: #7c5cff;
+  --color-brand-lavender: #9b86ff;
+  --color-brand-highlight: #ffffff;
   --color-text-primary: #ffffff;
-  --color-text-secondary: rgba(255, 255, 255, 0.65);
-  --color-text-tertiary: rgba(255, 255, 255, 0.45);
-  --color-border-subtle: rgba(255, 255, 255, 0.05);
+  --color-text-secondary: rgba(255, 255, 255, 0.72);
+  --color-text-tertiary: rgba(255, 255, 255, 0.5);
+  --color-border-subtle: rgba(255, 255, 255, 0.1);
   --font-sans: "Satoshi", var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --gradient-feather: linear-gradient(
+    135deg,
+    #7c5cff 0%,
+    #2bd9c5 50%,
+    #ff6fb1 100%
+  );
 }
 
 html {
@@ -49,8 +65,29 @@ textarea,
 
 body {
   background-color: var(--color-bg-primary);
+  background-image: radial-gradient(
+    ellipse 90% 50% at 50% -12%,
+    rgba(124, 92, 255, 0.07),
+    transparent 58%
+  );
   color: var(--color-text-primary);
   font-family: var(--font-sans);
+}
+
+/* Single accent: feather gradient clipped to text */
+.text-feather {
+  background-image: var(--gradient-feather);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Thin feather hairline for subtle dividers/accents */
+.feather-rule {
+  height: 1px;
+  border: 0;
+  background-image: var(--gradient-feather);
+  opacity: 0.6;
 }
 
 /* Subtle grain overlay (design system) */
@@ -64,25 +101,17 @@ body {
 }
 
 /*
- * Icon badge ring. Colors from AI/pattern_design.json (Liquid Aurora).
- * violet_bloom + luminance: deep navy → blues → violet → lavender/silver frost (no red/cyan).
+ * Icon badge ring. Feather keeps iconography monochrome, so this is a subtle
+ * top-lit metallic hairline rather than a colored gradient.
  */
 .icon-ring {
-  background: conic-gradient(
-    from -90deg,
-    #4733ff 0deg,
-    #4733ff 36deg,
-    #581acc 72deg,
-    #4d13ab 108deg,
-    #8905db 144deg,
-    #6633cc 180deg,
-    #8833cc 216deg,
-    #c4b8ff 252deg,
-    #e8d8ff 288deg,
-    #8833cc 324deg,
-    #4733ff 360deg
+  background: linear-gradient(
+    150deg,
+    rgba(255, 255, 255, 0.24) 0%,
+    rgba(255, 255, 255, 0.08) 45%,
+    rgba(255, 255, 255, 0.03) 100%
   );
-  padding: 2px;
+  padding: 1px;
   border-radius: 9999px;
 }
 
@@ -94,30 +123,29 @@ body {
   justify-content: center;
 }
 
-/* Liquid gradient card utility */
+/* Elevated panel: near-black with a restrained feather wash in opposite corners */
 .surface-liquid {
   background:
-    radial-gradient(ellipse 80% 60% at 30% 40%, #5b4bff 0%, transparent 60%),
-    radial-gradient(ellipse 70% 80% at 70% 70%, #4b3bff 0%, transparent 55%),
-    radial-gradient(
-      circle at 50% 50%,
-      rgba(200, 190, 255, 0.2) 0%,
-      transparent 40%
-    ),
+    radial-gradient(ellipse 55% 50% at 10% 0%, rgba(124, 92, 255, 0.13), transparent 60%),
+    radial-gradient(ellipse 50% 55% at 90% 100%, rgba(255, 111, 177, 0.09), transparent 62%),
+    radial-gradient(ellipse 60% 50% at 60% 35%, rgba(43, 217, 197, 0.05), transparent 60%),
     var(--color-bg-card-gradient-base);
 }
 
 .surface-matte {
-  background: linear-gradient(135deg, #0c0c1c 0%, #16132e 100%);
+  background: linear-gradient(
+    135deg,
+    var(--color-bg-card-gradient-base) 0%,
+    var(--color-bg-deepest) 100%
+  );
 }
 
-/* Frosted nav: dark variant from design json */
+/* Frosted nav: pure-black glass */
 .nav-frosted {
-  background: rgba(16, 16, 32, 0.62);
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  border-left: 3px solid var(--color-brand-purple);
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .distortion-container {
@@ -192,9 +220,78 @@ body {
   transform: translate3d(0, 0, 0);
 }
 
+/* Infinite gallery marquee (two copies of the track translate by -50%) */
+@keyframes marquee-left {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes marquee-right {
+  from {
+    transform: translate3d(-50%, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate-marquee-left {
+  animation: marquee-left var(--marquee-duration, 60s) linear infinite;
+}
+
+.animate-marquee-right {
+  animation: marquee-right var(--marquee-duration, 60s) linear infinite;
+}
+
+.marquee-mask {
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 6%,
+    black 94%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 6%,
+    black 94%,
+    transparent
+  );
+}
+
+/* Tablet/device bezel for raw media (the app screenshots already ship a frame) */
+.device-frame {
+  border-radius: 28px;
+  padding: 10px;
+  background: linear-gradient(155deg, #1c1c1c 0%, #0a0a0a 60%, #050505 100%);
+  box-shadow:
+    0 50px 120px rgba(0, 0, 0, 0.65),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+
+.device-screen {
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee-left,
+  .animate-marquee-right {
+    animation: none !important;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .hero-reveal,
   .hero-reveal-image,
+  .hero-word-cycle-in,
   .reveal {
     animation: none !important;
     transition: none !important;

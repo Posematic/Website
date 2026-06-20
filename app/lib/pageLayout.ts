@@ -18,22 +18,33 @@ export const SECTION_EDGE =
 export const PAGE_MAX =
   "mx-auto w-full max-w-[min(1240px,calc(100%-1.75rem))] sm:max-w-[min(1320px,calc(100%-2.75rem))] laptop:max-w-[min(80rem,calc(100%-2.5rem))] wide:max-w-[min(1580px,calc(100%-4.25rem))]";
 
-/** Shared section headings — compact on phones, scales up through breakpoints */
+/**
+ * Shared section headings. Feather-style display type: large, heavy, tight
+ * tracking, balanced wrap. Fluidly scales from ~36px on phones to ~64px wide.
+ */
 export const SECTION_H2 =
-  "text-[1.625rem] font-semibold leading-snug tracking-tight text-white sm:text-[1.75rem] tablet:text-[1.875rem] laptop:text-[1.875rem] desktop:text-[2rem] wide:text-[2.25rem] wide:leading-[1.1]";
+  "text-balance text-[clamp(2.25rem,5vw,4rem)] font-bold leading-[1.02] tracking-[-0.035em] text-white";
 
-/** Section body copy — 16px on phones, a touch larger on sm, caps at 18px on wide */
+/** Section body copy — 16px on phones, scaling to 20px on wide */
 export const SECTION_LEDE =
-  "text-base leading-relaxed text-[var(--color-text-secondary)] sm:text-[1.0625rem] wide:text-lg";
+  "text-base leading-[1.6] text-[var(--color-text-secondary)] sm:text-[1.0625rem] wide:text-xl";
 
-/** Default vertical padding for standard sections */
+/** Narrow intro copy (~62 characters) for hero-like or marketing ledes */
+export const SECTION_LEDE_NARROW =
+  "max-w-[62ch] text-base leading-[1.6] text-[var(--color-text-secondary)] sm:text-[1.0625rem] wide:text-xl";
+
+/** Muted supporting line under section headings */
+export const SECTION_KICKER =
+  "text-sm leading-relaxed text-[var(--color-text-tertiary)] italic";
+
+/** Default vertical padding for standard sections — generous Feather-style rhythm */
 export const SECTION_PY =
-  "py-12 laptop:py-14 desktop:py-16 wide:py-20";
+  "py-16 sm:py-20 laptop:py-28 desktop:py-32 wide:py-40";
 
 /** Taller sections (e.g. waitlist, sketch-to-pose) */
 export const SECTION_PY_TALL =
-  "py-16 laptop:py-18 desktop:py-20 wide:py-24";
+  "py-20 sm:py-24 laptop:py-32 desktop:py-40 wide:py-48";
 
 /** Shorter vertical rhythm (e.g. coming soon band) */
 export const SECTION_PY_COMPACT =
-  "py-12 laptop:py-14 desktop:py-16 wide:py-20";
+  "py-14 sm:py-16 laptop:py-20 desktop:py-24 wide:py-28";
