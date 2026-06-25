@@ -107,9 +107,8 @@ export function Team() {
       <div className="mx-auto w-full max-w-5xl desktop:max-w-5xl wide:max-w-6xl">
         <h2 className={SECTION_H2}>Our Team</h2>
         <p className={`mt-4 max-w-2xl ${SECTION_LEDE}`}>
-          We care about artist agency. We are artists ourselves. Posematic uses no generative AI. Our
-          Pose Matching Algorithm is trained on ethically sourced data, and
-          every pose stays under your control.
+          We care about artist agency. We are artists ourselves, and are committed to building a product
+          free from generative AI. Every pose stays under your control.
         </p>
 
         <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 laptop:mt-11">

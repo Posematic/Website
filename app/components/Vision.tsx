@@ -71,7 +71,7 @@ const approach: Array<{
     icon: Shield,
     title: "Artist agency first",
     description:
-      "No generative AI. Ethically sourced training data. You draw the sketch; you keep editing the pose.",
+      "Pro-artist position. No generative AI. Ethically sourced training data. Full artistic control.",
   },
 ];
 
