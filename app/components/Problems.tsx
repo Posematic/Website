@@ -10,38 +10,38 @@ import {
 const problems = [
   {
     icon: Clock,
-    title: "Posing takes too long",
+    title: "Slow process",
     quote:
-      "Posing apps take too long to figure out when I can grab references online.”",
+      "Posing apps take too long to figure out when I can grab references online.",
     attribution: "Illustrator, Digital Artist",
-    fix: "Posematic cuts iteration time with sketch-first input and controls tuned for speed.",
+    fix: "Sketch-first input and controls built for speed.",
     variant: "liquid" as const,
   },
   {
     icon: Cpu,
-    title: "Archaic & Inefficient UI/UX",
+    title: "Unintuitive UX",
     quote:
-      "“It’s easy to start, but once you need more control, the UI gets confusing and unintuitive.”",
+      "It's easy to start, but once you need more control, the UI gets confusing and unintuitive.",
     attribution: "Casual Artist, Hobbyist",
-    fix: "We are rebuilding the interface around a modern, easily readable layout you actually understand.",
+    fix: "A modern interface built around how artists work, not legacy 3D tooling.",
     variant: "matte" as const,
   },
   {
     icon: UserX,
-    title: "Inaccurate anatomy",
+    title: "Bad anatomy",
     quote:
-      "“I wish the models were more accurate, the models lack useful anatomical landmarks.”",
+      "I wish the models were more accurate, the models lack useful anatomical landmarks.",
     attribution: "Professional entertainment artist, Freelance",
-    fix: "Anatomy is a core pillar: believable default presets, clearer silhouettes, and physiological posing.",
+    fix: "Believable presets, clearer silhouettes, and anatomical landmarks you can trust.",
     variant: "matte" as const,
   },
   {
     icon: DollarSign,
-    title: "Expensive for casuals and professionals",
+    title: "Expensive paywalls",
     quote:
-      "“A lot of the features I need are locked behind paywalls, and they’re just too expensive.”",
+      "A lot of the features I need are locked behind paywalls, and they're just too expensive.",
     attribution: "From many artists interviewed",
-    fix: "Fair and generous tiers for all users. More details to be provided at launch.",
+    fix: "Free tier on essentials, a one-time purchase unlocks all features, and optional tiers.",
     variant: "liquid" as const,
   },
 ];
@@ -51,13 +51,16 @@ export function Problems() {
     <section className={`relative ${SECTION_PY} ${SECTION_EDGE}`}>
       <div className={PAGE_MAX}>
         <h2 className={`max-w-2xl ${SECTION_H2}`}>
-          Existing posing apps are broken
+          The workflow is broken
         </h2>
         <p className={`mt-4 max-w-2xl ${SECTION_LEDE}`}>
-          Four pain points we hear a lot, each with how we aim to tackle these problems.
+          Finding reference means searching for poses and angles, settling for
+          images that miss your intent, and copying anatomical mistakes from bad
+          source material. Posing apps should help, but slow workflows, weak
+          anatomy, and clunky controls get in the way.
         </p>
         <p className="mt-3 max-w-2xl text-sm leading-relaxed text-[var(--color-text-tertiary)] italic">
-          From real testimonies
+          From 15 customer interviews
         </p>
         <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:gap-5">
           {problems.map((p) => {

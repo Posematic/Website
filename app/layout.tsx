@@ -9,9 +9,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Posematic · Optimizing workflows for artists",
+  title: "Posematic · Redefining Reference For Artists",
   description:
-    "Sketch-to-pose algorithm and a modern posing workflow built for illustrators, animators, and every artist who needs reference fast.",
+    "One app for artist reference. Pose Matching, not generative AI. Built by artists from CMU and UMD.",
 };
 
 export default function RootLayout({

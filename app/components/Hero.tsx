@@ -119,9 +119,9 @@ export function Hero() {
               className="hero-reveal mt-4 max-w-xl text-sm leading-relaxed text-[var(--color-text-secondary)] drop-shadow-sm sm:mt-5 sm:text-base md:text-lg laptop:mt-5 laptop:max-w-xl laptop:text-lg laptop:leading-relaxed wide:max-w-[38rem] wide:text-[1.25rem] wide:leading-relaxed"
               style={heroDelay(320)}
             >
-              A modern posing app for the modern artist: fast anatomy, modern UI,
-              and sketch-to-pose algorithm that turns rough lines into clear 3D
-              reference.
+              Artists rely on reference tools spread across the
+              web. Most are outdated and disconnected. We are building one app
+              to unify them, starting with Sketch to Pose.
             </p>
             <div
               className="hero-reveal mt-8 flex w-full min-w-0 flex-wrap items-center justify-start gap-3 sm:mt-9 sm:gap-4"

@@ -9,7 +9,7 @@ import { PAGE_EDGE, PAGE_MAX } from "@/app/lib/pageLayout";
 const links = [
   { href: "#mission", label: "Mission" },
   { href: "#product", label: "Product" },
-  { href: "#vision", label: "Features"}, 
+  { href: "#vision", label: "Roadmap" },
   { href: "#team", label: "Team" },
 ] as const;
 

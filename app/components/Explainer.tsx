@@ -19,21 +19,19 @@ export function Explainer() {
         className={`grid gap-10 laptop:grid-cols-2 laptop:items-center laptop:gap-9 desktop:gap-12 wide:gap-16 ${PAGE_MAX}`}
       >
         <div>
-          <h2 className={SECTION_H2}>What is a posing app?</h2>
+          <h2 className={SECTION_H2}>Starting with posing</h2>
           <p className={`mt-4 ${SECTION_LEDE}`}>
-            A posing app lets you position a 3D figure (limbs, torso, camera)
-            so you can light, frame, and capture reference for illustration or
-            animation. It is the bridge between &ldquo;I know what I want to
-            draw&rdquo; and &ldquo;I can see it clearly enough to commit ink to
-            canvas.&rdquo;
+            Posing is our first focus. Contemprary posing apps exist,
+            but most are slow and hard to use.
           </p>
           <p className={`mt-3 ${SECTION_LEDE}`}>
-            Posematic treats that bridge as a core product: fast
-            iteration, readable anatomy, and workflows that respect how artists and creatives
-            actually work.
+            A posing app lets you position a 3D figure, set the camera, and
+            capture reference for your work. Posematic owns that step in the
+            pipeline: ideation, reference, finalization.
           </p>
           <p className={`mt-3 ${SECTION_LEDE}`}>
-            For initial release, we aim to ship with a feature-complete and innovative posing app. 
+            We are shipping a feature-complete posing app at launch, with Pose
+            Matching built in from the start.
           </p>
         </div>
         <figure className="min-w-0 w-full">

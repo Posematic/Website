@@ -32,7 +32,7 @@ export function Waitlist() {
             </a>
           </div>
           <p className="mt-4 text-sm text-[var(--color-text-tertiary)]">
-            We only use your email for launch updates and this perk—not a
+            We only use your email for launch updates and this perk, not a
             newsletter.
           </p>
         </div>

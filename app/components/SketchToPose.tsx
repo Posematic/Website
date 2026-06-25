@@ -18,7 +18,7 @@ const stages = [
   },
   {
     title: "Pose",
-    caption: "ML lifts it into 3D",
+    caption: "Pose Matching maps it to 3D",
     src: "/images/model1.png",
     alt: "3D mannequin posed to match the sketch",
   },
@@ -43,15 +43,15 @@ export function SketchToPose() {
         <div className="relative z-[1]">
           <div className="mb-3 inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-black/20 px-2.5 py-0.5 text-[11px] font-medium uppercase tracking-wider text-[var(--color-brand-highlight)] desktop:px-3 desktop:py-1 desktop:text-xs">
             <Sparkles className="h-3 w-3 desktop:h-3.5 desktop:w-3.5" strokeWidth={1.5} aria-hidden />
-            Flagship
+            Flagship Feature
           </div>
           <h2 className={`max-w-3xl ${SECTION_H2}`}>
-            Sketch to pose, powered by machine learning and proven algorithms.
+            Sketch to Pose
           </h2>
           <p className={`mt-3 max-w-2xl ${SECTION_LEDE}`}>
-            We are empowering the next generation of posing apps: go from a
-            sketch to a believable pose, then keep iterating without disrupting
-            your creative flow.
+            Start with a sketch, refine in 3D, and keep iterating. Our Pose
+            Matching Algorithm maps your sketches into a controllable pose. In our research, sketch to pose cuts
+            posing time significantly.
           </p>
 
           {/* Mobile: stack each stage (box + text) then arrow */}

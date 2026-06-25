@@ -19,10 +19,10 @@ export function ComingSoon() {
           Mobile first, then desktop
         </h2>
         <p className={`mx-auto mt-4 max-w-xl ${SECTION_LEDE}`}>
-          We are polishing our core posing features, such as, sketch-to-pose, and account flows before
-          our full release. Get development updates so you can try Posematic as soon as
-          it drops. 
+          We are polishing 3D reference posing, Pose Matching, and account
+          flows before launch. Join the waitlist to try Posematic when it ships.
         </p>
+
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
           <button
             type="button"

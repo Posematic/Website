@@ -19,7 +19,7 @@ const team: TeamMember[] = [
   {
     name: "Craig Mellor",
     role: "Co-founder",
-    bio: "AI @ CMU. Initiated and created the project. Worked on all aspects, from the brush engine, sketch to pose pipeline, backend, etc.",
+    bio: "CS @ CMU. Initiated and created the project. Brush engine, Pose Matching pipeline, backend, and more.",
     imageSrc: "/images/craig.jpeg",
     imageAlt: "Portrait for Craig Mellor",
     founder: true,
@@ -27,7 +27,7 @@ const team: TeamMember[] = [
   {
     name: "Daniel Yang",
     role: "Co-founder",
-    bio: "CS @ UMD College Park. Built visualization systems for ML backend, brush engine, system design, front-end brainstorming and devlopment, and design/UI-UX lead.",
+    bio: "CS @ UMD College Park. Visualization systems for the backend, brush engine, system design, full-stack development, and design/UI-UX lead.",
     imageSrc: "/images/daniel_pfp.jpg",
     imageAlt: "Portrait placeholder for Daniel Yang",
     founder: true,
@@ -35,7 +35,7 @@ const team: TeamMember[] = [
   {
     name: "Ritvik Gupta",
     role: "Fullstack Engineer & Product Designer",
-    bio: "AI & CS @ CMU and UoE. Worked on the sketch-to-pose pipeline, brush and 3D engine, design and business operations. Certified dork.",
+    bio: "CS @ CMU and UoE. Sketch-to-pose pipeline, brush and 3D engine, design and business operations. Certified dork.",
     imageSrc: "/images/vik.png",
     imageAlt: "Portrait placeholder for Ritvik Gupta",
     founder: true,
@@ -43,7 +43,7 @@ const team: TeamMember[] = [
   {
     name: "Nicholas Mino",
     role: "Fullstack Engineer & Product Designer",
-    bio: "AI @ CMU. Building core ML systems, production inference, frontend, authentication, and the interactive 3D editor, while helping drive product design and business strategy.",
+    bio: "CS @ CMU. Pose Matching pipeline, production inference, frontend, authentication, and the interactive 3D editor, plus product design and business strategy.",
     imageSrc: "/images/nmino_headshot.jpg",
     imageAlt: "Portrait placeholder for Nick Mino",
     founder: true,
@@ -51,7 +51,7 @@ const team: TeamMember[] = [
   {
     name: "Ivan Zhang",
     role: "Fullstack Engineer",
-    bio: "CS @ CMU. Worked on sketch-to-pose pipeline, data generation, and 3D viewer.",
+    bio: "CS @ CMU. Pose Matching training data, sketch-to-pose pipeline, and 3D viewer.",
     imageSrc: "/images/ivan.jpeg",
     imageAlt: "Portrait placeholder for Ivan Zhang",
   },
@@ -105,10 +105,11 @@ export function Team() {
       className={`relative scroll-mt-5 sm:scroll-mt-5 ${SECTION_PY} ${SECTION_EDGE}`}
     >
       <div className="mx-auto w-full max-w-5xl desktop:max-w-5xl wide:max-w-6xl">
-        <h2 className={SECTION_H2}>Team</h2>
+        <h2 className={SECTION_H2}>Our Team</h2>
         <p className={`mt-4 max-w-2xl ${SECTION_LEDE}`}>
-          Developers who care about the craft as much as the code, with backgrounds
-          in graphics, ML, and real-time 3D. We&apos;re a small team, but with a focused roadmap: Posematic.
+          We care about artist agency. We are artists ourselves. Posematic uses no generative AI. Our
+          Pose Matching Algorithm is trained on ethically sourced data, and
+          every pose stays under your control.
         </p>
 
         <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 laptop:mt-11">
