@@ -49,9 +49,10 @@ export function SketchToPose() {
             Sketch to Pose
           </h2>
           <p className={`mt-3 max-w-2xl ${SECTION_LEDE}`}>
-            Start with a sketch, refine in 3D, and keep iterating. Our Pose
-            Matching Algorithm maps your sketches into a controllable pose. In our research, sketch to pose cuts
-            posing time significantly.
+            Sketch to Pose turns a rough drawing into an editable 3D pose
+            reference without generative output. Our Pose Matching Algorithm
+            maps your sketch into a controllable pose that you can refine in
+            3D.
           </p>
 
           {/* Mobile: stack each stage (box + text) then arrow */}

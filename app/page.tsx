@@ -9,10 +9,17 @@ import { SketchToPose } from "./components/SketchToPose";
 import { Team } from "./components/Team";
 import { Vision } from "./components/Vision";
 import { Waitlist } from "./components/Waitlist";
+import { homeJsonLd } from "./lib/structuredData";
 
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(homeJsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
       <Nav />
       <main>
         <Hero />
