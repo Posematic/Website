@@ -21,7 +21,7 @@ const team: TeamMember[] = [
     role: "Co-founder",
     bio: "CS @ CMU. Initiated and created the project. Brush engine, Pose Matching pipeline, backend, and more.",
     imageSrc: "/images/craig.jpeg",
-    imageAlt: "Portrait for Craig Mellor",
+    imageAlt: "Portrait of Craig Mellor",
     founder: true,
   },
   {
@@ -29,7 +29,7 @@ const team: TeamMember[] = [
     role: "Co-founder",
     bio: "CS @ UMD College Park. Visualization systems for the backend, brush engine, system design, full-stack development, and design/UI-UX lead.",
     imageSrc: "/images/daniel_pfp.jpg",
-    imageAlt: "Portrait placeholder for Daniel Yang",
+    imageAlt: "Portrait of Daniel Yang",
     founder: true,
   },
   {
@@ -37,7 +37,7 @@ const team: TeamMember[] = [
     role: "Fullstack Engineer & Product Designer",
     bio: "CS @ CMU and UoE. Sketch-to-pose pipeline, brush and 3D engine, design and business operations. Certified dork.",
     imageSrc: "/images/vik.png",
-    imageAlt: "Portrait placeholder for Ritvik Gupta",
+    imageAlt: "Portrait of Ritvik Gupta",
     founder: true,
   },
   {
@@ -45,7 +45,7 @@ const team: TeamMember[] = [
     role: "Fullstack Engineer & Product Designer",
     bio: "CS @ CMU. Pose Matching pipeline, production inference, frontend, authentication, and the interactive 3D editor, plus product design and business strategy.",
     imageSrc: "/images/nmino_headshot.jpg",
-    imageAlt: "Portrait placeholder for Nick Mino",
+    imageAlt: "Portrait of Nicholas Mino",
     founder: true,
   },
   {
@@ -53,7 +53,7 @@ const team: TeamMember[] = [
     role: "Fullstack Engineer",
     bio: "CS @ CMU. Pose Matching training data, sketch-to-pose pipeline, and 3D viewer.",
     imageSrc: "/images/ivan.jpeg",
-    imageAlt: "Portrait placeholder for Ivan Zhang",
+    imageAlt: "Portrait of Ivan Zhang",
   },
 ];
 

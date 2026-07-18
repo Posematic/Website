@@ -1,13 +1,14 @@
 // import GridDistortion from "./GridDistortion";
-import Image from "next/image"
+import Image from "next/image";
 
 const HERO_BACKGROUND = "/images/937_1x_shots_so.png" as const;
 
 export function HeroBackdrop() {
   return (
     <Image
-      src = {HERO_BACKGROUND}
-      alt="background image"
+      src={HERO_BACKGROUND}
+      alt=""
+      aria-hidden
       fill
       className="object-cover object-center"
       sizes="100vw"

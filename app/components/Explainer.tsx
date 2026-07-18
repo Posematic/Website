@@ -1,4 +1,3 @@
-import Image from "next/image";
 import {
   PAGE_MAX,
   SECTION_EDGE,
@@ -6,10 +5,12 @@ import {
   SECTION_LEDE,
   SECTION_PY,
 } from "@/app/lib/pageLayout";
+import { PreviewPlayer } from "./PreviewPlayer";
 
 const POSING_DEMO = {
-  src: "/images/posematic_posing_ver2.gif",
-  alt: "3D mannequin with pose markers transitioning from T-pose to a dynamic pose on a grid",
+  src: "/images/posematic_posing_ver2.mp4",
+  poster: "/images/posematic_posing_poster.webp",
+  alt: "3D pose reference mannequin transitioning from a T-pose to a dynamic pose on a grid",
 } as const;
 
 export function Explainer() {
@@ -21,7 +22,7 @@ export function Explainer() {
         <div>
           <h2 className={SECTION_H2}>Starting with posing</h2>
           <p className={`mt-4 ${SECTION_LEDE}`}>
-            Posing is our first focus. Contemprary posing apps exist,
+            Posing is our first focus. Contemporary posing apps exist,
             but most are slow and hard to use.
           </p>
           <p className={`mt-3 ${SECTION_LEDE}`}>
@@ -36,13 +37,10 @@ export function Explainer() {
         </div>
         <figure className="min-w-0 w-full">
           <div className="relative aspect-[3.25/3] w-full overflow-hidden rounded-2xl border border-[var(--color-border-subtle)] bg-gradient-to-b from-[#12122a] to-[#0a0a18] surface-matte">
-            <Image
+            <PreviewPlayer
               src={POSING_DEMO.src}
+              poster={POSING_DEMO.poster}
               alt={POSING_DEMO.alt}
-              fill
-              unoptimized
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover"
             />
           </div>
           {/* <figcaption className={`mt-4 text-center ${SECTION_LEDE}`}>

@@ -109,7 +109,7 @@ export function Hero() {
               className="hero-reveal w-full min-w-0 text-balance text-[clamp(1.3125rem,4vw+0.5rem,2.05rem)] font-semibold leading-snug tracking-tight text-white drop-shadow-sm sm:text-4xl sm:leading-[1.18] md:text-5xl md:leading-[1.14] laptop:text-[2.75rem] laptop:leading-[1.12] wide:text-[3.2rem] wide:leading-[1.08]"
               style={heroDelay(180)}
             >
-              Redefining references that keeps up with your&nbsp;
+              Sketch to Pose: 3D reference that keeps up with your&nbsp;
               <WordCycle
                 words={wordCycle}
                 className="text-[var(--color-brand-highlight)]"
@@ -119,9 +119,9 @@ export function Hero() {
               className="hero-reveal mt-4 max-w-xl text-sm leading-relaxed text-[var(--color-text-secondary)] drop-shadow-sm sm:mt-5 sm:text-base md:text-lg laptop:mt-5 laptop:max-w-xl laptop:text-lg laptop:leading-relaxed wide:max-w-[38rem] wide:text-[1.25rem] wide:leading-relaxed"
               style={heroDelay(320)}
             >
-              Artists rely on reference tools spread across the
-              web. Most are outdated and disconnected. We are building one app
-              to unify them, starting with Sketch to Pose.
+              Posematic is an upcoming 3D pose reference app for artists. Turn
+              rough sketches into controllable poses, refine them in 3D, and
+              keep every creative decision in your hands.
             </p>
             <div
               className="hero-reveal mt-8 flex w-full min-w-0 flex-wrap items-center justify-start gap-3 sm:mt-9 sm:gap-4"

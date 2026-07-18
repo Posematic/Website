@@ -7,7 +7,8 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "seo:verify": "node scripts/verify-seo.mjs"
   },
   "dependencies": {
     "gsap": "^3.14.2",
