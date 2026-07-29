@@ -7,6 +7,7 @@ import {
   ScanSearch,
   Shield,
 } from "lucide-react";
+import { Roadmap } from "@/app/components/Roadmap";
 import {
   PAGE_MAX,
   SECTION_EDGE,
@@ -14,16 +15,6 @@ import {
   SECTION_LEDE,
   SECTION_PY,
 } from "@/app/lib/pageLayout";
-
-const roadmap = [
-  { label: "3D Reference Posing", status: "In progress" },
-  { label: "3D Facial Reference" },
-  { label: "Face & Hand Reference" },
-  { label: "Gesture Drawing" },
-  { label: "3D Reference Repositories" },
-  { label: "2D Reference Boards" },
-  { label: "Reference Collections" },
-] as const;
 
 const pillars: Array<{
   icon: LucideIcon;
@@ -93,30 +84,7 @@ export function Vision() {
         </p>
 
         <div className="mt-10 space-y-10 laptop:mt-12 laptop:space-y-12">
-          <div>
-            <h3 className="text-base font-semibold tracking-tight text-[var(--color-brand-highlight)] laptop:text-[1.35rem] wide:text-[1.45rem]">
-              Roadmap
-            </h3>
-            <div className="mt-4 flex flex-wrap gap-2.5 laptop:mt-5">
-              {roadmap.map((item) => (
-                <span
-                  key={item.label}
-                  className={`inline-flex items-center gap-2 rounded-full border px-4 py-2 text-[0.8125rem] font-medium laptop:text-sm ${
-                    "status" in item && item.status === "In progress"
-                      ? "border-[var(--color-brand-purple)]/40 bg-[var(--color-brand-purple)]/10 text-white"
-                      : "border-[var(--color-border-subtle)] bg-[var(--color-bg-card-dark)] text-[var(--color-text-secondary)]"
-                  }`}
-                >
-                  {item.label}
-                  {"status" in item && item.status ? (
-                    <span className="rounded-full bg-[var(--color-brand-highlight)]/20 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-[var(--color-brand-highlight)]">
-                      {item.status}
-                    </span>
-                  ) : null}
-                </span>
-              ))}
-            </div>
-          </div>
+          <Roadmap />
 
           <div>
             <h3 className="text-base font-semibold tracking-tight text-[var(--color-brand-highlight)] laptop:text-[1.35rem] wide:text-[1.45rem]">
