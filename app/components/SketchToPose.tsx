@@ -24,7 +24,7 @@ const stages = [
   },
   {
     title: "Final",
-    caption: "Draw with real reference",
+    caption: "You make the finished product",
     src: "/images/finalimage.png",
     alt: "Sketch with 3D model aligned for reference",
   },
